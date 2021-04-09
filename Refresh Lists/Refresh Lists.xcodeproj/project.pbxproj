@@ -19,6 +19,9 @@
 		1FBD074A262030B300E6CC15 /* ListItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FBD0749262030B300E6CC15 /* ListItemModel.swift */; };
 		1FBD074D2620316900E6CC15 /* DateTimeSelectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FBD074C2620316900E6CC15 /* DateTimeSelectionModel.swift */; };
 		1FBD0750262032FB00E6CC15 /* CheckListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FBD074F262032FB00E6CC15 /* CheckListModel.swift */; };
+		1FBD07522620363700E6CC15 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FBD07512620363700E6CC15 /* Data.swift */; };
+		1FBD07542620368800E6CC15 /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FBD07532620368800E6CC15 /* MockData.swift */; };
+		1FBD075626203DBD00E6CC15 /* CheckListFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FBD075526203DBD00E6CC15 /* CheckListFunctions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +60,9 @@
 		1FBD0749262030B300E6CC15 /* ListItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItemModel.swift; sourceTree = "<group>"; };
 		1FBD074C2620316900E6CC15 /* DateTimeSelectionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateTimeSelectionModel.swift; sourceTree = "<group>"; };
 		1FBD074F262032FB00E6CC15 /* CheckListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckListModel.swift; sourceTree = "<group>"; };
+		1FBD07512620363700E6CC15 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		1FBD07532620368800E6CC15 /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
+		1FBD075526203DBD00E6CC15 /* CheckListFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckListFunctions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,9 +149,11 @@
 		1FBD074526202FD300E6CC15 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				1FBD07512620363700E6CC15 /* Data.swift */,
 				1FBD074E2620328500E6CC15 /* CheckList */,
 				1FBD074B2620315500E6CC15 /* DateTimeSelection */,
 				1FBD07482620309A00E6CC15 /* ListItem */,
+				1FBD07532620368800E6CC15 /* MockData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -184,6 +192,7 @@
 			isa = PBXGroup;
 			children = (
 				1FBD074F262032FB00E6CC15 /* CheckListModel.swift */,
+				1FBD075526203DBD00E6CC15 /* CheckListFunctions.swift */,
 			);
 			path = CheckList;
 			sourceTree = "<group>";
@@ -319,13 +328,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1FBD075626203DBD00E6CC15 /* CheckListFunctions.swift in Sources */,
 				1FBD071726202D8900E6CC15 /* ViewController.swift in Sources */,
 				1FBD074D2620316900E6CC15 /* DateTimeSelectionModel.swift in Sources */,
 				1FBD0750262032FB00E6CC15 /* CheckListModel.swift in Sources */,
 				1FBD074A262030B300E6CC15 /* ListItemModel.swift in Sources */,
+				1FBD07542620368800E6CC15 /* MockData.swift in Sources */,
 				1FBD071326202D8900E6CC15 /* AppDelegate.swift in Sources */,
 				1FBD071526202D8900E6CC15 /* SceneDelegate.swift in Sources */,
 				1FBD071D26202D8900E6CC15 /* Refresh_Lists.xcdatamodeld in Sources */,
+				1FBD07522620363700E6CC15 /* Data.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -507,7 +519,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ganeshh.Refresh-Lists";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -524,7 +536,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ganeshh.Refresh-Lists";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

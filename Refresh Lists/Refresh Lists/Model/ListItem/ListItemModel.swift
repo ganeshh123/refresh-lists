@@ -10,12 +10,14 @@ import Foundation
 
 struct ListItemModel {
     
+    let id: UUID
+    
     var title: String!
     
     init(title: String){
-        if(title != ""){
-            self.title = title
-        }
+        
+        self.id = UUID()
+        self.title = title
     }
     
 }

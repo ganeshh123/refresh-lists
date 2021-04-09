@@ -17,11 +17,28 @@ struct CheckListModel {
     var refresh: DateTimeSelectionModel
     var reminder: DateTimeSelectionModel
     
-    init(title: String){
+    init(title: String, items: [ListItemModel]?, refresh: DateTimeSelectionModel?, reminder: DateTimeSelectionModel?){
+        
         self.id = UUID()
         self.title = title
-        self.items = []
-        self.refresh = DateTimeSelectionModel(hours: [],days: [],dates: [],months: [])
-        self.reminder = DateTimeSelectionModel(hours: [],days: [],dates: [],months: [])
+        
+        if(items != nil){
+            self.items = items
+        }else{
+            self.items = []
+        }
+        
+        if(refresh != nil){
+            self.refresh = refresh!
+        }else{
+            self.refresh = DateTimeSelectionModel(hours: [],days: [],dates: [],months: [])
+        }
+        
+        if(reminder != nil){
+            self.reminder = reminder!
+        }else{
+            self.reminder = DateTimeSelectionModel(hours: [],days: [],dates: [],months: [])
+        }
+        
     }
 }
