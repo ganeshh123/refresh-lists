@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct ListItem {
+struct ListItemModel {
     
     var title: String!
     

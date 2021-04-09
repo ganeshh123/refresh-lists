@@ -17,7 +17,8 @@
 		1FBD072D26202D8B00E6CC15 /* Refresh_ListsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FBD072C26202D8B00E6CC15 /* Refresh_ListsTests.swift */; };
 		1FBD073826202D8B00E6CC15 /* Refresh_ListsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FBD073726202D8B00E6CC15 /* Refresh_ListsUITests.swift */; };
 		1FBD074A262030B300E6CC15 /* ListItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FBD0749262030B300E6CC15 /* ListItemModel.swift */; };
-		1FBD074D2620316900E6CC15 /* DateTimeSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FBD074C2620316900E6CC15 /* DateTimeSelection.swift */; };
+		1FBD074D2620316900E6CC15 /* DateTimeSelectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FBD074C2620316900E6CC15 /* DateTimeSelectionModel.swift */; };
+		1FBD0750262032FB00E6CC15 /* CheckListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FBD074F262032FB00E6CC15 /* CheckListModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,7 +55,8 @@
 		1FBD073726202D8B00E6CC15 /* Refresh_ListsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Refresh_ListsUITests.swift; sourceTree = "<group>"; };
 		1FBD073926202D8B00E6CC15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1FBD0749262030B300E6CC15 /* ListItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItemModel.swift; sourceTree = "<group>"; };
-		1FBD074C2620316900E6CC15 /* DateTimeSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateTimeSelection.swift; sourceTree = "<group>"; };
+		1FBD074C2620316900E6CC15 /* DateTimeSelectionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateTimeSelectionModel.swift; sourceTree = "<group>"; };
+		1FBD074F262032FB00E6CC15 /* CheckListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckListModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +143,7 @@
 		1FBD074526202FD300E6CC15 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				1FBD074E2620328500E6CC15 /* CheckList */,
 				1FBD074B2620315500E6CC15 /* DateTimeSelection */,
 				1FBD07482620309A00E6CC15 /* ListItem */,
 			);
@@ -172,9 +175,17 @@
 		1FBD074B2620315500E6CC15 /* DateTimeSelection */ = {
 			isa = PBXGroup;
 			children = (
-				1FBD074C2620316900E6CC15 /* DateTimeSelection.swift */,
+				1FBD074C2620316900E6CC15 /* DateTimeSelectionModel.swift */,
 			);
 			path = DateTimeSelection;
+			sourceTree = "<group>";
+		};
+		1FBD074E2620328500E6CC15 /* CheckList */ = {
+			isa = PBXGroup;
+			children = (
+				1FBD074F262032FB00E6CC15 /* CheckListModel.swift */,
+			);
+			path = CheckList;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -309,7 +320,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				1FBD071726202D8900E6CC15 /* ViewController.swift in Sources */,
-				1FBD074D2620316900E6CC15 /* DateTimeSelection.swift in Sources */,
+				1FBD074D2620316900E6CC15 /* DateTimeSelectionModel.swift in Sources */,
+				1FBD0750262032FB00E6CC15 /* CheckListModel.swift in Sources */,
 				1FBD074A262030B300E6CC15 /* ListItemModel.swift in Sources */,
 				1FBD071326202D8900E6CC15 /* AppDelegate.swift in Sources */,
 				1FBD071526202D8900E6CC15 /* SceneDelegate.swift in Sources */,

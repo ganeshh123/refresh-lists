@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct DateTimeSelection {
+struct DateTimeSelectionModel {
     
     var hours: [Int64]?
     var days: [Int64]?
