@@ -13,6 +13,8 @@ class MainViewController: UIViewController {
     
     @IBOutlet var mainView: UIView!
     @IBOutlet var screenTitleLabel: UILabel!
+    @IBOutlet var appOptionsButton: UIButton!
+    @IBOutlet var newListBotton: UIButton!
     
     
     override func viewDidLoad() {

@@ -18,7 +18,6 @@ extension UILabel {
         /* Set Font */
         self.font = self.font.withSize(34.0)
         
-        
     }
     
 }
