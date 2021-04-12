@@ -110,7 +110,6 @@
 				1F0A62332624A746007D2227 /* ThemeProtocol.swift */,
 				1F0A62352624A914007D2227 /* LightTheme.swift */,
 				1F0A62372624AAD6007D2227 /* DarkTheme.swift */,
-				1F0A623B2624BAE9007D2227 /* Theme.swift */,
 			);
 			path = Theme;
 			sourceTree = "<group>";
@@ -186,6 +185,7 @@
 		1FBD074626202FF900E6CC15 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				1F0A623B2624BAE9007D2227 /* Theme.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
