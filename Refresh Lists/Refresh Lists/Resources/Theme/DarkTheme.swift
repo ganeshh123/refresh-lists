@@ -15,6 +15,7 @@ struct DarkTheme: ThemeProtocol{
     var appBackgroundColor: UIColor = UIColor(named: "dark_app_background")!
     var greenColor: UIColor = UIColor(named: "dark_green")!
     var redColor: UIColor = UIColor(named: "dark_red")!
+    var grayColor: UIColor = UIColor(named: "dark_gray")!
     var listBgBlueColor: UIColor = UIColor(named: "dark_list_bg_blue")!
     var listBgGreenColor: UIColor = UIColor(named: "dark_list_bg_green")!
     var listBgPinkColor: UIColor = UIColor(named: "dark_list_bg_pink")!

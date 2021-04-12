@@ -15,6 +15,7 @@ protocol ThemeProtocol{
     var appBackgroundColor: UIColor {get}
     var greenColor: UIColor {get}
     var redColor: UIColor {get}
+    var grayColor: UIColor {get}
     var listBgBlueColor: UIColor {get}
     var listBgGreenColor: UIColor {get}
     var listBgPinkColor: UIColor {get}

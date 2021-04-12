@@ -15,6 +15,7 @@ struct LightTheme: ThemeProtocol{
     var appBackgroundColor: UIColor = UIColor(named: "light_app_background")!
     var greenColor: UIColor = UIColor(named: "light_green")!
     var redColor: UIColor = UIColor(named: "light_red")!
+    var grayColor: UIColor = UIColor(named: "light_gray")!
     var listBgBlueColor: UIColor = UIColor(named: "light_list_bg_blue")!
     var listBgGreenColor: UIColor = UIColor(named: "light_list_bg_green")!
     var listBgPinkColor: UIColor = UIColor(named: "light_list_bg_pink")!
