@@ -58,5 +58,10 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>UIAppFonts</key>
+	<array>
+		<string>font_raleway.tff</string>
+		<string>font_shortstack.tff</string>
+	</array>
 </dict>
 </plist>
