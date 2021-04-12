@@ -14,6 +14,7 @@
 		1F0A623A2624ABA0007D2227 /* Icons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F0A62392624ABA0007D2227 /* Icons.xcassets */; };
 		1F0A623C2624BAE9007D2227 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0A623B2624BAE9007D2227 /* Theme.swift */; };
 		1F0A623E2624BE79007D2227 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0A623D2624BE79007D2227 /* MainViewController.swift */; };
+		1FBB8EE92624C38900BFB47E /* UILabelExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FBB8EE82624C38900BFB47E /* UILabelExtensions.swift */; };
 		1FBD071326202D8900E6CC15 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FBD071226202D8900E6CC15 /* AppDelegate.swift */; };
 		1FBD071526202D8900E6CC15 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FBD071426202D8900E6CC15 /* SceneDelegate.swift */; };
 		1FBD071726202D8900E6CC15 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FBD071626202D8900E6CC15 /* ViewController.swift */; };
@@ -58,6 +59,7 @@
 		1F0A62392624ABA0007D2227 /* Icons.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Icons.xcassets; sourceTree = "<group>"; };
 		1F0A623B2624BAE9007D2227 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		1F0A623D2624BE79007D2227 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		1FBB8EE82624C38900BFB47E /* UILabelExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabelExtensions.swift; sourceTree = "<group>"; };
 		1FBD070F26202D8900E6CC15 /* Refresh Lists.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Refresh Lists.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FBD071226202D8900E6CC15 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1FBD071426202D8900E6CC15 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -133,6 +135,21 @@
 			path = LaunchView;
 			sourceTree = "<group>";
 		};
+		1FBB8EE42624C29100BFB47E /* Components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		1FBB8EE72624C37500BFB47E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				1FBB8EE82624C38900BFB47E /* UILabelExtensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		1FBD070626202D8900E6CC15 = {
 			isa = PBXGroup;
 			children = (
@@ -156,6 +173,7 @@
 		1FBD071126202D8900E6CC15 /* Refresh Lists */ = {
 			isa = PBXGroup;
 			children = (
+				1FBB8EE42624C29100BFB47E /* Components */,
 				1FBD07472620303200E6CC15 /* Resources */,
 				1FBD074626202FF900E6CC15 /* Views */,
 				1FBD074526202FD300E6CC15 /* Model */,
@@ -212,6 +230,7 @@
 		1FBD07472620303200E6CC15 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				1FBB8EE72624C37500BFB47E /* Extensions */,
 				1F0A62322624A684007D2227 /* font_shortstack.ttf */,
 				1F0A62312624A661007D2227 /* font_raleway.ttf */,
 				1F0A622D2624A127007D2227 /* Colors.xcassets */,
@@ -379,6 +398,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1FBB8EE92624C38900BFB47E /* UILabelExtensions.swift in Sources */,
 				1FBD075626203DBD00E6CC15 /* CheckListFunctions.swift in Sources */,
 				1FBD071726202D8900E6CC15 /* ViewController.swift in Sources */,
 				1FBD074D2620316900E6CC15 /* DateTimeSelectionModel.swift in Sources */,

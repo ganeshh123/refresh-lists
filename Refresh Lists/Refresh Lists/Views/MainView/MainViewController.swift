@@ -9,11 +9,19 @@
 import UIKit
 
 class MainViewController: UIViewController {
-
+    
+    
+    @IBOutlet var mainView: UIView!
+    @IBOutlet var screenTitleLabel: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        screenTitleLabel.makeScreenTitleLabel()
+        
     }
     
 
