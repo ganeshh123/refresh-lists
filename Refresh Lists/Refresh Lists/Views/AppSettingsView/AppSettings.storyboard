@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="oBY-4X-gWg">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--App Settings View Controller-->
+        <scene sceneID="lxP-Rp-2CE">
+            <objects>
+                <viewController id="oBY-4X-gWg" customClass="AppSettingsViewController" customModule="Refresh_Lists" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DzR-QS-KZc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lfg-8M-0GL">
+                                <rect key="frame" x="103" y="60" width="252" height="125"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="nSR-7W-Y4n" userLabel="themeSwitchButtonStackView">
+                                        <rect key="frame" x="28.5" y="18" width="195" height="45"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="icon_sunmoon" translatesAutoresizingMaskIntoConstraints="NO" id="Trl-RJ-d8n">
+                                                <rect key="frame" x="0.0" y="13.5" width="17" height="18"/>
+                                                <color key="tintColor" name="light_app_accent"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="17" id="Xxi-et-n39"/>
+                                                    <constraint firstAttribute="height" constant="18.420000000000002" id="o1n-TA-NFm"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Switch Theme" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7LP-gh-Wwa">
+                                                <rect key="frame" x="45" y="12.5" width="150" height="20"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="45" id="C0V-pM-qwZ"/>
+                                            <constraint firstAttribute="width" constant="195" id="xsA-Ov-ecJ"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="252" id="5Ta-gM-OaD"/>
+                                    <constraint firstItem="nSR-7W-Y4n" firstAttribute="top" secondItem="Lfg-8M-0GL" secondAttribute="top" constant="18" id="RdY-NB-RhF"/>
+                                    <constraint firstItem="nSR-7W-Y4n" firstAttribute="centerX" secondItem="Lfg-8M-0GL" secondAttribute="centerX" id="YA7-Dr-Xwp"/>
+                                    <constraint firstAttribute="height" constant="125" id="sSH-vN-cMz"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="Lfg-8M-0GL" firstAttribute="top" secondItem="sba-es-6kX" secondAttribute="top" constant="60" id="pmu-VJ-gLO"/>
+                            <constraint firstItem="sba-es-6kX" firstAttribute="trailing" secondItem="Lfg-8M-0GL" secondAttribute="trailing" constant="20" id="qwD-na-aZ2"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="sba-es-6kX"/>
+                    </view>
+                    <connections>
+                        <outlet property="settingsViewModal" destination="Lfg-8M-0GL" id="UhM-jA-CYD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WSH-zA-kZb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1535.2" y="218.1409295352324"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="icon_sunmoon" width="472" height="500"/>
+        <namedColor name="light_app_accent">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

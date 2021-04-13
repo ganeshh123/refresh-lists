@@ -14,6 +14,11 @@
 		1F0A623A2624ABA0007D2227 /* Icons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F0A62392624ABA0007D2227 /* Icons.xcassets */; };
 		1F0A623C2624BAE9007D2227 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0A623B2624BAE9007D2227 /* Theme.swift */; };
 		1F0A623E2624BE79007D2227 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0A623D2624BE79007D2227 /* MainViewController.swift */; };
+		1F6D0EE72625E4F100623061 /* SettingsButtonStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6D0EE62625E4F100623061 /* SettingsButtonStackView.swift */; };
+		1FB470612625C8CE00B6A6DA /* ModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB470602625C8CE00B6A6DA /* ModalView.swift */; };
+		1FB470642625CA0F00B6A6DA /* AppSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB470622625CA0F00B6A6DA /* AppSettingsViewController.swift */; };
+		1FB470672625CA4B00B6A6DA /* AppSettings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FB470662625CA4B00B6A6DA /* AppSettings.storyboard */; };
+		1FB470692625D22600B6A6DA /* UIButtonExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB470682625D22600B6A6DA /* UIButtonExtensions.swift */; };
 		1FBB8EE92624C38900BFB47E /* UILabelExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FBB8EE82624C38900BFB47E /* UILabelExtensions.swift */; };
 		1FBD071326202D8900E6CC15 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FBD071226202D8900E6CC15 /* AppDelegate.swift */; };
 		1FBD071526202D8900E6CC15 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FBD071426202D8900E6CC15 /* SceneDelegate.swift */; };
@@ -59,6 +64,11 @@
 		1F0A62392624ABA0007D2227 /* Icons.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Icons.xcassets; sourceTree = "<group>"; };
 		1F0A623B2624BAE9007D2227 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		1F0A623D2624BE79007D2227 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		1F6D0EE62625E4F100623061 /* SettingsButtonStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsButtonStackView.swift; sourceTree = "<group>"; };
+		1FB470602625C8CE00B6A6DA /* ModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalView.swift; sourceTree = "<group>"; };
+		1FB470622625CA0F00B6A6DA /* AppSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettingsViewController.swift; sourceTree = "<group>"; };
+		1FB470662625CA4B00B6A6DA /* AppSettings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AppSettings.storyboard; sourceTree = "<group>"; };
+		1FB470682625D22600B6A6DA /* UIButtonExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtensions.swift; sourceTree = "<group>"; };
 		1FBB8EE82624C38900BFB47E /* UILabelExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabelExtensions.swift; sourceTree = "<group>"; };
 		1FBD070F26202D8900E6CC15 /* Refresh Lists.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Refresh Lists.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FBD071226202D8900E6CC15 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -135,6 +145,23 @@
 			path = LaunchView;
 			sourceTree = "<group>";
 		};
+		1F6D0EE52625E4C600623061 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				1F6D0EE62625E4F100623061 /* SettingsButtonStackView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		1FB4705F2625C82300B6A6DA /* AppSettingsView */ = {
+			isa = PBXGroup;
+			children = (
+				1FB470622625CA0F00B6A6DA /* AppSettingsViewController.swift */,
+				1FB470662625CA4B00B6A6DA /* AppSettings.storyboard */,
+			);
+			path = AppSettingsView;
+			sourceTree = "<group>";
+		};
 		1FBB8EE42624C29100BFB47E /* Components */ = {
 			isa = PBXGroup;
 			children = (
@@ -146,6 +173,8 @@
 			isa = PBXGroup;
 			children = (
 				1FBB8EE82624C38900BFB47E /* UILabelExtensions.swift */,
+				1FB470602625C8CE00B6A6DA /* ModalView.swift */,
+				1FB470682625D22600B6A6DA /* UIButtonExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -220,6 +249,8 @@
 		1FBD074626202FF900E6CC15 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				1F6D0EE52625E4C600623061 /* Components */,
+				1FB4705F2625C82300B6A6DA /* AppSettingsView */,
 				1F0A62402624BEA9007D2227 /* LaunchView */,
 				1F0A623F2624BE8E007D2227 /* MainView */,
 				1F0A623B2624BAE9007D2227 /* Theme.swift */,
@@ -374,6 +405,7 @@
 				1FBD071F26202D8B00E6CC15 /* Assets.xcassets in Resources */,
 				1FBD071A26202D8900E6CC15 /* Main.storyboard in Resources */,
 				1F0A623A2624ABA0007D2227 /* Icons.xcassets in Resources */,
+				1FB470672625CA4B00B6A6DA /* AppSettings.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -399,8 +431,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				1FBB8EE92624C38900BFB47E /* UILabelExtensions.swift in Sources */,
+				1FB470642625CA0F00B6A6DA /* AppSettingsViewController.swift in Sources */,
+				1F6D0EE72625E4F100623061 /* SettingsButtonStackView.swift in Sources */,
+				1FB470692625D22600B6A6DA /* UIButtonExtensions.swift in Sources */,
 				1FBD075626203DBD00E6CC15 /* CheckListFunctions.swift in Sources */,
 				1FBD071726202D8900E6CC15 /* ViewController.swift in Sources */,
+				1FB470612625C8CE00B6A6DA /* ModalView.swift in Sources */,
 				1FBD074D2620316900E6CC15 /* DateTimeSelectionModel.swift in Sources */,
 				1FBD0750262032FB00E6CC15 /* CheckListModel.swift in Sources */,
 				1F0A62342624A746007D2227 /* ThemeProtocol.swift in Sources */,

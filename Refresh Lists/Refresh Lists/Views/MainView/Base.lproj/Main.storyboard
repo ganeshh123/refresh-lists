@@ -30,6 +30,9 @@
                                 </constraints>
                                 <color key="tintColor" name="light_app_accent"/>
                                 <state key="normal" image="icon_options"/>
+                                <connections>
+                                    <segue destination="jfV-O0-kkd" kind="presentation" identifier="toSettingsSegue" id="Pd8-OI-YxF"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F3v-H9-S9i">
                                 <rect key="frame" x="267" y="20" width="34" height="34"/>
@@ -64,6 +67,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RSJ-g0-ssp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="135" y="115"/>
+        </scene>
+        <!--AppSettings-->
+        <scene sceneID="O4X-Qw-5oq">
+            <objects>
+                <viewControllerPlaceholder storyboardName="AppSettings" id="jfV-O0-kkd" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Wuk-iG-btv"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kU2-zj-IDo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="792" y="-144"/>
         </scene>
     </scenes>
     <resources>
