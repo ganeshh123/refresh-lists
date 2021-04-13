@@ -37,6 +37,12 @@ class AppSettingsViewController: UIViewController {
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
+
+        if let firstVC = presentingViewController as? MainViewController {
+            DispatchQueue.main.async {
+                firstVC.viewDidLoad()
+            }
+        }
     }
 
 
@@ -55,11 +61,6 @@ class AppSettingsViewController: UIViewController {
     @IBAction func themeSwitchPressed(_ sender: UIButton) {
         Theme.switchTheme()
         self.dismiss(animated: true, completion: nil)
-        if let firstVC = presentingViewController as? MainViewController {
-            DispatchQueue.main.async {
-                firstVC.viewDidLoad()
-            }
-        }
     }
     
     
