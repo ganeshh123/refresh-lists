@@ -19,10 +19,9 @@ extension UIView {
         
         /* Set Corner Radius*/
         self.layer.cornerRadius = 10
-    }
-    
-    func setModalBackground(color: UIColor){
-         self.backgroundColor = color
+        
+        /* Set Colors */
+        self.backgroundColor = Theme.current.appBackgroundColor
     }
     
 }

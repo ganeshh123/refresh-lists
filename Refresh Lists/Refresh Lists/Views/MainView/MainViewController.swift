@@ -14,13 +14,18 @@ class MainViewController: UIViewController {
     @IBOutlet var mainView: UIView!
     @IBOutlet var screenTitleLabel: UILabel!
     @IBOutlet var appOptionsButton: UIButton!
-    @IBOutlet var newListBotton: UIButton!
+    @IBOutlet var newListButton: UIButton!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        mainView.backgroundColor = Theme.current.appBackgroundColor
+        
+        /* Setup Buttons */
+        appOptionsButton.makeMainAppButton()
+        newListButton.makeMainAppButton()
         
         screenTitleLabel.makeScreenTitleLabel()
         
@@ -36,5 +41,11 @@ class MainViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    @IBAction func appOptionsPressed(_ sender: UIButton) {
+        
+       
+    }
+    
 
 }

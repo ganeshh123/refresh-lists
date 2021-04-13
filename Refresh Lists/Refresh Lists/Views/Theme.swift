@@ -15,16 +15,30 @@ class Theme {
         if(UserDefaults.standard.object(forKey: "LightTheme") != nil){
             if(UserDefaults.standard.bool(forKey: "LightTheme") == true){
                 Theme.current = LightTheme()
+                print("Read Light Theme from Settings")
             }else{
                 Theme.current = DarkTheme()
+                print("Read Dark Theme from Settings")
             }
         }else{
             Theme.current = LightTheme()
         }
-        print("Set Theme from Settings")
     }
     
-    static func setThemeSetting(lightThemeChosen: Bool){
-        UserDefaults.standard.set(lightThemeChosen, forKey: "LightTheme")
+    static func switchTheme(){
+        if(UserDefaults.standard.object(forKey: "LightTheme") != nil){
+            if(UserDefaults.standard.bool(forKey: "LightTheme") == true){
+                UserDefaults.standard.set(false, forKey: "LightTheme")
+                print("Set Theme to Dark")
+            }else{
+                UserDefaults.standard.set(true, forKey: "LightTheme")
+                print("Set Theme to Light")
+            }
+        }else{
+            UserDefaults.standard.set(true, forKey: "LightTheme")
+            print("Set Theme to Light")
+        }
+        
+        self.getThemeSetting()
     }
 }

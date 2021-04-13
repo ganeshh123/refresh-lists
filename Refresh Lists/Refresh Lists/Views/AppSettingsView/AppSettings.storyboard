@@ -3,7 +3,6 @@
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
-        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -19,35 +18,36 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lfg-8M-0GL">
                                 <rect key="frame" x="103" y="60" width="252" height="125"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="nSR-7W-Y4n" userLabel="themeSwitchButtonStackView">
-                                        <rect key="frame" x="28.5" y="18" width="195" height="45"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="IoU-ea-vhF" userLabel="SettingsButtonsStackView">
+                                        <rect key="frame" x="28.5" y="17.5" width="195" height="90"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="icon_sunmoon" translatesAutoresizingMaskIntoConstraints="NO" id="Trl-RJ-d8n">
-                                                <rect key="frame" x="0.0" y="13.5" width="17" height="18"/>
-                                                <color key="tintColor" name="light_app_accent"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UK3-cF-86B">
+                                                <rect key="frame" x="0.0" y="0.0" width="195" height="45"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="17" id="Xxi-et-n39"/>
-                                                    <constraint firstAttribute="height" constant="18.420000000000002" id="o1n-TA-NFm"/>
+                                                    <constraint firstAttribute="width" constant="195" id="O3W-x3-FFg"/>
+                                                    <constraint firstAttribute="height" constant="45" id="Rsg-fq-nq8"/>
                                                 </constraints>
-                                            </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Switch Theme" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7LP-gh-Wwa">
-                                                <rect key="frame" x="45" y="12.5" width="150" height="20"/>
-                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
+                                                <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="themeSwitchPressed:" destination="oBY-4X-gWg" eventType="touchUpInside" id="hGq-lW-yl8"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VwW-9M-QOT">
+                                                <rect key="frame" x="0.0" y="45" width="195" height="45"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="45" id="Mfn-Ba-Nk5"/>
+                                                    <constraint firstAttribute="width" constant="195" id="THJ-ZZ-g9m"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                            </button>
                                         </subviews>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="45" id="C0V-pM-qwZ"/>
-                                            <constraint firstAttribute="width" constant="195" id="xsA-Ov-ecJ"/>
-                                        </constraints>
                                     </stackView>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
+                                    <constraint firstItem="IoU-ea-vhF" firstAttribute="centerX" secondItem="Lfg-8M-0GL" secondAttribute="centerX" id="2Ji-FS-t3H"/>
                                     <constraint firstAttribute="width" constant="252" id="5Ta-gM-OaD"/>
-                                    <constraint firstItem="nSR-7W-Y4n" firstAttribute="top" secondItem="Lfg-8M-0GL" secondAttribute="top" constant="18" id="RdY-NB-RhF"/>
-                                    <constraint firstItem="nSR-7W-Y4n" firstAttribute="centerX" secondItem="Lfg-8M-0GL" secondAttribute="centerX" id="YA7-Dr-Xwp"/>
+                                    <constraint firstItem="IoU-ea-vhF" firstAttribute="centerY" secondItem="Lfg-8M-0GL" secondAttribute="centerY" id="OGQ-qu-nv5"/>
                                     <constraint firstAttribute="height" constant="125" id="sSH-vN-cMz"/>
                                 </constraints>
                             </view>
@@ -59,7 +59,10 @@
                         <viewLayoutGuide key="safeArea" id="sba-es-6kX"/>
                     </view>
                     <connections>
+                        <outlet property="aboutButton" destination="VwW-9M-QOT" id="S4O-Dl-rAh"/>
+                        <outlet property="outsideView" destination="DzR-QS-KZc" id="maZ-ZS-tJ1"/>
                         <outlet property="settingsViewModal" destination="Lfg-8M-0GL" id="UhM-jA-CYD"/>
+                        <outlet property="themeSwitchButton" destination="UK3-cF-86B" id="J2V-8d-1FZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WSH-zA-kZb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -67,10 +70,4 @@
             <point key="canvasLocation" x="-1535.2" y="218.1409295352324"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="icon_sunmoon" width="472" height="500"/>
-        <namedColor name="light_app_accent">
-            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-    </resources>
 </document>

@@ -31,7 +31,10 @@
                                 <color key="tintColor" name="light_app_accent"/>
                                 <state key="normal" image="icon_options"/>
                                 <connections>
-                                    <segue destination="jfV-O0-kkd" kind="presentation" identifier="toSettingsSegue" id="Pd8-OI-YxF"/>
+                                    <action selector="appOptionsPressed:" destination="XIV-oP-iG3" eventType="touchUpInside" id="Bu2-4V-Z8a"/>
+                                    <segue destination="5XC-qf-yCD" kind="popoverPresentation" popoverAnchorView="yuq-fD-7vp" id="3gM-bm-SkE">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F3v-H9-S9i">
@@ -60,7 +63,7 @@
                     <connections>
                         <outlet property="appOptionsButton" destination="yuq-fD-7vp" id="RtI-Fn-02j"/>
                         <outlet property="mainView" destination="QCL-he-ITR" id="pi0-C6-Fka"/>
-                        <outlet property="newListBotton" destination="F3v-H9-S9i" id="uAa-2w-npo"/>
+                        <outlet property="newListButton" destination="F3v-H9-S9i" id="uAa-2w-npo"/>
                         <outlet property="screenTitleLabel" destination="W58-Yf-vem" id="dGf-Ng-48D"/>
                     </connections>
                 </viewController>
@@ -69,14 +72,12 @@
             <point key="canvasLocation" x="135" y="115"/>
         </scene>
         <!--AppSettings-->
-        <scene sceneID="O4X-Qw-5oq">
+        <scene sceneID="Hze-gQ-Xqf">
             <objects>
-                <viewControllerPlaceholder storyboardName="AppSettings" id="jfV-O0-kkd" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="Wuk-iG-btv"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="kU2-zj-IDo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="AppSettings" id="5XC-qf-yCD" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="geW-ZQ-28p" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="792" y="-144"/>
+            <point key="canvasLocation" x="731" y="71"/>
         </scene>
     </scenes>
     <resources>
