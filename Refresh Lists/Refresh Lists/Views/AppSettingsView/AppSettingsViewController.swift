@@ -20,19 +20,15 @@ class AppSettingsViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         
-        outsideTapToDismiss()
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.outsideViewTouched(sender:)))
+        outsideView.isUserInteractionEnabled = true
+        outsideView.addGestureRecognizer(tap)
         
         settingsViewModal.makeModalView()
         
         themeSwitchButton.makeSettingsButton(title: "Switch Theme", icon: UIImage(named: "icon_sunmoon")!)
         
         aboutButton.makeSettingsButton(title: "About", icon: UIImage(named: "icon_info")!)
-    }
-    
-    func outsideTapToDismiss(){
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.outsideViewTouched(sender:)))
-        outsideView.isUserInteractionEnabled = true
-        outsideView.addGestureRecognizer(tap)
     }
     
     @objc func outsideViewTouched(sender: UITapGestureRecognizer? = nil) {
@@ -59,9 +55,9 @@ class AppSettingsViewController: UIViewController {
     @IBAction func themeSwitchPressed(_ sender: UIButton) {
         Theme.switchTheme()
         self.dismiss(animated: true, completion: nil)
-        if let mainViewController = presentingViewController as? MainViewController {
+        if let firstVC = presentingViewController as? MainViewController {
             DispatchQueue.main.async {
-                mainViewController.viewDidLoad()
+                firstVC.viewDidLoad()
             }
         }
     }
