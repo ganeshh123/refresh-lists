@@ -9,8 +9,8 @@
 import UIKit
 
 struct LightTheme: ThemeProtocol{
-    var sansFont: String = "font_raleway"
-    var handwritingFont: String = "font_shortstack"
+    var sansFont: String = "RalewayRoman-Regular"
+    var handwritingFont: String = "ShortStack"
     var appAccentColor: UIColor = UIColor(named: "light_app_accent")!
     var appBackgroundColor: UIColor = UIColor(named: "light_app_background")!
     var greenColor: UIColor = UIColor(named: "light_green")!

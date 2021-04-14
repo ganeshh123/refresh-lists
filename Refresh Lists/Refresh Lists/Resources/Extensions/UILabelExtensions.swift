@@ -20,4 +20,17 @@ extension UILabel {
         
     }
     
+    func makeCheckListCardTitle(title: String){
+        
+        /* Set Colors */
+        self.textColor = Theme.current.appAccentColor
+        
+        /* Set Fonts */
+        self.font = UIFont(name: Theme.current.handwritingFont, size: 22)
+        
+        /* Set Values */
+        self.text = title
+        
+    }
+    
 }

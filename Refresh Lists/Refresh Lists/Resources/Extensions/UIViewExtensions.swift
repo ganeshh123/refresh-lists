@@ -24,4 +24,20 @@ extension UIView {
         self.backgroundColor = Theme.current.appBackgroundColor
     }
     
+    func makeCheckListCardView(checkList: CheckListModel) {
+        
+        /* Set Colors */
+        self.backgroundColor = checkList.color
+        
+        /* Set Shadows */
+        self.layer.shadowOpacity = 1
+        self.layer.shadowOffset = CGSize.zero
+        self.layer.shadowColor = UIColor.darkGray.cgColor
+        
+        /* Set Corner Radius*/
+        self.layer.cornerRadius = 10
+        
+        /* Set Dimensions */
+    }
+    
 }

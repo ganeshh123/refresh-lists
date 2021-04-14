@@ -15,6 +15,7 @@ class MainViewController: UIViewController {
     @IBOutlet var screenTitleLabel: UILabel!
     @IBOutlet var appOptionsButton: UIButton!
     @IBOutlet var newListButton: UIButton!
+    @IBOutlet var checkListsTableView: UITableView!
     
     
     override func viewDidLoad() {
@@ -28,6 +29,13 @@ class MainViewController: UIViewController {
         newListButton.makeMainAppButton()
         
         screenTitleLabel.makeScreenTitleLabel()
+        
+        checkListsTableView.dataSource = self
+        checkListsTableView.delegate = self
+        CheckListFunctions.readCheckLists { [unowned self] in
+            print("Read Main Data")
+            self.checkListsTableView.reloadData()
+        }
         
     }
     

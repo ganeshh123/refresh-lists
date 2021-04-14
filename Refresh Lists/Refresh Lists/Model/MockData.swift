@@ -21,7 +21,52 @@ class MockData {
                 refresh: createMockRefreshDateTimeSelectionModelData(),
                 reminder: createMockReminderDateTimeSelectionModelData()
             )
+            
         )
+        
+        models.append(
+            CheckListModel(
+                title: "Bedtime Pills",
+                items: createMockShoppingListItemModelData(),
+                refresh: createMockRefreshDateTimeSelectionModelData(),
+                reminder: createMockReminderDateTimeSelectionModelData(),
+                color: Theme.current.listBgGreenColor
+            )
+            
+        )
+        
+        models.append(
+            CheckListModel(
+                title: "Utility Bills",
+                items: createMockShoppingListItemModelData(),
+                refresh: createMockRefreshDateTimeSelectionModelData(),
+                reminder: createMockReminderDateTimeSelectionModelData(),
+                color: Theme.current.listBgBlueColor
+            )
+            
+        )
+        
+        models.append(
+            CheckListModel(
+                title: "Fishing Supplies",
+                items: createMockShoppingListItemModelData(),
+                refresh: createMockRefreshDateTimeSelectionModelData(),
+                reminder: createMockReminderDateTimeSelectionModelData(),
+                color: Theme.current.listBgPinkColor
+            )
+            
+        )
+
+        models.append(
+            CheckListModel(
+                title: "Phone Backup",
+                items: createMockShoppingListItemModelData(),
+                refresh: createMockRefreshDateTimeSelectionModelData(),
+                reminder: createMockReminderDateTimeSelectionModelData()
+            )
+            
+        )
+
         
         return models
     }

@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 struct CheckListModel {
     
@@ -16,8 +17,9 @@ struct CheckListModel {
     var items: [ListItemModel]?
     var refresh: DateTimeSelectionModel
     var reminder: DateTimeSelectionModel
+    var color: UIColor
     
-    init(title: String, items: [ListItemModel]?, refresh: DateTimeSelectionModel?, reminder: DateTimeSelectionModel?){
+    init(title: String, items: [ListItemModel]?, refresh: DateTimeSelectionModel?, reminder: DateTimeSelectionModel?, color: UIColor? = Theme.current.listBgSandColor){
         
         self.id = UUID()
         self.title = title
@@ -40,5 +42,7 @@ struct CheckListModel {
             self.reminder = DateTimeSelectionModel(hours: [],days: [],dates: [],months: [])
         }
         
+        self.color = color!
+
     }
 }

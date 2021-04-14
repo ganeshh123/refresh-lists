@@ -14,8 +14,7 @@
 		1F0A623A2624ABA0007D2227 /* Icons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F0A62392624ABA0007D2227 /* Icons.xcassets */; };
 		1F0A623C2624BAE9007D2227 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0A623B2624BAE9007D2227 /* Theme.swift */; };
 		1F0A623E2624BE79007D2227 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0A623D2624BE79007D2227 /* MainViewController.swift */; };
-		1F6D0EE72625E4F100623061 /* SettingsButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6D0EE62625E4F100623061 /* SettingsButton.swift */; };
-		1FB470612625C8CE00B6A6DA /* ModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB470602625C8CE00B6A6DA /* ModalView.swift */; };
+		1FB470612625C8CE00B6A6DA /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB470602625C8CE00B6A6DA /* UIViewExtensions.swift */; };
 		1FB470642625CA0F00B6A6DA /* AppSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB470622625CA0F00B6A6DA /* AppSettingsViewController.swift */; };
 		1FB470672625CA4B00B6A6DA /* AppSettings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FB470662625CA4B00B6A6DA /* AppSettings.storyboard */; };
 		1FB470692625D22600B6A6DA /* UIButtonExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB470682625D22600B6A6DA /* UIButtonExtensions.swift */; };
@@ -35,6 +34,10 @@
 		1FBD07522620363700E6CC15 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FBD07512620363700E6CC15 /* Data.swift */; };
 		1FBD07542620368800E6CC15 /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FBD07532620368800E6CC15 /* MockData.swift */; };
 		1FBD075626203DBD00E6CC15 /* CheckListFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FBD075526203DBD00E6CC15 /* CheckListFunctions.swift */; };
+		1FCB24C9262718550038ED0B /* font_shortstack.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1F0A62322624A684007D2227 /* font_shortstack.ttf */; };
+		1FCB24CA262718590038ED0B /* font_raleway.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1F0A62312624A661007D2227 /* font_raleway.ttf */; };
+		1FE4C9A826262B91003BE873 /* CheckListsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE4C9A726262B91003BE873 /* CheckListsTableViewCell.swift */; };
+		1FE4C9AA26262C0C003BE873 /* CheckListsTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE4C9A926262C0C003BE873 /* CheckListsTableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,16 +59,15 @@
 
 /* Begin PBXFileReference section */
 		1F0A622D2624A127007D2227 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
-		1F0A62312624A661007D2227 /* font_raleway.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = font_raleway.ttf; path = ../../../../../../Desktop/Raleway/font_raleway.ttf; sourceTree = "<group>"; };
-		1F0A62322624A684007D2227 /* font_shortstack.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = font_shortstack.ttf; path = ../../../../../../Desktop/font_shortstack.ttf; sourceTree = "<group>"; };
+		1F0A62312624A661007D2227 /* font_raleway.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = font_raleway.ttf; path = "Refresh Lists/Resources/font_raleway.ttf"; sourceTree = SOURCE_ROOT; };
+		1F0A62322624A684007D2227 /* font_shortstack.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = font_shortstack.ttf; path = "Refresh Lists/Resources/font_shortstack.ttf"; sourceTree = SOURCE_ROOT; };
 		1F0A62332624A746007D2227 /* ThemeProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeProtocol.swift; sourceTree = "<group>"; };
 		1F0A62352624A914007D2227 /* LightTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightTheme.swift; sourceTree = "<group>"; };
 		1F0A62372624AAD6007D2227 /* DarkTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarkTheme.swift; sourceTree = "<group>"; };
 		1F0A62392624ABA0007D2227 /* Icons.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Icons.xcassets; sourceTree = "<group>"; };
 		1F0A623B2624BAE9007D2227 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		1F0A623D2624BE79007D2227 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
-		1F6D0EE62625E4F100623061 /* SettingsButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsButton.swift; sourceTree = "<group>"; };
-		1FB470602625C8CE00B6A6DA /* ModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalView.swift; sourceTree = "<group>"; };
+		1FB470602625C8CE00B6A6DA /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
 		1FB470622625CA0F00B6A6DA /* AppSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettingsViewController.swift; sourceTree = "<group>"; };
 		1FB470662625CA4B00B6A6DA /* AppSettings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AppSettings.storyboard; sourceTree = "<group>"; };
 		1FB470682625D22600B6A6DA /* UIButtonExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtensions.swift; sourceTree = "<group>"; };
@@ -91,6 +93,8 @@
 		1FBD07512620363700E6CC15 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		1FBD07532620368800E6CC15 /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
 		1FBD075526203DBD00E6CC15 /* CheckListFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckListFunctions.swift; sourceTree = "<group>"; };
+		1FE4C9A726262B91003BE873 /* CheckListsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckListsTableViewCell.swift; sourceTree = "<group>"; };
+		1FE4C9A926262C0C003BE873 /* CheckListsTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckListsTableView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +149,15 @@
 			path = LaunchView;
 			sourceTree = "<group>";
 		};
+		1F9259592626277000350C0B /* CheckListsTableView */ = {
+			isa = PBXGroup;
+			children = (
+				1FE4C9A926262C0C003BE873 /* CheckListsTableView.swift */,
+				1FE4C9A726262B91003BE873 /* CheckListsTableViewCell.swift */,
+			);
+			path = CheckListsTableView;
+			sourceTree = "<group>";
+		};
 		1FB4705F2625C82300B6A6DA /* AppSettingsView */ = {
 			isa = PBXGroup;
 			children = (
@@ -157,7 +170,6 @@
 		1FBB8EE42624C29100BFB47E /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				1F6D0EE62625E4F100623061 /* SettingsButton.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -166,7 +178,7 @@
 			isa = PBXGroup;
 			children = (
 				1FBB8EE82624C38900BFB47E /* UILabelExtensions.swift */,
-				1FB470602625C8CE00B6A6DA /* ModalView.swift */,
+				1FB470602625C8CE00B6A6DA /* UIViewExtensions.swift */,
 				1FB470682625D22600B6A6DA /* UIButtonExtensions.swift */,
 			);
 			path = Extensions;
@@ -242,6 +254,8 @@
 		1FBD074626202FF900E6CC15 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				1FCB24CB262779FF0038ED0B /* CheckListView */,
+				1F9259592626277000350C0B /* CheckListsTableView */,
 				1FB4705F2625C82300B6A6DA /* AppSettingsView */,
 				1F0A62402624BEA9007D2227 /* LaunchView */,
 				1F0A623F2624BE8E007D2227 /* MainView */,
@@ -286,6 +300,13 @@
 				1FBD075526203DBD00E6CC15 /* CheckListFunctions.swift */,
 			);
 			path = CheckList;
+			sourceTree = "<group>";
+		};
+		1FCB24CB262779FF0038ED0B /* CheckListView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CheckListView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -395,9 +416,11 @@
 				1FBD072226202D8B00E6CC15 /* LaunchScreen.storyboard in Resources */,
 				1F0A622E2624A127007D2227 /* Colors.xcassets in Resources */,
 				1FBD071F26202D8B00E6CC15 /* Assets.xcassets in Resources */,
+				1FCB24C9262718550038ED0B /* font_shortstack.ttf in Resources */,
 				1FBD071A26202D8900E6CC15 /* Main.storyboard in Resources */,
 				1F0A623A2624ABA0007D2227 /* Icons.xcassets in Resources */,
 				1FB470672625CA4B00B6A6DA /* AppSettings.storyboard in Resources */,
+				1FCB24CA262718590038ED0B /* font_raleway.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -422,13 +445,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1FE4C9AA26262C0C003BE873 /* CheckListsTableView.swift in Sources */,
 				1FBB8EE92624C38900BFB47E /* UILabelExtensions.swift in Sources */,
 				1FB470642625CA0F00B6A6DA /* AppSettingsViewController.swift in Sources */,
-				1F6D0EE72625E4F100623061 /* SettingsButton.swift in Sources */,
 				1FB470692625D22600B6A6DA /* UIButtonExtensions.swift in Sources */,
 				1FBD075626203DBD00E6CC15 /* CheckListFunctions.swift in Sources */,
+				1FE4C9A826262B91003BE873 /* CheckListsTableViewCell.swift in Sources */,
 				1FBD071726202D8900E6CC15 /* ViewController.swift in Sources */,
-				1FB470612625C8CE00B6A6DA /* ModalView.swift in Sources */,
+				1FB470612625C8CE00B6A6DA /* UIViewExtensions.swift in Sources */,
 				1FBD074D2620316900E6CC15 /* DateTimeSelectionModel.swift in Sources */,
 				1FBD0750262032FB00E6CC15 /* CheckListModel.swift in Sources */,
 				1F0A62342624A746007D2227 /* ThemeProtocol.swift in Sources */,
