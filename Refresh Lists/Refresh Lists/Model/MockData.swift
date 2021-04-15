@@ -27,7 +27,7 @@ class MockData {
         models.append(
             CheckListModel(
                 title: "Bedtime Pills",
-                items: createMockShoppingListItemModelData(),
+                items: [],
                 refresh: createMockRefreshDateTimeSelectionModelData(),
                 reminder: createMockReminderDateTimeSelectionModelData(),
                 color: "green"
@@ -38,7 +38,7 @@ class MockData {
         models.append(
             CheckListModel(
                 title: "Utility Bills",
-                items: createMockShoppingListItemModelData(),
+                items: [],
                 refresh: createMockRefreshDateTimeSelectionModelData(),
                 reminder: createMockReminderDateTimeSelectionModelData(),
                 color: "blue"
@@ -49,7 +49,7 @@ class MockData {
         models.append(
             CheckListModel(
                 title: "Fishing Supplies",
-                items: createMockShoppingListItemModelData(),
+                items: [],
                 refresh: createMockRefreshDateTimeSelectionModelData(),
                 reminder: createMockReminderDateTimeSelectionModelData(),
                 color: "pink"
@@ -60,7 +60,7 @@ class MockData {
         models.append(
             CheckListModel(
                 title: "Phone Backup",
-                items: createMockShoppingListItemModelData(),
+                items: [],
                 refresh: createMockRefreshDateTimeSelectionModelData(),
                 reminder: createMockReminderDateTimeSelectionModelData()
             )

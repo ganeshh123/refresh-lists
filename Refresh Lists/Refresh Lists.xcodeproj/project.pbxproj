@@ -43,6 +43,7 @@
 		1FDCE1B22627B3D500BF3F89 /* ListItemTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FDCE1B12627B3D500BF3F89 /* ListItemTable.swift */; };
 		1FE4C9A826262B91003BE873 /* CheckListsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE4C9A726262B91003BE873 /* CheckListsTableViewCell.swift */; };
 		1FE4C9AA26262C0C003BE873 /* CheckListsTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE4C9A926262C0C003BE873 /* CheckListsTableView.swift */; };
+		1FEC06332628B5F90089ED7B /* UITextFieldExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FEC06322628B5F90089ED7B /* UITextFieldExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,6 +106,7 @@
 		1FDCE1B12627B3D500BF3F89 /* ListItemTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItemTable.swift; sourceTree = "<group>"; };
 		1FE4C9A726262B91003BE873 /* CheckListsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckListsTableViewCell.swift; sourceTree = "<group>"; };
 		1FE4C9A926262C0C003BE873 /* CheckListsTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckListsTableView.swift; sourceTree = "<group>"; };
+		1FEC06322628B5F90089ED7B /* UITextFieldExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextFieldExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,6 +193,7 @@
 				1FB470602625C8CE00B6A6DA /* UIViewExtensions.swift */,
 				1FB470682625D22600B6A6DA /* UIButtonExtensions.swift */,
 				1FDCE1AC2627A25100BF3F89 /* StringExtensions.swift */,
+				1FEC06322628B5F90089ED7B /* UITextFieldExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -480,6 +483,7 @@
 				1FB470612625C8CE00B6A6DA /* UIViewExtensions.swift in Sources */,
 				1FBD074D2620316900E6CC15 /* DateTimeSelectionModel.swift in Sources */,
 				1FBD0750262032FB00E6CC15 /* CheckListModel.swift in Sources */,
+				1FEC06332628B5F90089ED7B /* UITextFieldExtensions.swift in Sources */,
 				1F0A62342624A746007D2227 /* ThemeProtocol.swift in Sources */,
 				1FDCE1B22627B3D500BF3F89 /* ListItemTable.swift in Sources */,
 				1FCB24D126277F190038ED0B /* CheckListViewController.swift in Sources */,
