@@ -40,6 +40,7 @@ class AppSettingsViewController: UIViewController {
 
         if let firstVC = presentingViewController as? MainViewController {
             DispatchQueue.main.async {
+                print("Dismissing View")
                 firstVC.viewDidLoad()
             }
         }
@@ -60,6 +61,12 @@ class AppSettingsViewController: UIViewController {
     
     @IBAction func themeSwitchPressed(_ sender: UIButton) {
         Theme.switchTheme()
+        if let firstVC = presentingViewController as? MainViewController {
+            DispatchQueue.main.async {
+                print("Dismissing View")
+                firstVC.viewDidLoad()
+            }
+        }
         self.dismiss(animated: true, completion: nil)
     }
     

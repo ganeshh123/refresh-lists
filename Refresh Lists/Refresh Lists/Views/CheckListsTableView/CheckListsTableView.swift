@@ -28,7 +28,16 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
+        let storyboard = UIStoryboard(name: "CheckListView", bundle: nil)
         
+        let checkListView = storyboard.instantiateInitialViewController() as! CheckListViewController
+        
+        self.screenTitleLabel.text = "View List"
+        self.appOptionsButton.isHidden = true
+        self.newListButton.isHidden = true
+        
+        checkListView.checkListIndex = indexPath.row
+        self.present(checkListView, animated: true, completion: nil)
     }
     
 }

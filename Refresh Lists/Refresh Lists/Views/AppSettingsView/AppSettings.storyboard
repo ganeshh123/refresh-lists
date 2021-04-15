@@ -15,7 +15,7 @@
         <!--App Settings View Controller-->
         <scene sceneID="lxP-Rp-2CE">
             <objects>
-                <viewController id="oBY-4X-gWg" customClass="AppSettingsViewController" customModule="Refresh_Lists" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="currentContext" id="oBY-4X-gWg" customClass="AppSettingsViewController" customModule="Refresh_Lists" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DzR-QS-KZc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -19,7 +19,7 @@
         <!--Main View Controller-->
         <scene sceneID="Ts2-TU-P7h">
             <objects>
-                <viewController id="XIV-oP-iG3" customClass="MainViewController" customModule="Refresh_Lists" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController definesPresentationContext="YES" modalTransitionStyle="crossDissolve" modalPresentationStyle="currentContext" id="XIV-oP-iG3" customClass="MainViewController" customModule="Refresh_Lists" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QCL-he-ITR">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -127,6 +127,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="2Tw-yl-y2h"/>
                     </view>
+                    <navigationItem key="navigationItem" id="H4z-nd-j4m"/>
                     <connections>
                         <outlet property="appOptionsButton" destination="yuq-fD-7vp" id="RtI-Fn-02j"/>
                         <outlet property="checkListsTableView" destination="J9t-Hz-WLE" id="BXv-sq-LpR"/>
@@ -137,7 +138,15 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RSJ-g0-ssp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="133.59999999999999" y="114.69265367316342"/>
+            <point key="canvasLocation" x="1072.8" y="114.69265367316342"/>
+        </scene>
+        <!--CheckListView-->
+        <scene sceneID="gJR-OV-u5O">
+            <objects>
+                <viewControllerPlaceholder storyboardName="CheckListView" id="g5f-Te-0uC" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="un2-L1-rcx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1836.8" y="68.365817091454275"/>
         </scene>
         <!--AppSettings-->
         <scene sceneID="Hze-gQ-Xqf">
@@ -145,7 +154,7 @@
                 <viewControllerPlaceholder storyboardName="AppSettings" id="5XC-qf-yCD" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="geW-ZQ-28p" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="731" y="71"/>
+            <point key="canvasLocation" x="1620.8" y="-173.61319340329837"/>
         </scene>
     </scenes>
     <resources>

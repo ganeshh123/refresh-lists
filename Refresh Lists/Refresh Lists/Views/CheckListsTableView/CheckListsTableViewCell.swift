@@ -24,7 +24,7 @@ class CheckListsTableViewCell: UITableViewCell {
     func setup(checkListModel: CheckListModel){
         
         checkListCard.makeCheckListCardView(checkList: checkListModel)
-        checkListCardTitle.makeCheckListCardTitle(title: checkListModel.title)
+        checkListCardTitle.makeCheckListCardTitle(title: checkListModel.title, maxLength: 18)
         
         checkListCardOptionsButton.makeCheckListCardButton(icon: UIImage(named: "icon_options")!)
         checkListCardLockButton.makeCheckListCardButton(icon: UIImage(named: "icon_locked")!)

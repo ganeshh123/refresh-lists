@@ -15,6 +15,7 @@ extension UIButton {
     func makeMainAppButton(){
         
         self.tintColor = Theme.current.appAccentColor
+        self.isHidden = false
     }
     
     func makeSettingsButton(title: String, icon: UIImage){
@@ -47,6 +48,16 @@ extension UIButton {
         self.setImage(icon, for: .normal)
         self.imageEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
         
+    }
+    
+    func disableButton(){
+        self.isHidden = true
+        self.isEnabled = false
+    }
+    
+    func enableButton(){
+        self.isEnabled = true
+        self.isHidden = false
     }
     
 }

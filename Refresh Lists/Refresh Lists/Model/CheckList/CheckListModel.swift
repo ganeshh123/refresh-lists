@@ -17,9 +17,9 @@ struct CheckListModel {
     var items: [ListItemModel]?
     var refresh: DateTimeSelectionModel
     var reminder: DateTimeSelectionModel
-    var color: UIColor
+    var color: String
     
-    init(title: String, items: [ListItemModel]?, refresh: DateTimeSelectionModel?, reminder: DateTimeSelectionModel?, color: UIColor? = Theme.current.listBgSandColor){
+    init(title: String, items: [ListItemModel]?, refresh: DateTimeSelectionModel?, reminder: DateTimeSelectionModel?, color: String? = "sand"){
         
         self.id = UUID()
         self.title = title

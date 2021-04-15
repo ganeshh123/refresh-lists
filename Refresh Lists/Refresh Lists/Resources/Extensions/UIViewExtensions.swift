@@ -27,7 +27,7 @@ extension UIView {
     func makeCheckListCardView(checkList: CheckListModel) {
         
         /* Set Colors */
-        self.backgroundColor = checkList.color
+        self.setCheckListCardBackground(color: checkList.color)
         
         /* Set Shadows */
         self.layer.shadowOpacity = 1
@@ -38,6 +38,28 @@ extension UIView {
         self.layer.cornerRadius = 10
         
         /* Set Dimensions */
+    }
+    
+    func setCheckListCardBackground(color: String){
+        switch color {
+        case "blue":
+            self.backgroundColor = Theme.current.listBgBlueColor
+        case "green":
+             self.backgroundColor = Theme.current.listBgGreenColor
+        case "pink":
+             self.backgroundColor = Theme.current.listBgPinkColor
+        case "sand":
+             self.backgroundColor = Theme.current.listBgSandColor
+        default:
+             self.backgroundColor = Theme.current.listBgSandColor
+        }
+    }
+    
+    func makeListItem(){
+        
+        /* Set Colors */
+        self.backgroundColor = UIColor(named: "clear")
+        
     }
     
 }

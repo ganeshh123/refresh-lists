@@ -28,4 +28,10 @@ class CheckListFunctions {
         }
     }
     
+    static func updateCheckList(index: Int, updatedCheckList: CheckListModel){
+        Data.checkListModels[index] = updatedCheckList
+        
+        /* TODO: Push to Core Data */
+    }
+    
 }

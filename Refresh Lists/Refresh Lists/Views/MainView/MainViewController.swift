@@ -20,6 +20,8 @@ class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //self.navigationController?.navigationBar.isHidden = true
 
         // Do any additional setup after loading the view.
         mainView.backgroundColor = Theme.current.appBackgroundColor
@@ -28,12 +30,11 @@ class MainViewController: UIViewController {
         appOptionsButton.makeMainAppButton()
         newListButton.makeMainAppButton()
         
-        screenTitleLabel.makeScreenTitleLabel()
+        screenTitleLabel.makeScreenTitleLabel(text: "Your Lists")
         
         checkListsTableView.dataSource = self
         checkListsTableView.delegate = self
         CheckListFunctions.readCheckLists { [unowned self] in
-            print("Read Main Data")
             self.checkListsTableView.reloadData()
         }
         

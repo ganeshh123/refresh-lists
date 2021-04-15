@@ -13,11 +13,13 @@ struct ListItemModel {
     let id: UUID
     
     var title: String!
+    var completed: Bool
     
-    init(title: String){
+    init(title: String, completed: Bool = false){
         
         self.id = UUID()
         self.title = title
+        self.completed = completed
     }
     
 }

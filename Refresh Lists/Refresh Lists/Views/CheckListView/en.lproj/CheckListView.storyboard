@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ME2-ut-RtU">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="font_shortstack.ttf">
+            <string>ShortStack</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Check List View Controller-->
+        <scene sceneID="YXs-WU-0SE">
+            <objects>
+                <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" id="ME2-ut-RtU" customClass="CheckListViewController" customModule="Refresh_Lists" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" opaque="NO" contentMode="scaleToFill" id="Z8Q-k3-VlJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rfP-Is-c0y">
+                                <rect key="frame" x="321" y="20" width="34" height="34"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="hCj-pr-Cu9"/>
+                                    <constraint firstAttribute="width" constant="34" id="sqm-l8-KHY"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="checkListModalCloseButtonPressed:" destination="ME2-ut-RtU" eventType="touchUpInside" id="7wO-a6-ZXH"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fCL-MW-qLW">
+                                <rect key="frame" x="267" y="20" width="34" height="34"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="4sB-Dw-8QQ"/>
+                                    <constraint firstAttribute="width" constant="34" id="wIL-Da-bPK"/>
+                                </constraints>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xpl-hs-wOG">
+                                <rect key="frame" x="222" y="20" width="25" height="34"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="25" id="Z3u-Px-3Ge"/>
+                                    <constraint firstAttribute="height" constant="34" id="z02-6g-Phh"/>
+                                </constraints>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k3o-an-7v9">
+                                <rect key="frame" x="30" y="75" width="315" height="582"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Card Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FSA-B9-9Pw">
+                                        <rect key="frame" x="20" y="20" width="122.5" height="27.5"/>
+                                        <fontDescription key="fontDescription" name="ShortStack" family="Short Stack" pointSize="22"/>
+                                        <color key="textColor" name="light_app_accent"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="45" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7am-ym-X42">
+                                        <rect key="frame" x="20" y="102.5" width="275" height="469.5"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <prototypes>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="listItemCell" id="5eQ-W7-SjB" customClass="ListItemViewCell" customModule="Refresh_Lists" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="28" width="275" height="45"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5eQ-W7-SjB" id="cTQ-81-euh">
+                                                    <rect key="frame" x="0.0" y="0.0" width="275" height="45"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XU9-7Q-zkf">
+                                                            <rect key="frame" x="10" y="14" width="17" height="17"/>
+                                                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="17" id="QD4-KM-f7M"/>
+                                                                <constraint firstAttribute="height" constant="17" id="QgP-wg-Jgp"/>
+                                                            </constraints>
+                                                            <connections>
+                                                                <action selector="checkListModalCloseButtonPressed:" destination="ME2-ut-RtU" eventType="touchUpInside" id="PKb-eS-8bn"/>
+                                                            </connections>
+                                                        </button>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="List Item" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gLM-Ga-ayK">
+                                                            <rect key="frame" x="37" y="12" width="87.5" height="21"/>
+                                                            <fontDescription key="fontDescription" name="ShortStack" family="Short Stack" pointSize="17"/>
+                                                            <color key="textColor" name="light_app_accent"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E1g-br-U77">
+                                                            <rect key="frame" x="233" y="14" width="17" height="17"/>
+                                                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="17" id="Lqu-99-H7X"/>
+                                                                <constraint firstAttribute="height" constant="17" id="XBG-st-lsY"/>
+                                                                <constraint firstAttribute="width" constant="17" id="bDV-OD-efw"/>
+                                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="17" id="cOV-nI-aCv"/>
+                                                            </constraints>
+                                                            <connections>
+                                                                <action selector="checkListModalCloseButtonPressed:" destination="ME2-ut-RtU" eventType="touchUpInside" id="A3q-en-DY5"/>
+                                                            </connections>
+                                                        </button>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstItem="gLM-Ga-ayK" firstAttribute="centerY" secondItem="cTQ-81-euh" secondAttribute="centerY" id="7vw-ca-NOu"/>
+                                                        <constraint firstItem="gLM-Ga-ayK" firstAttribute="leading" secondItem="XU9-7Q-zkf" secondAttribute="trailing" constant="10" id="NGr-5M-pVM"/>
+                                                        <constraint firstItem="XU9-7Q-zkf" firstAttribute="leading" secondItem="cTQ-81-euh" secondAttribute="leading" constant="10" id="U2o-4a-6iK"/>
+                                                        <constraint firstAttribute="trailingMargin" secondItem="E1g-br-U77" secondAttribute="trailing" constant="10" id="axo-KH-70h"/>
+                                                        <constraint firstItem="E1g-br-U77" firstAttribute="centerY" secondItem="cTQ-81-euh" secondAttribute="centerY" id="dm3-gQ-1Gn"/>
+                                                        <constraint firstItem="XU9-7Q-zkf" firstAttribute="centerY" secondItem="cTQ-81-euh" secondAttribute="centerY" id="vZy-IW-06L"/>
+                                                    </constraints>
+                                                </tableViewCellContentView>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <connections>
+                                                    <outlet property="listItemLeftButton" destination="XU9-7Q-zkf" id="rby-AN-O4Y"/>
+                                                    <outlet property="listItemRightButton" destination="E1g-br-U77" id="nC5-7x-qVb"/>
+                                                    <outlet property="listItemTitle" destination="gLM-Ga-ayK" id="lk0-dp-sce"/>
+                                                    <outlet property="listItemView" destination="cTQ-81-euh" id="PEC-ze-jJc"/>
+                                                </connections>
+                                            </tableViewCell>
+                                        </prototypes>
+                                    </tableView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.97254901960784312" green="0.95686274509803926" blue="0.90588235294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" name="light_app_accent"/>
+                                <constraints>
+                                    <constraint firstItem="7am-ym-X42" firstAttribute="top" secondItem="FSA-B9-9Pw" secondAttribute="bottom" constant="55" id="Iz1-8x-5To"/>
+                                    <constraint firstItem="7am-ym-X42" firstAttribute="leading" secondItem="k3o-an-7v9" secondAttribute="leading" constant="20" id="Vb8-CX-weq"/>
+                                    <constraint firstItem="FSA-B9-9Pw" firstAttribute="top" secondItem="k3o-an-7v9" secondAttribute="top" constant="20" id="WKD-Zr-oe1"/>
+                                    <constraint firstItem="7am-ym-X42" firstAttribute="centerX" secondItem="k3o-an-7v9" secondAttribute="centerX" id="cy7-V5-tdR"/>
+                                    <constraint firstItem="FSA-B9-9Pw" firstAttribute="leading" secondItem="k3o-an-7v9" secondAttribute="leading" constant="20" id="hzg-YX-Eyk"/>
+                                    <constraint firstAttribute="trailing" secondItem="7am-ym-X42" secondAttribute="trailing" constant="20" id="izY-6F-vkm"/>
+                                    <constraint firstAttribute="bottom" secondItem="7am-ym-X42" secondAttribute="bottom" constant="10" id="oDA-2O-JSg"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="0.01" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="rfP-Is-c0y" firstAttribute="top" secondItem="AcA-k2-AQa" secondAttribute="top" constant="20" id="3O8-X4-Oxs"/>
+                            <constraint firstItem="AcA-k2-AQa" firstAttribute="trailing" secondItem="k3o-an-7v9" secondAttribute="trailing" constant="30" id="4QM-Uj-Tlz"/>
+                            <constraint firstItem="xpl-hs-wOG" firstAttribute="top" secondItem="AcA-k2-AQa" secondAttribute="top" constant="20" id="C5y-4G-hyD"/>
+                            <constraint firstItem="fCL-MW-qLW" firstAttribute="top" secondItem="AcA-k2-AQa" secondAttribute="top" constant="20" id="Hqo-y7-7St"/>
+                            <constraint firstItem="k3o-an-7v9" firstAttribute="top" secondItem="AcA-k2-AQa" secondAttribute="top" constant="75" id="J3q-EY-Ilz"/>
+                            <constraint firstItem="AcA-k2-AQa" firstAttribute="bottom" secondItem="k3o-an-7v9" secondAttribute="bottom" constant="10" id="KN3-41-0wO"/>
+                            <constraint firstItem="AcA-k2-AQa" firstAttribute="trailing" secondItem="rfP-Is-c0y" secondAttribute="trailing" constant="20" id="Ltq-Je-l13"/>
+                            <constraint firstItem="k3o-an-7v9" firstAttribute="centerX" secondItem="Z8Q-k3-VlJ" secondAttribute="centerX" id="WF2-1i-zuS"/>
+                            <constraint firstItem="rfP-Is-c0y" firstAttribute="leading" secondItem="fCL-MW-qLW" secondAttribute="trailing" constant="20" id="o00-dZ-xm5"/>
+                            <constraint firstItem="k3o-an-7v9" firstAttribute="leading" secondItem="AcA-k2-AQa" secondAttribute="leading" constant="30" id="sGn-gr-lue"/>
+                            <constraint firstItem="fCL-MW-qLW" firstAttribute="leading" secondItem="xpl-hs-wOG" secondAttribute="trailing" constant="20" id="vdi-pm-TLL"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="AcA-k2-AQa"/>
+                    </view>
+                    <connections>
+                        <outlet property="checkListCloseButton" destination="rfP-Is-c0y" id="7DY-Sa-8eW"/>
+                        <outlet property="checkListLockButton" destination="xpl-hs-wOG" id="Wio-us-xJC"/>
+                        <outlet property="checkListOptionsButton" destination="fCL-MW-qLW" id="Cbx-e9-ZPi"/>
+                        <outlet property="checkListTitleLabel" destination="FSA-B9-9Pw" id="zJp-lW-BYn"/>
+                        <outlet property="checkListViewModal" destination="k3o-an-7v9" id="Tod-UZ-GcX"/>
+                        <outlet property="listItemsTableView" destination="7am-ym-X42" id="meG-Wt-AP6"/>
+                        <outlet property="outsideView" destination="Z8Q-k3-VlJ" id="qW4-to-gfu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Yr-Rg-lbD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-23" y="74"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="light_app_accent">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

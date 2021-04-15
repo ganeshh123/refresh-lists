@@ -30,7 +30,7 @@ class MockData {
                 items: createMockShoppingListItemModelData(),
                 refresh: createMockRefreshDateTimeSelectionModelData(),
                 reminder: createMockReminderDateTimeSelectionModelData(),
-                color: Theme.current.listBgGreenColor
+                color: "green"
             )
             
         )
@@ -41,7 +41,7 @@ class MockData {
                 items: createMockShoppingListItemModelData(),
                 refresh: createMockRefreshDateTimeSelectionModelData(),
                 reminder: createMockReminderDateTimeSelectionModelData(),
-                color: Theme.current.listBgBlueColor
+                color: "blue"
             )
             
         )
@@ -52,7 +52,7 @@ class MockData {
                 items: createMockShoppingListItemModelData(),
                 refresh: createMockRefreshDateTimeSelectionModelData(),
                 reminder: createMockReminderDateTimeSelectionModelData(),
-                color: Theme.current.listBgPinkColor
+                color: "pink"
             )
             
         )
