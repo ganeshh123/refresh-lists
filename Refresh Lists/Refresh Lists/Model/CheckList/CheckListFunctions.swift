@@ -69,4 +69,23 @@ class CheckListFunctions {
         
     }
     
+    static func deleteListItemById(checkListId: UUID, listItemId: UUID){
+        
+        DispatchQueue.global(qos: .userInteractive).async {
+            
+            if let checkListIndex = Data.checkListModels.firstIndex(where: { $0.id == checkListId}){
+                if let listItemIndex = Data.checkListModels[checkListIndex].items?.firstIndex(where: { $0.id == listItemId}){
+                    
+                    Data.checkListModels[checkListIndex].items!.remove(at: listItemIndex)
+                    
+                    print("Deleted List Item")
+                    /* Todo Push to Core Data */
+                    
+                }
+            }
+            
+        }
+        
+    }
+    
 }

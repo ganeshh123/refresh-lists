@@ -41,7 +41,12 @@ class CheckListViewController: UIViewController {
         checkListTitleLabel.makeCheckListCardTitle(title: currentCheckList!.title, maxLength: 25)
         checkListCloseButton.makeCheckListCardButton(icon: UIImage(named: "icon_cross")!)
         checkListOptionsButton.makeCheckListCardButton(icon: UIImage(named: "icon_options")!)
-        checkListLockButton.makeCheckListCardButton(icon: UIImage(named: "icon_locked")!)
+        
+        if(self.isEditing == false){
+            checkListLockButton.makeCheckListCardButton(icon: UIImage(named: "icon_locked")!)
+        }else{
+             checkListLockButton.makeCheckListCardButton(icon: UIImage(named: "icon_unlocked")!)
+        }
         
         checkListRefreshButton.makeCheckListTimeButton(title: "Refresh", icon: UIImage(named: "icon_refresh")!, color: Theme.current.greenColor)
         
@@ -59,6 +64,10 @@ class CheckListViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    func refreshCheckListView(){
+        self.listItemsTableView.reloadData()
+    }
     
     @IBAction func checkListModalCloseButtonPressed(_ sender: Any) {
         
@@ -130,5 +139,17 @@ class CheckListViewController: UIViewController {
         }
     }
     
+    @IBAction func checkListLockButtonPressed(_ sender: Any) {
+        
+        if(self.isEditing == false){
+            self.isEditing = true
+        }else{
+            self.isEditing = false
+            /* Save Updated Checklist */
+           CheckListFunctions.updateCheckListById(checkListId: currentCheckList!.id, updatedCheckList: currentCheckList!)
+        }
+        self.viewDidLoad()
+        self.listItemsTableView.reloadData()
+    }
     
 }

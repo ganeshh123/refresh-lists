@@ -17,33 +17,49 @@ class ListItemViewCell: UITableViewCell {
     
     var listItem: ListItemModel?
     var checkListId: UUID?
+    var checkListEditing: Bool = false
+    var deleteListItemFunc: (UUID) -> Void = {_ in }
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
 
-    func setup(inputListItem: ListItemModel, checkListId: UUID){
+    func setup(inputListItem: ListItemModel, checkListId: UUID, editing: Bool, deleteListItemFunc: @escaping (UUID) -> Void = {_ in }){
         
         self.listItem = inputListItem
         self.checkListId = checkListId
-        
-        self.listItemRightButton.disableButton()
+        self.checkListEditing = editing
+        self.deleteListItemFunc = deleteListItemFunc
         
         self.listItemView.makeListItem()
-        self.listItemTitle.makeListItemLabel(text: listItem!.title)
         
-        if(inputListItem.completed){
-            self.listItemLeftButton.makeCheckListItemButton(icon: UIImage(named: "icon_checked")!, color: Theme.current.grayColor)
+        if(self.checkListEditing == false){
+            
+            self.listItemTitle.makeListItemLabel(text: listItem!.title, maxLength: 22)
+            self.listItemRightButton.disableButton()
+            
+            if(inputListItem.completed){
+                self.listItemLeftButton.makeCheckListItemButton(icon: UIImage(named: "icon_checked")!, color: Theme.current.grayColor)
+            }else{
+                self.listItemLeftButton.makeCheckListItemButton(icon: UIImage(named: "icon_unchecked")!, color: Theme.current.appAccentColor)
+            }
         }else{
-            self.listItemLeftButton.makeCheckListItemButton(icon: UIImage(named: "icon_unchecked")!, color: Theme.current.appAccentColor)
+            
+            self.listItemTitle.makeListItemLabel(text: listItem!.title, maxLength: 18)
+            self.listItemRightButton.enableButton()
+            
+            self.listItemLeftButton.makeCheckListItemButton(icon: UIImage(named: "icon_edit")!, color: Theme.current.greenColor)
+            self.listItemRightButton.makeCheckListItemButton(icon: UIImage(named: "icon_cross")!, color: Theme.current.redColor)
         }
     }
 
     @IBAction func leftButtonPressed(_ sender: UIButton) {
         
-        if(self.isEditing == false){
+        if(self.checkListEditing == false){
             toggleCompleted()
+        }else{
+            return
         }
     }
     
@@ -61,6 +77,15 @@ class ListItemViewCell: UITableViewCell {
         }
         
         CheckListFunctions.updateListItemById(checkListId: self.checkListId!, listItemId: self.listItem!.id, updatedListItem: self.listItem!)
+    }
+    
+    
+    @IBAction func listItemRightButtonPressed(_ sender: UIButton) {
+        
+        if(self.checkListEditing == true){
+            
+            self.deleteListItemFunc(self.listItem!.id)
+        }
     }
     
 }

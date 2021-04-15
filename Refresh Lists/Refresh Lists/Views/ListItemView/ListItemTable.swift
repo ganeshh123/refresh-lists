@@ -28,7 +28,7 @@ extension CheckListViewController: UITableViewDataSource, UITableViewDelegate{
         let cell = tableView.dequeueReusableCell(withIdentifier: "listItemCell") as! ListItemViewCell
         
         if let items = currentCheckList?.items {
-            cell.setup(inputListItem: items[indexPath.row], checkListId: currentCheckList!.id)
+            cell.setup(inputListItem: items[indexPath.row], checkListId: currentCheckList!.id, editing: self.isEditing, deleteListItemFunc: self.deleteListItem(listItemId:))
         }
         
         return cell
@@ -41,6 +41,18 @@ extension CheckListViewController: UITableViewDataSource, UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         
+    }
+    
+    func deleteListItem(listItemId: UUID ){
+        
+        
+        CheckListFunctions.deleteListItemById(checkListId: currentCheckList!.id, listItemId: listItemId)
+        
+        /* Save Updated Checklist */
+        //CheckListFunctions.updateCheckListById(checkListId: currentCheckList!.id, updatedCheckList: currentCheckList!)
+        
+        self.viewDidLoad()
+        self.listItemsTableView.reloadData()
     }
     
 }
