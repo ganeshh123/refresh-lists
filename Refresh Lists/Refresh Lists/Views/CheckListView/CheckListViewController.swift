@@ -32,6 +32,7 @@ class CheckListViewController: UIViewController {
         listItemsTableView.dataSource = self
         
         currentCheckList = Data.checkListModels[checkListIndex!]
+        print(currentCheckList)
         
         checkListViewModal.makeCheckListCardView(checkList: currentCheckList!)
         
@@ -54,12 +55,13 @@ class CheckListViewController: UIViewController {
     
     @IBAction func checkListModalCloseButtonPressed(_ sender: Any) {
         
-        CheckListFunctions.updateCheckList(index: checkListIndex!, updatedCheckList: currentCheckList!)
+        //CheckListFunctions.updateCheckList(index: checkListIndex!, updatedCheckList: currentCheckList!)
         
         if let firstVC = self.presentingViewController as? MainViewController {
             DispatchQueue.main.async {
                 print("Dismissing Checklist View")
                 firstVC.viewDidLoad()
+                firstVC.checkListsTableView.reloadData()
             }
         }
         self.dismiss(animated: true, completion: nil)

@@ -37,6 +37,14 @@ extension UILabel {
     }
     
     func makeListItemLabel(text: String){
+        
+        /* Set Colors */
+        self.textColor = Theme.current.appAccentColor
+        
+        /* Set Fonts */
+        self.font = UIFont(name: Theme.current.handwritingFont, size: 17)
+        
+        /* Set Text */
         self.text = text.trunc(length: 22)
     }
     

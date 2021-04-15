@@ -50,6 +50,17 @@ extension UIButton {
         
     }
     
+    func makeCheckListItemButton(icon: UIImage, color: UIColor){
+        
+        /* Set Colors */
+        self.backgroundColor = UIColor(named: "clear")
+        self.tintColor = color
+        
+        /* Set Icon */
+        self.setImage(icon, for: .normal)
+        self.imageEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+    }
+    
     func disableButton(){
         self.isHidden = true
         self.isEnabled = false

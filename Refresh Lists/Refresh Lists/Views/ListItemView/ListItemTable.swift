@@ -28,7 +28,7 @@ extension CheckListViewController: UITableViewDataSource, UITableViewDelegate{
         let cell = tableView.dequeueReusableCell(withIdentifier: "listItemCell") as! ListItemViewCell
         
         if let items = currentCheckList?.items {
-            cell.setup(inputListItem: items[indexPath.row])
+            cell.setup(inputListItem: items[indexPath.row], checkListId: currentCheckList!.id)
         }
         
         return cell
