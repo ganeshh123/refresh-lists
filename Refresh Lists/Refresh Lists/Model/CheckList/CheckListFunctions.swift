@@ -34,6 +34,22 @@ class CheckListFunctions {
         /* TODO: Push to Core Data */
     }
     
+    static func updateCheckListById(checkListId: UUID, updatedCheckList: CheckListModel){
+        
+        DispatchQueue.global(qos: .userInteractive).async {
+            
+            if let checkListIndex = Data.checkListModels.firstIndex(where: { $0.id == checkListId}){
+                
+                print("Updated Check List")
+                Data.checkListModels[checkListIndex] = updatedCheckList
+                
+                /* TODO: Push to Core Data */
+            }
+            
+        }
+        
+    }
+    
     static func updateListItemById(checkListId: UUID, listItemId: UUID, updatedListItem: ListItemModel){
         
         DispatchQueue.global(qos: .userInteractive).async {

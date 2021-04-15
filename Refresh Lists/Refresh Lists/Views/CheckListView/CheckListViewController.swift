@@ -17,6 +17,7 @@ class CheckListViewController: UIViewController {
     @IBOutlet var checkListOptionsButton: UIButton!
     @IBOutlet var checkListLockButton: UIButton!
     @IBOutlet var listItemsTableView: UITableView!
+    @IBOutlet var checkListRefreshButton: UIButton!
     
     var checkListIndex: Int?
     var currentCheckList: CheckListModel?
@@ -32,7 +33,6 @@ class CheckListViewController: UIViewController {
         listItemsTableView.dataSource = self
         
         currentCheckList = Data.checkListModels[checkListIndex!]
-        print(currentCheckList)
         
         checkListViewModal.makeCheckListCardView(checkList: currentCheckList!)
         
@@ -40,6 +40,8 @@ class CheckListViewController: UIViewController {
         checkListCloseButton.makeCheckListCardButton(icon: UIImage(named: "icon_cross")!)
         checkListOptionsButton.makeCheckListCardButton(icon: UIImage(named: "icon_options")!)
         checkListLockButton.makeCheckListCardButton(icon: UIImage(named: "icon_locked")!)
+        
+        checkListRefreshButton.makeCheckListTimeButton(title: "Refresh", icon: UIImage(named: "icon_refresh")!, color: Theme.current.greenColor)
     }
     
 
@@ -68,4 +70,22 @@ class CheckListViewController: UIViewController {
     }
     
 
+    @IBAction func checkListRefreshButtonPressed(_ sender: Any) {
+        
+        if let items = currentCheckList?.items{
+            
+            /* Set all list items to not completed */
+            for i in items.indices{
+                currentCheckList!.items![i].completed = false
+            }
+            
+        }
+        
+        /* Save Updated Checklist */
+        CheckListFunctions.updateCheckListById(checkListId: currentCheckList!.id, updatedCheckList: currentCheckList!)
+        
+        /* Refresh List Items */
+        listItemsTableView.reloadData()
+        
+    }
 }
