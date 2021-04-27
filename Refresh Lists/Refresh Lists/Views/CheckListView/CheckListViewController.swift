@@ -133,6 +133,12 @@ class CheckListViewController: UIViewController {
         }
     }
     
+    
+    @IBAction func newListItemInputBoxPressed(_ sender: UITextField) {
+        newListItemInputBox.placeholder = ""
+    }
+    
+    
     @IBAction func checkListLockButtonPressed(_ sender: Any) {
         
         if(self.isEditing == false){

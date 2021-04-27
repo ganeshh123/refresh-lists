@@ -72,6 +72,10 @@ class CheckListSettingsViewController: UIViewController {
             
         }
         
+        confirmationView.noFunction = {
+            self.dismiss(animated: true)
+        }
+        
         self.present(confirmationView, animated: true, completion: nil)
         
     }

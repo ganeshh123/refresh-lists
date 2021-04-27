@@ -45,7 +45,7 @@ class ConfirmationViewController: UIViewController {
     */
     
     @IBAction func noButtonPressed(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
+        self.dismiss(animated: true, completion: noFunction)
     }
     
     

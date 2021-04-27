@@ -34,6 +34,7 @@ extension UITextField {
         /* Set Text */
         self.attributedPlaceholder = NSAttributedString(string: placeholder, attributes: [NSAttributedString.Key.foregroundColor : Theme.current.appAccentColor])
         
+        /* Set Functions */
         
     }
     
