@@ -26,7 +26,10 @@ class ConfirmationViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        
+        confirmationDialogView.makeModalView()
+        confirmationYesButton.makeConfirmationButton(icon: UIImage(named: "icon_tick")!, color: Theme.current.greenColor)
+        confirmationNoButton.makeConfirmationButton(icon: UIImage(named: "icon_cross")!, color: Theme.current.redColor)
+        confirmationMessageLabel.makeConfirmationMessageLabel(text: "Are you sure?", maxLength: 24)
         
     }
     
@@ -47,7 +50,7 @@ class ConfirmationViewController: UIViewController {
     
     
     @IBAction func yesButtonPressed(_ sender: Any) {
-        yesFunction()
+        self.dismiss(animated: true, completion: yesFunction)
     }
     
 }

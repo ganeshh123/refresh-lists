@@ -56,6 +56,7 @@ extension UILabel {
         
         /* Set Fonts */
         self.font = UIFont(name: Theme.current.sansFont, size: 22)
+        self.textAlignment = .center
         
         /* Set Values */
         self.text = text.trunc(length: maxLength)

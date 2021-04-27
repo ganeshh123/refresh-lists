@@ -60,11 +60,10 @@ class CheckListSettingsViewController: UIViewController {
                     
                     self.dismiss(animated: true)
                     
-                    if let firstVC = self.presentingViewController as? MainViewController {
-                        DispatchQueue.main.async {
-                             print("Dismissing Checklist VIew")
-                             firstVC.dismiss(animated: true, completion: nil)
-                        }
+                    
+                    if let checkListView = self.presentingViewController as? CheckListViewController {
+                        checkListView.closeCheckListView()
+
                     }
                     
                 }

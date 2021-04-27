@@ -74,16 +74,7 @@ class CheckListViewController: UIViewController {
     
     @IBAction func checkListModalCloseButtonPressed(_ sender: Any) {
         
-        //CheckListFunctions.updateCheckList(index: checkListIndex!, updatedCheckList: currentCheckList!)
-        
-        if let firstVC = self.presentingViewController as? MainViewController {
-            DispatchQueue.main.async {
-                print("Dismissing Checklist View")
-                firstVC.viewDidLoad()
-                firstVC.checkListsTableView.reloadData()
-            }
-        }
-        self.dismiss(animated: true, completion: nil)
+        self.closeCheckListView()
     }
     
 
@@ -165,6 +156,17 @@ class CheckListViewController: UIViewController {
         
         self.present(checkListSettingsView, animated: true, completion: nil)
         
+    }
+    
+    func closeCheckListView(){
+        if let firstVC = self.presentingViewController as? MainViewController {
+           DispatchQueue.main.async {
+               print("Dismissing Checklist View")
+               firstVC.viewDidLoad()
+               firstVC.checkListsTableView.reloadData()
+           }
+       }
+       self.dismiss(animated: true, completion: nil)
     }
     
     
