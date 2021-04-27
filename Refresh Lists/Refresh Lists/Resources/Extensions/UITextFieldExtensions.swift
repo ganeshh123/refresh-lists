@@ -20,4 +20,21 @@ extension UITextField {
         self.layer.borderWidth = 0
     }
     
+    
+    func makeAddListItemTextInput(placeholder: String){
+        
+        /* Set Colors */
+        self.backgroundColor = Theme.current.appBackgroundColor
+        self.textColor = Theme.current.appAccentColor
+        self.tintColor = Theme.current.appAccentColor
+        
+        /* Set Font */
+        self.font = UIFont(name: Theme.current.handwritingFont, size: 22)
+        
+        /* Set Text */
+        self.attributedPlaceholder = NSAttributedString(string: placeholder, attributes: [NSAttributedString.Key.foregroundColor : Theme.current.appAccentColor])
+        
+        
+    }
+    
 }

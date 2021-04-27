@@ -18,10 +18,10 @@ extension UIButton {
         self.isHidden = false
     }
     
-    func makeSettingsButton(title: String, icon: UIImage){
+    func makeSettingsButton(title: String, icon: UIImage, color: UIColor){
         
         /* Set Colors */
-        self.tintColor = Theme.current.appAccentColor
+        self.tintColor = color
         
         /* Set Icon */
         self.setImage(icon, for: .normal)
@@ -30,7 +30,8 @@ extension UIButton {
         self.setTitle(title, for: .normal)
         self.setTitleColor(Theme.current.appAccentColor, for: .normal)
         self.titleLabel!.font = UIFont(name: Theme.current.sansFont, size: 17)
-        self.titleEdgeInsets = UIEdgeInsets(top: 14, left: 15, bottom: 14, right: 10)
+        self.titleEdgeInsets = UIEdgeInsets(top: 14, left: 15, bottom: 14, right: 0)
+        self.titleLabel!.textAlignment = .left
         
         /* Set Border */
         let lineView = UIView(frame: CGRect(x: 0, y: self.frame.size.height, width: self.frame.size.width, height: 2))
@@ -75,6 +76,18 @@ extension UIButton {
         /* Set Icon */
         self.setImage(icon, for: .normal)
         self.imageEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+    }
+    
+    func makeConfirmationButton(icon: UIImage, color: UIColor){
+        
+        /* Set Colors */
+        self.backgroundColor = UIColor(named: "clear")
+        self.tintColor = color
+        
+        /* Set Icon */
+        self.setImage(icon, for: .normal)
+        self.imageEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        
     }
     
     func disableButton(){

@@ -26,9 +26,9 @@ class AppSettingsViewController: UIViewController {
         
         settingsViewModal.makeModalView()
         
-        themeSwitchButton.makeSettingsButton(title: "Switch Theme", icon: UIImage(named: "icon_sunmoon")!)
+        themeSwitchButton.makeSettingsButton(title: "Switch Theme", icon: UIImage(named: "icon_sunmoon")!, color: Theme.current.appAccentColor)
         
-        aboutButton.makeSettingsButton(title: "About", icon: UIImage(named: "icon_info")!)
+        aboutButton.makeSettingsButton(title: "About", icon: UIImage(named: "icon_info")!, color: Theme.current.appAccentColor)
     }
     
     @objc func outsideViewTouched(sender: UITapGestureRecognizer? = nil) {

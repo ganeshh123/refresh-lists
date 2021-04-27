@@ -69,7 +69,7 @@ class CheckListFunctions {
         
     }
     
-    static func deleteListItemById(checkListId: UUID, listItemId: UUID){
+    static func deleteListItemById(checkListId: UUID, listItemId: UUID, completion: @escaping (Int) -> ()){
         
         DispatchQueue.global(qos: .userInteractive).async {
             
@@ -81,8 +81,35 @@ class CheckListFunctions {
                     print("Deleted List Item")
                     /* Todo Push to Core Data */
                     
+                    completion(listItemIndex)
+                    
+                    return
+                    
                 }
             }
+            
+            completion(-1)
+            return
+            
+        }
+        
+    }
+    
+    static func deleteCheckListById(checkListId: UUID, completion: @escaping (Int) -> ()){
+        
+        DispatchQueue.global(qos: .userInteractive).async {
+            
+            if let checkListIndex = Data.checkListModels.firstIndex(where: { $0.id == checkListId}){
+                
+                Data.checkListModels.remove(at: checkListIndex)
+                print("Deleted Check List")
+                
+                completion(checkListIndex)
+                
+            }
+            
+            completion(-1)
+            return
             
         }
         

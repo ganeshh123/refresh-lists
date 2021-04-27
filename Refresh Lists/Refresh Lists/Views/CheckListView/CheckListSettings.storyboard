@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="oBY-4X-gWg">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="font_raleway.ttf">
+            <string>RalewayRoman-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Check List Settings View Controller-->
+        <scene sceneID="lxP-Rp-2CE">
+            <objects>
+                <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" id="oBY-4X-gWg" customClass="CheckListSettingsViewController" customModule="Refresh_Lists" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DzR-QS-KZc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lfg-8M-0GL">
+                                <rect key="frame" x="103" y="60" width="252" height="125"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="IoU-ea-vhF" userLabel="SettingsButtonsStackView">
+                                        <rect key="frame" x="28.5" y="17.5" width="195" height="90"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UK3-cF-86B">
+                                                <rect key="frame" x="0.0" y="0.0" width="195" height="45"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="195" id="O3W-x3-FFg"/>
+                                                    <constraint firstAttribute="height" constant="45" id="Rsg-fq-nq8"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="RalewayRoman-Regular" family="Raleway" pointSize="17"/>
+                                                <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="checkListSettingsRenameButtonPressed:" destination="oBY-4X-gWg" eventType="touchUpInside" id="bc0-5F-MUF"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VwW-9M-QOT">
+                                                <rect key="frame" x="0.0" y="45" width="195" height="45"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="45" id="Mfn-Ba-Nk5"/>
+                                                    <constraint firstAttribute="width" constant="195" id="THJ-ZZ-g9m"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="RalewayRoman-Regular" family="Raleway" pointSize="17"/>
+                                                <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="checkListSettingsDeleteButtonPressed:" destination="oBY-4X-gWg" eventType="touchUpInside" id="Z33-hA-EfF"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="IoU-ea-vhF" firstAttribute="centerX" secondItem="Lfg-8M-0GL" secondAttribute="centerX" id="2Ji-FS-t3H"/>
+                                    <constraint firstAttribute="width" constant="252" id="5Ta-gM-OaD"/>
+                                    <constraint firstItem="IoU-ea-vhF" firstAttribute="centerY" secondItem="Lfg-8M-0GL" secondAttribute="centerY" id="OGQ-qu-nv5"/>
+                                    <constraint firstAttribute="height" constant="125" id="sSH-vN-cMz"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="Lfg-8M-0GL" firstAttribute="top" secondItem="sba-es-6kX" secondAttribute="top" constant="60" id="pmu-VJ-gLO"/>
+                            <constraint firstItem="sba-es-6kX" firstAttribute="trailing" secondItem="Lfg-8M-0GL" secondAttribute="trailing" constant="20" id="qwD-na-aZ2"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="sba-es-6kX"/>
+                    </view>
+                    <connections>
+                        <outlet property="checkListSettingsButtonStackView" destination="IoU-ea-vhF" id="a9J-l5-XzZ"/>
+                        <outlet property="checkListSettingsDeleteButton" destination="VwW-9M-QOT" id="9Yk-Kq-aq6"/>
+                        <outlet property="checkListSettingsOutsideView" destination="DzR-QS-KZc" id="xdT-5c-44k"/>
+                        <outlet property="checkListSettingsRenameButton" destination="UK3-cF-86B" id="oqW-II-yrj"/>
+                        <outlet property="checkListSettingsViewModal" destination="Lfg-8M-0GL" id="20e-jC-Afz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WSH-zA-kZb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1535.2" y="218.1409295352324"/>
+        </scene>
+    </scenes>
+</document>

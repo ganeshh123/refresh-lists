@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uAg-j3-y1c">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Confirmation View Controller-->
+        <scene sceneID="Zo6-jZ-QNq">
+            <objects>
+                <viewController id="uAg-j3-y1c" customClass="ConfirmationViewController" customModule="Refresh_Lists" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wWq-Mv-PXy">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="97k-Qw-zXj">
+                                <rect key="frame" x="52.5" y="276" width="270" height="115"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tdf-XH-ula">
+                                        <rect key="frame" x="10" y="20" width="240" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S5O-b7-ANE">
+                                        <rect key="frame" x="84" y="73" width="22" height="22"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="22" id="gkB-F7-AFB"/>
+                                            <constraint firstAttribute="height" constant="22" id="o55-sY-EOM"/>
+                                        </constraints>
+                                        <connections>
+                                            <action selector="noButtonPressed:" destination="uAg-j3-y1c" eventType="touchUpInside" id="gJV-G0-Zzp"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Yj-sD-uV3">
+                                        <rect key="frame" x="165" y="73" width="28" height="22"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="22" id="QJO-nX-gKR"/>
+                                            <constraint firstAttribute="width" constant="28" id="n0j-vX-VZB"/>
+                                        </constraints>
+                                        <connections>
+                                            <action selector="yesButtonPressed:" destination="uAg-j3-y1c" eventType="touchUpInside" id="qz6-ET-laT"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="270" id="630-VB-kR0"/>
+                                    <constraint firstAttribute="bottom" secondItem="4Yj-sD-uV3" secondAttribute="bottom" constant="20" id="9Qc-7P-S2g"/>
+                                    <constraint firstItem="S5O-b7-ANE" firstAttribute="centerX" secondItem="97k-Qw-zXj" secondAttribute="centerX" constant="-40" id="EXU-06-Bzj"/>
+                                    <constraint firstItem="4Yj-sD-uV3" firstAttribute="centerX" secondItem="97k-Qw-zXj" secondAttribute="centerX" constant="44" id="Mtc-Sq-qcQ"/>
+                                    <constraint firstAttribute="height" constant="115" id="Vxf-E8-f2M"/>
+                                    <constraint firstAttribute="trailing" secondItem="tdf-XH-ula" secondAttribute="trailing" constant="20" id="WGS-rE-4zC"/>
+                                    <constraint firstItem="tdf-XH-ula" firstAttribute="top" secondItem="97k-Qw-zXj" secondAttribute="top" constant="20" id="Zv7-vd-L5d"/>
+                                    <constraint firstAttribute="bottom" secondItem="S5O-b7-ANE" secondAttribute="bottom" constant="20" id="lBH-dD-sc0"/>
+                                    <constraint firstItem="tdf-XH-ula" firstAttribute="leading" secondItem="97k-Qw-zXj" secondAttribute="leading" constant="10" id="u1u-Pr-nw7"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="97k-Qw-zXj" firstAttribute="centerX" secondItem="wWq-Mv-PXy" secondAttribute="centerX" id="Ckx-GP-mRf"/>
+                            <constraint firstItem="97k-Qw-zXj" firstAttribute="centerY" secondItem="wWq-Mv-PXy" secondAttribute="centerY" id="c5B-z7-J1H"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="EwD-vc-IjS"/>
+                    </view>
+                    <connections>
+                        <outlet property="confirmationDialogView" destination="97k-Qw-zXj" id="med-e7-8aF"/>
+                        <outlet property="confirmationMessageLabel" destination="tdf-XH-ula" id="ng0-fd-wwS"/>
+                        <outlet property="confirmationNoButton" destination="S5O-b7-ANE" id="Pih-9k-hit"/>
+                        <outlet property="confirmationOutsideView" destination="wWq-Mv-PXy" id="ceI-3S-89E"/>
+                        <outlet property="confirmationYesButton" destination="4Yj-sD-uV3" id="CPr-It-cdR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Q37-32-nUr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="80"/>
+        </scene>
+    </scenes>
+</document>

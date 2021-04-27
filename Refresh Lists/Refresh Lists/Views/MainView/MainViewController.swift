@@ -17,6 +17,8 @@ class MainViewController: UIViewController {
     @IBOutlet var newListButton: UIButton!
     @IBOutlet var checkListsTableView: UITableView!
     
+    static var screenTitle = "Your Lists"
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,6 +52,10 @@ class MainViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    static func setScreenTitleLabel(text: String){
+        //self.screenTitleLabel = text
+    }
     
     @IBAction func appOptionsPressed(_ sender: UIButton) {
         

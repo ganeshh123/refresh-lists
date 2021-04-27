@@ -52,6 +52,8 @@ class CheckListViewController: UIViewController {
         
         
         newListItemAddButton.makeCheckListItemButton(icon: UIImage(named: "icon_plus")!, color: Theme.current.greenColor)
+        
+        newListItemInputBox.makeAddListItemTextInput(placeholder: "New Item...")
     }
     
 
@@ -64,6 +66,7 @@ class CheckListViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
     
     func refreshCheckListView(){
         self.listItemsTableView.reloadData()
@@ -151,5 +154,18 @@ class CheckListViewController: UIViewController {
         self.viewDidLoad()
         self.listItemsTableView.reloadData()
     }
+    
+    @IBAction func checkListOptionsButtonPressed(_ sender: UIButton) {
+        
+        let storyboard = UIStoryboard(name: "CheckListSettings", bundle: nil)
+        
+        let checkListSettingsView = storyboard.instantiateInitialViewController() as! CheckListSettingsViewController
+        
+        checkListSettingsView.checkListId = self.currentCheckList!.id
+        
+        self.present(checkListSettingsView, animated: true, completion: nil)
+        
+    }
+    
     
 }

@@ -44,15 +44,23 @@ extension CheckListViewController: UITableViewDataSource, UITableViewDelegate{
     }
     
     func deleteListItem(listItemId: UUID ){
+
+        CheckListFunctions.deleteListItemById(checkListId: currentCheckList!.id, listItemId: listItemId, completion: { deletedItemIndex in
+            
+            if(deletedItemIndex == -1){
+                return
+            }else{
+                
+                DispatchQueue.main.async {
+                    self.currentCheckList = Data.checkListModels[self.checkListIndex!]
+                    self.listItemsTableView.deleteRows(at: [IndexPath(row: deletedItemIndex, section: 0)], with: .fade)
+                }
+                
+            }
+            
+        })
         
-        
-        CheckListFunctions.deleteListItemById(checkListId: currentCheckList!.id, listItemId: listItemId)
-        
-        /* Save Updated Checklist */
-        //CheckListFunctions.updateCheckListById(checkListId: currentCheckList!.id, updatedCheckList: currentCheckList!)
-        
-        self.viewDidLoad()
-        self.listItemsTableView.reloadData()
     }
     
 }
+

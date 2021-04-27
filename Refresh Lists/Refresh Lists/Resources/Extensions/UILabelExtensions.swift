@@ -48,4 +48,18 @@ extension UILabel {
         self.text = text.trunc(length: maxLength)
     }
     
+    
+    func makeConfirmationMessageLabel(text: String, maxLength: Int){
+        
+        /* Set Colors */
+        self.textColor = Theme.current.appAccentColor
+        
+        /* Set Fonts */
+        self.font = UIFont(name: Theme.current.sansFont, size: 22)
+        
+        /* Set Values */
+        self.text = text.trunc(length: maxLength)
+        
+    }
+    
 }
