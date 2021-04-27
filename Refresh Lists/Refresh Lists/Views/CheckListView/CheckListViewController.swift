@@ -158,7 +158,7 @@ class CheckListViewController: UIViewController {
         
         let checkListSettingsView = storyboard.instantiateInitialViewController() as! CheckListSettingsViewController
         
-        checkListSettingsView.checkListId = self.currentCheckList!.id
+        checkListSettingsView.currentCheckList = self.currentCheckList
         
         self.present(checkListSettingsView, animated: true, completion: nil)
         

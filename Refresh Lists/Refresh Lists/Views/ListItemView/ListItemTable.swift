@@ -84,7 +84,7 @@ extension CheckListViewController: UITableViewDataSource, UITableViewDelegate{
         }
         
         self.present(nameEditView, animated: true)
-        nameEditView.prepareNameEditInput(color: Theme.current.listBgSandColor, currentName: listItemToEdit.title)
+        nameEditView.prepareNameEditInput(color: ThemeFunctions.getColorFromName(colorName: self.currentCheckList!.color), currentName: listItemToEdit.title)
         
     }
     

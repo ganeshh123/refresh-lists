@@ -44,6 +44,7 @@
 		1FCB24C9262718550038ED0B /* font_shortstack.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1F0A62322624A684007D2227 /* font_shortstack.ttf */; };
 		1FCB24CA262718590038ED0B /* font_raleway.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1F0A62312624A661007D2227 /* font_raleway.ttf */; };
 		1FCB24D126277F190038ED0B /* CheckListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCB24D026277F190038ED0B /* CheckListViewController.swift */; };
+		1FD05DFC26383B8D0059B913 /* ThemeFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD05DFB26383B8D0059B913 /* ThemeFunctions.swift */; };
 		1FDCE1AD2627A25100BF3F89 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FDCE1AC2627A25100BF3F89 /* StringExtensions.swift */; };
 		1FDCE1B02627AEFB00BF3F89 /* ListItemViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FDCE1AF2627AEFB00BF3F89 /* ListItemViewCell.swift */; };
 		1FDCE1B22627B3D500BF3F89 /* ListItemTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FDCE1B12627B3D500BF3F89 /* ListItemTable.swift */; };
@@ -113,6 +114,7 @@
 		1FBD07532620368800E6CC15 /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
 		1FBD075526203DBD00E6CC15 /* CheckListFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckListFunctions.swift; sourceTree = "<group>"; };
 		1FCB24D026277F190038ED0B /* CheckListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckListViewController.swift; sourceTree = "<group>"; };
+		1FD05DFB26383B8D0059B913 /* ThemeFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeFunctions.swift; sourceTree = "<group>"; };
 		1FDCE1AC2627A25100BF3F89 /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
 		1FDCE1AF2627AEFB00BF3F89 /* ListItemViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItemViewCell.swift; sourceTree = "<group>"; };
 		1FDCE1B12627B3D500BF3F89 /* ListItemTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItemTable.swift; sourceTree = "<group>"; };
@@ -152,6 +154,7 @@
 				1F0A62332624A746007D2227 /* ThemeProtocol.swift */,
 				1F0A62352624A914007D2227 /* LightTheme.swift */,
 				1F0A62372624AAD6007D2227 /* DarkTheme.swift */,
+				1FD05DFB26383B8D0059B913 /* ThemeFunctions.swift */,
 			);
 			path = Theme;
 			sourceTree = "<group>";
@@ -510,6 +513,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1FE4C9AA26262C0C003BE873 /* CheckListsTableView.swift in Sources */,
+				1FD05DFC26383B8D0059B913 /* ThemeFunctions.swift in Sources */,
 				1FB62D082637F39700C9A984 /* NameEditViewController.swift in Sources */,
 				1F3B4112262CD5F70039EF03 /* CheckListSettingsViewController.swift in Sources */,
 				1FBB8EE92624C38900BFB47E /* UILabelExtensions.swift in Sources */,
