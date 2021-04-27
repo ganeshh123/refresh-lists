@@ -38,4 +38,21 @@ extension UITextField {
         
     }
     
+    func makeNameEditInput(backgroundColor: UIColor, text: String){
+        
+        /* Set Colors */
+        self.backgroundColor = backgroundColor
+        self.textColor = Theme.current.appAccentColor
+        self.tintColor = Theme.current.appAccentColor
+        
+        /* Set Font */
+        self.font = UIFont(name: Theme.current.handwritingFont, size: 22)
+        
+        /* Set Text */
+        self.text = text
+        
+        /* Set Functions */
+        
+    }
+    
 }

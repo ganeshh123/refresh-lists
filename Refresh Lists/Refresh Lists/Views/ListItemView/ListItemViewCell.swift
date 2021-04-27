@@ -19,18 +19,20 @@ class ListItemViewCell: UITableViewCell {
     var checkListId: UUID?
     var checkListEditing: Bool = false
     var deleteListItemFunc: (UUID) -> Void = {_ in }
+    var editListItemFunc: (ListItemModel) -> Void = {_ in }
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
 
-    func setup(inputListItem: ListItemModel, checkListId: UUID, editing: Bool, deleteListItemFunc: @escaping (UUID) -> Void = {_ in }){
+    func setup(inputListItem: ListItemModel, checkListId: UUID, editing: Bool, deleteListItemFunc: @escaping (UUID) -> Void = {_ in }, editListItemFunc: @escaping (ListItemModel) -> Void = {_ in }){
         
         self.listItem = inputListItem
         self.checkListId = checkListId
         self.checkListEditing = editing
         self.deleteListItemFunc = deleteListItemFunc
+        self.editListItemFunc = editListItemFunc
         
         self.listItemView.makeListItem()
         
@@ -59,7 +61,7 @@ class ListItemViewCell: UITableViewCell {
         if(self.checkListEditing == false){
             toggleCompleted()
         }else{
-            return
+            editListItemFunc(self.listItem!)
         }
     }
     

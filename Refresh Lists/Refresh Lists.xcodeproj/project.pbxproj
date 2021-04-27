@@ -23,6 +23,8 @@
 		1FB470642625CA0F00B6A6DA /* AppSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB470622625CA0F00B6A6DA /* AppSettingsViewController.swift */; };
 		1FB470672625CA4B00B6A6DA /* AppSettings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FB470662625CA4B00B6A6DA /* AppSettings.storyboard */; };
 		1FB470692625D22600B6A6DA /* UIButtonExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB470682625D22600B6A6DA /* UIButtonExtensions.swift */; };
+		1FB62D062637F38500C9A984 /* NameEditView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FB62D052637F38500C9A984 /* NameEditView.storyboard */; };
+		1FB62D082637F39700C9A984 /* NameEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB62D072637F39700C9A984 /* NameEditViewController.swift */; };
 		1FBB8EE92624C38900BFB47E /* UILabelExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FBB8EE82624C38900BFB47E /* UILabelExtensions.swift */; };
 		1FBD071326202D8900E6CC15 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FBD071226202D8900E6CC15 /* AppDelegate.swift */; };
 		1FBD071526202D8900E6CC15 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FBD071426202D8900E6CC15 /* SceneDelegate.swift */; };
@@ -86,6 +88,8 @@
 		1FB470622625CA0F00B6A6DA /* AppSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettingsViewController.swift; sourceTree = "<group>"; };
 		1FB470662625CA4B00B6A6DA /* AppSettings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AppSettings.storyboard; sourceTree = "<group>"; };
 		1FB470682625D22600B6A6DA /* UIButtonExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtensions.swift; sourceTree = "<group>"; };
+		1FB62D052637F38500C9A984 /* NameEditView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NameEditView.storyboard; sourceTree = "<group>"; };
+		1FB62D072637F39700C9A984 /* NameEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameEditViewController.swift; sourceTree = "<group>"; };
 		1FBB8EE82624C38900BFB47E /* UILabelExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabelExtensions.swift; sourceTree = "<group>"; };
 		1FBD070F26202D8900E6CC15 /* Refresh Lists.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Refresh Lists.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FBD071226202D8900E6CC15 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -196,6 +200,15 @@
 			path = AppSettingsView;
 			sourceTree = "<group>";
 		};
+		1FB62D042637F35F00C9A984 /* NameEditView */ = {
+			isa = PBXGroup;
+			children = (
+				1FB62D052637F38500C9A984 /* NameEditView.storyboard */,
+				1FB62D072637F39700C9A984 /* NameEditViewController.swift */,
+			);
+			path = NameEditView;
+			sourceTree = "<group>";
+		};
 		1FBB8EE42624C29100BFB47E /* Components */ = {
 			isa = PBXGroup;
 			children = (
@@ -285,6 +298,7 @@
 		1FBD074626202FF900E6CC15 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				1FB62D042637F35F00C9A984 /* NameEditView */,
 				1F63A4A82629F16F000D5A26 /* ConfirmationView */,
 				1FDCE1AE2627AEC700BF3F89 /* ListItemView */,
 				1FCB24CB262779FF0038ED0B /* CheckListView */,
@@ -467,6 +481,7 @@
 				1F3B4118262CDC360039EF03 /* CheckListSettings.storyboard in Resources */,
 				1FBD071A26202D8900E6CC15 /* Main.storyboard in Resources */,
 				1F0A623A2624ABA0007D2227 /* Icons.xcassets in Resources */,
+				1FB62D062637F38500C9A984 /* NameEditView.storyboard in Resources */,
 				1FB470672625CA4B00B6A6DA /* AppSettings.storyboard in Resources */,
 				1F63A4AA2629F1D8000D5A26 /* ConfirmationView.storyboard in Resources */,
 				1FCB24CA262718590038ED0B /* font_raleway.ttf in Resources */,
@@ -495,6 +510,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1FE4C9AA26262C0C003BE873 /* CheckListsTableView.swift in Sources */,
+				1FB62D082637F39700C9A984 /* NameEditViewController.swift in Sources */,
 				1F3B4112262CD5F70039EF03 /* CheckListSettingsViewController.swift in Sources */,
 				1FBB8EE92624C38900BFB47E /* UILabelExtensions.swift in Sources */,
 				1FB470642625CA0F00B6A6DA /* AppSettingsViewController.swift in Sources */,

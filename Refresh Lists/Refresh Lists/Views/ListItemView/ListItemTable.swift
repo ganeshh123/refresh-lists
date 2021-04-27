@@ -28,7 +28,7 @@ extension CheckListViewController: UITableViewDataSource, UITableViewDelegate{
         let cell = tableView.dequeueReusableCell(withIdentifier: "listItemCell") as! ListItemViewCell
         
         if let items = currentCheckList?.items {
-            cell.setup(inputListItem: items[indexPath.row], checkListId: currentCheckList!.id, editing: self.isEditing, deleteListItemFunc: self.deleteListItem(listItemId:))
+            cell.setup(inputListItem: items[indexPath.row], checkListId: currentCheckList!.id, editing: self.isEditing, deleteListItemFunc: self.deleteListItem(listItemId:), editListItemFunc: self.showEditListItemName(listItemToEdit:))
         }
         
         return cell
@@ -59,6 +59,32 @@ extension CheckListViewController: UITableViewDataSource, UITableViewDelegate{
             }
             
         })
+        
+    }
+    
+    func showEditListItemName(listItemToEdit: ListItemModel){
+        
+        var listItemToEdit = listItemToEdit
+        let nameEditStoryBoard = UIStoryboard(name: "NameEditView", bundle: nil)
+        let nameEditView = nameEditStoryBoard.instantiateInitialViewController() as! NameEditViewController
+        
+        nameEditView.confirmFunction = {inputName in 
+            listItemToEdit.title = inputName
+            
+            CheckListFunctions.updateListItemById(checkListId: self.currentCheckList!.id, listItemId: listItemToEdit.id, updatedListItem: listItemToEdit)
+            
+            DispatchQueue.main.async {
+                self.currentCheckList = Data.checkListModels[self.checkListIndex!]
+                self.listItemsTableView.reloadData()
+            }
+        }
+        
+        nameEditView.cancelFunction = {
+            return
+        }
+        
+        self.present(nameEditView, animated: true)
+        nameEditView.prepareNameEditInput(color: Theme.current.listBgSandColor, currentName: listItemToEdit.title)
         
     }
     
