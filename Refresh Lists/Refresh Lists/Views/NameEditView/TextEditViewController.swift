@@ -1,5 +1,5 @@
 //
-//  NameEditViewController.swift
+//  TextEditViewController.swift
 //  Refresh Lists
 //
 //  Created by Ganesh H on 27/04/2021.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class NameEditViewController: UIViewController {
+class TextEditViewController: UIViewController {
     
     @IBOutlet var outsideView: UIView!
     @IBOutlet var nameEditModalView: UIView!

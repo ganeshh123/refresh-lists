@@ -44,10 +44,10 @@ class CheckListSettingsViewController: UIViewController {
     
     @IBAction func checkListSettingsRenameButtonPressed(_ sender: UIButton) {
         
-        let nameEditStoryBoard = UIStoryboard(name: "NameEditView", bundle: nil)
-        let nameEditView = nameEditStoryBoard.instantiateInitialViewController() as! NameEditViewController
+        let nameEditStoryBoard = UIStoryboard(name: "TextEditView", bundle: nil)
+        let textEditView = nameEditStoryBoard.instantiateInitialViewController() as! TextEditViewController
         
-        nameEditView.confirmFunction = {inputName in
+        textEditView.confirmFunction = {inputName in
             
             self.currentCheckList?.title = inputName
             
@@ -66,12 +66,12 @@ class CheckListSettingsViewController: UIViewController {
             }
         }
         
-        nameEditView.cancelFunction = {
+        textEditView.cancelFunction = {
             self.dismiss(animated: true)
         }
         
-        self.present(nameEditView, animated: true)
-        nameEditView.prepareNameEditInput(color: ThemeFunctions.getColorFromName(colorName: self.currentCheckList!.color), currentName: self.currentCheckList!.title)
+        self.present(textEditView, animated: true)
+        textEditView.prepareNameEditInput(color: ThemeFunctions.getColorFromName(colorName: self.currentCheckList!.color), currentName: self.currentCheckList!.title)
         
     }
     

@@ -85,10 +85,10 @@ extension CheckListViewController: UITableViewDataSource, UITableViewDelegate, U
     func showEditListItemName(listItemToEdit: ListItemModel){
         
         var listItemToEdit = listItemToEdit
-        let nameEditStoryBoard = UIStoryboard(name: "NameEditView", bundle: nil)
-        let nameEditView = nameEditStoryBoard.instantiateInitialViewController() as! NameEditViewController
+        let nameEditStoryBoard = UIStoryboard(name: "TextEditView", bundle: nil)
+        let textEditView = nameEditStoryBoard.instantiateInitialViewController() as! TextEditViewController
         
-        nameEditView.confirmFunction = {inputName in 
+        textEditView.confirmFunction = {inputName in 
             listItemToEdit.title = inputName
             
             CheckListFunctions.updateListItemById(checkListId: self.currentCheckList!.id, listItemId: listItemToEdit.id, updatedListItem: listItemToEdit)
@@ -99,12 +99,12 @@ extension CheckListViewController: UITableViewDataSource, UITableViewDelegate, U
             }
         }
         
-        nameEditView.cancelFunction = {
+        textEditView.cancelFunction = {
             return
         }
         
-        self.present(nameEditView, animated: true)
-        nameEditView.prepareNameEditInput(color: ThemeFunctions.getColorFromName(colorName: self.currentCheckList!.color), currentName: listItemToEdit.title)
+        self.present(textEditView, animated: true)
+        textEditView.prepareNameEditInput(color: ThemeFunctions.getColorFromName(colorName: self.currentCheckList!.color), currentName: listItemToEdit.title)
         
     }
     

@@ -30,6 +30,27 @@ class ThemeFunctions {
         return color!
         
     }
+    
+    static func switchListColor(currentColorName: String) -> UIColor {
+        
+        var newColor: UIColor?
+        
+        switch currentColorName {
+        case "sand":
+            newColor = Theme.current.listBgBlueColor
+        case "blue":
+            newColor = Theme.current.listBgGreenColor
+        case "green":
+            newColor = Theme.current.listBgPinkColor
+        case "pink":
+            newColor = Theme.current.listBgSandColor
+        default:
+            newColor = Theme.current.listBgSandColor
+        }
+        
+        return newColor!
+        
+    }
 }
 
 

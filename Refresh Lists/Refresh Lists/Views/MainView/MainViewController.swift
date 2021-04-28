@@ -62,5 +62,23 @@ class MainViewController: UIViewController {
        
     }
     
-
+    @IBAction func newListButtonPressed(_ sender: UIButton) {
+        
+        let nameEditStoryBoard = UIStoryboard(name: "TextEditView", bundle: nil)
+        let textEditView = nameEditStoryBoard.instantiateInitialViewController() as! TextEditViewController
+        
+        textEditView.confirmFunction = {inputName in
+            
+            
+        }
+        
+        textEditView.cancelFunction = {
+            self.dismiss(animated: true)
+        }
+        
+        self.present(textEditView, animated: true)
+        textEditView.prepareNameEditInput(color: ThemeFunctions.getColorFromName(colorName: "sand"), currentName: "")
+        
+    }
+    
 }

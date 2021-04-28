@@ -55,6 +55,9 @@
                                 </constraints>
                                 <color key="tintColor" name="light_app_accent"/>
                                 <state key="normal" image="icon_plus"/>
+                                <connections>
+                                    <action selector="newListButtonPressed:" destination="XIV-oP-iG3" eventType="touchUpInside" id="ce1-kK-w8d"/>
+                                </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="J9t-Hz-WLE">
                                 <rect key="frame" x="0.0" y="75" width="375" height="572"/>
