@@ -71,7 +71,7 @@ class CheckListSettingsViewController: UIViewController {
         }
         
         self.present(textEditView, animated: true)
-        textEditView.prepareNameEditInput(color: ThemeFunctions.getColorFromName(colorName: self.currentCheckList!.color), currentName: self.currentCheckList!.title)
+        textEditView.prepareTextEditInput(color: ThemeFunctions.getColorFromName(colorName: self.currentCheckList!.color), currentName: self.currentCheckList!.title)
         
     }
     

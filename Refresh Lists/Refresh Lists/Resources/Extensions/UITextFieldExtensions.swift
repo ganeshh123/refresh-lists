@@ -38,7 +38,7 @@ extension UITextField {
         
     }
     
-    func makeNameEditInput(backgroundColor: UIColor, text: String){
+    func makeNameEditInput(backgroundColor: UIColor, text: String, placeholder: String = ""){
         
         /* Set Colors */
         self.backgroundColor = backgroundColor
@@ -50,9 +50,11 @@ extension UITextField {
         
         /* Set Text */
         self.text = text
+        if(text == ""){
+            self.placeholder = placeholder
+        }
         
         /* Set Functions */
-        
     }
     
 }

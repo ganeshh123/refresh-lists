@@ -203,13 +203,13 @@
 			path = AppSettingsView;
 			sourceTree = "<group>";
 		};
-		1FB62D042637F35F00C9A984 /* NameEditView */ = {
+		1FB62D042637F35F00C9A984 /* TextEditView */ = {
 			isa = PBXGroup;
 			children = (
 				1F7380ED263A1F1200745894 /* TextEditViewController.swift */,
 				1FB62D052637F38500C9A984 /* TextEditView.storyboard */,
 			);
-			path = NameEditView;
+			path = TextEditView;
 			sourceTree = "<group>";
 		};
 		1FBB8EE42624C29100BFB47E /* Components */ = {
@@ -301,7 +301,7 @@
 		1FBD074626202FF900E6CC15 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				1FB62D042637F35F00C9A984 /* NameEditView */,
+				1FB62D042637F35F00C9A984 /* TextEditView */,
 				1F63A4A82629F16F000D5A26 /* ConfirmationView */,
 				1FDCE1AE2627AEC700BF3F89 /* ListItemView */,
 				1FCB24CB262779FF0038ED0B /* CheckListView */,

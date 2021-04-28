@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Rl3-NZ-QFL">
-    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -12,11 +11,11 @@
             <objects>
                 <viewController id="Rl3-NZ-QFL" customClass="TextEditViewController" customModule="Refresh_Lists" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="alg-Zd-U57">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q0I-pN-LUm">
-                                <rect key="frame" x="52.5" y="276" width="270" height="115"/>
+                                <rect key="frame" x="165" y="242.5" width="270" height="115"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NQx-Z5-PXt">
                                         <rect key="frame" x="84" y="73" width="22" height="22"/>
@@ -26,7 +25,7 @@
                                             <constraint firstAttribute="height" constant="22" id="rv9-6D-cdN"/>
                                         </constraints>
                                         <connections>
-                                            <action selector="nameEditCancelButtonPressed:" destination="Rl3-NZ-QFL" eventType="touchUpInside" id="4a0-I7-iBi"/>
+                                            <action selector="textEditCancelButtonPressed:" destination="Rl3-NZ-QFL" eventType="touchUpInside" id="4a0-I7-iBi"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZlH-wY-Kqj">
@@ -37,7 +36,7 @@
                                             <constraint firstAttribute="width" constant="28" id="sLp-zJ-dLK"/>
                                         </constraints>
                                         <connections>
-                                            <action selector="nameEditConfirmButtonPressed:" destination="Rl3-NZ-QFL" eventType="touchUpInside" id="KzJ-d2-aQZ"/>
+                                            <action selector="textEditConfirmButtonPressed:" destination="Rl3-NZ-QFL" eventType="touchUpInside" id="KzJ-d2-aQZ"/>
                                         </connections>
                                     </button>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3i2-sW-2kb">
@@ -45,7 +44,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                         <connections>
-                                            <action selector="nameEditInputBoxTextChanged:" destination="Rl3-NZ-QFL" eventType="editingChanged" id="q7Q-nX-67K"/>
+                                            <action selector="textEditInputBoxTextChanged:" destination="Rl3-NZ-QFL" eventType="editingChanged" id="q7Q-nX-67K"/>
                                         </connections>
                                     </textField>
                                 </subviews>
@@ -71,11 +70,11 @@
                         <viewLayoutGuide key="safeArea" id="7Rz-wo-EQI"/>
                     </view>
                     <connections>
-                        <outlet property="nameEditCancelButton" destination="NQx-Z5-PXt" id="ViV-LX-jxI"/>
-                        <outlet property="nameEditConfirmButton" destination="ZlH-wY-Kqj" id="3hb-jL-3x4"/>
-                        <outlet property="nameEditInputBox" destination="3i2-sW-2kb" id="7KV-6B-Aex"/>
-                        <outlet property="nameEditModalView" destination="Q0I-pN-LUm" id="KAE-t3-Tgg"/>
                         <outlet property="outsideView" destination="alg-Zd-U57" id="7Ir-V9-B6T"/>
+                        <outlet property="textEditCancelButton" destination="NQx-Z5-PXt" id="ViV-LX-jxI"/>
+                        <outlet property="textEditConfirmButton" destination="ZlH-wY-Kqj" id="3hb-jL-3x4"/>
+                        <outlet property="textEditInputBox" destination="3i2-sW-2kb" id="7KV-6B-Aex"/>
+                        <outlet property="textEditModalView" destination="Q0I-pN-LUm" id="KAE-t3-Tgg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uau-lr-1Yp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

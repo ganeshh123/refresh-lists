@@ -104,7 +104,7 @@ extension CheckListViewController: UITableViewDataSource, UITableViewDelegate, U
         }
         
         self.present(textEditView, animated: true)
-        textEditView.prepareNameEditInput(color: ThemeFunctions.getColorFromName(colorName: self.currentCheckList!.color), currentName: listItemToEdit.title)
+        textEditView.prepareTextEditInput(color: ThemeFunctions.getColorFromName(colorName: self.currentCheckList!.color), currentName: listItemToEdit.title)
         
     }
     

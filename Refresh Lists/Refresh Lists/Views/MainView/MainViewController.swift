@@ -77,7 +77,7 @@ class MainViewController: UIViewController {
         }
         
         self.present(textEditView, animated: true)
-        textEditView.prepareNameEditInput(color: ThemeFunctions.getColorFromName(colorName: "sand"), currentName: "")
+        textEditView.prepareTextEditInput(color: ThemeFunctions.getColorFromName(colorName: "sand"), currentName: "", placeholder: "New List Name")
         
     }
     
