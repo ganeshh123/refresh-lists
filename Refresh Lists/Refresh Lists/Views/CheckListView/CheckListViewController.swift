@@ -33,7 +33,8 @@ class CheckListViewController: UIViewController {
         
         listItemsTableView.delegate = self
         listItemsTableView.dataSource = self
-        
+        listItemsTableView.dragInteractionEnabled = true
+        listItemsTableView.dragDelegate = self
         currentCheckList = Data.checkListModels[checkListIndex!]
         
         checkListViewModal.makeCheckListCardView(checkList: currentCheckList!)

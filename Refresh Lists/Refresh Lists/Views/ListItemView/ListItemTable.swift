@@ -10,8 +10,9 @@ import Foundation
 
 import UIKit
 
-extension CheckListViewController: UITableViewDataSource, UITableViewDelegate{
-
+extension CheckListViewController: UITableViewDataSource, UITableViewDelegate, UITableViewDragDelegate{
+    
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         if let items = currentCheckList?.items {
@@ -39,7 +40,26 @@ extension CheckListViewController: UITableViewDataSource, UITableViewDelegate{
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        return
+    }
+    
+    func tableView(_ tableView: UITableView, itemsForBeginning session: UIDragSession, at indexPath: IndexPath) -> [UIDragItem] {
+        let dragItem = UIDragItem(itemProvider: NSItemProvider())
+        dragItem.localObject = self.currentCheckList!.items?[indexPath.row]
+        return [ dragItem ]
+    }
+    
+    func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
         
+        let listItemToMove = self.currentCheckList!.items?.remove(at: sourceIndexPath.row)
+        self.currentCheckList!.items?.insert(listItemToMove!, at: destinationIndexPath.row)
+        
+        CheckListFunctions.updateCheckListById(checkListId: self.currentCheckList!.id, updatedCheckList: self.currentCheckList!)
+        
+        DispatchQueue.main.async {
+            self.currentCheckList = Data.checkListModels[self.checkListIndex!]
+            self.listItemsTableView.reloadData()
+        }
         
     }
     
