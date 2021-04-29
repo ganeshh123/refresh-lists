@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import CoreData
 
 class CheckListFunctions {
     
@@ -16,10 +17,7 @@ class CheckListFunctions {
         DispatchQueue.global(qos: .userInteractive).async {
             
             // TODO: Fetch CheckLists from CoreData Storage
-            
-            if(Data.checkListModels.count == 0){
-                Data.checkListModels = MockData.createMockCheckListModelData()
-            }
+            Data.fetchCheckListsFromStorage()
             
             DispatchQueue.main.async {
                 completion()
@@ -35,6 +33,7 @@ class CheckListFunctions {
             /* Add to Core Data*/
             
             Data.checkListModels.insert(checkListToAdd, at: 0)
+            Data.writeCheckListsToStorage()
             
             DispatchQueue.main.async {
                 completion(checkListToAdd)
@@ -55,6 +54,7 @@ class CheckListFunctions {
                 Data.checkListModels[checkListIndex] = updatedCheckList
                 
                 /* TODO: Push to Core Data */
+                Data.writeCheckListsToStorage()
             }
             
         }
@@ -72,7 +72,7 @@ class CheckListFunctions {
                     
                     print("Updated List Item" )
                     /* Todo Push to Core Data */
-                    
+                    Data.writeCheckListsToStorage()
                 }
             }
             
@@ -90,7 +90,9 @@ class CheckListFunctions {
                     Data.checkListModels[checkListIndex].items!.remove(at: listItemIndex)
                     
                     print("Deleted List Item")
+                    
                     /* Todo Push to Core Data */
+                    Data.writeCheckListsToStorage()
                     
                     completion(listItemIndex)
                     
@@ -114,6 +116,7 @@ class CheckListFunctions {
                 
                 Data.checkListModels.remove(at: checkListIndex)
                 print("Deleted Check List")
+                Data.writeCheckListsToStorage()
                 
                 completion(checkListIndex)
                 

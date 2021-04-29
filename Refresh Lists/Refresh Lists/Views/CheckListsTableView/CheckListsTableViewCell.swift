@@ -28,6 +28,9 @@ class CheckListsTableViewCell: UITableViewCell {
         
         checkListCardOptionsButton.makeCheckListCardButton(icon: UIImage(named: "icon_options")!)
         checkListCardLockButton.makeCheckListCardButton(icon: UIImage(named: "icon_locked")!)
+        
+        checkListCardOptionsButton.isHidden = true
+        checkListCardLockButton.isHidden = true
     }
     
     override func layoutSubviews() {

@@ -71,5 +71,10 @@ class AppSettingsViewController: UIViewController {
     }
     
     
+    @IBAction func aboutButtonPressed(_ sender: UIButton) {
+        
+        Data.writeCheckListsToStorage()
+        
+    }
     
 }

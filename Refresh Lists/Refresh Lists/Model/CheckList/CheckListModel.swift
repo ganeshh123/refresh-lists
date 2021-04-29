@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-struct CheckListModel {
+struct CheckListModel: Codable {
     
     let id: UUID
     

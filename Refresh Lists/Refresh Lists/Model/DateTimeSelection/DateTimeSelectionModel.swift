@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct DateTimeSelectionModel {
+struct DateTimeSelectionModel: Codable {
     
     var hours: [Int64]?
     var days: [Int64]?

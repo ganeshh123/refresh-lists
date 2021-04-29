@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct ListItemModel {
+struct ListItemModel: Codable {
     
     let id: UUID
     
