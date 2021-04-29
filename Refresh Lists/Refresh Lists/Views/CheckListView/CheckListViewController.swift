@@ -35,6 +35,7 @@ class CheckListViewController: UIViewController {
         listItemsTableView.dataSource = self
         listItemsTableView.dragInteractionEnabled = true
         listItemsTableView.dragDelegate = self
+        listItemsTableView.separatorColor = Theme.current.appAccentColor
         currentCheckList = Data.checkListModels[checkListIndex!]
         
         checkListViewModal.makeCheckListCardView(checkList: currentCheckList!)

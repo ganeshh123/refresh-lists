@@ -59,7 +59,6 @@ extension UIView {
         
         /* Set Colors */
         self.backgroundColor = UIColor(named: "clear")
-        
     }
     
 }

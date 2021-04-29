@@ -21,10 +21,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lfg-8M-0GL">
-                                <rect key="frame" x="103" y="60" width="252" height="125"/>
+                                <rect key="frame" x="103" y="60" width="252" height="170"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="IoU-ea-vhF" userLabel="SettingsButtonsStackView">
-                                        <rect key="frame" x="28.5" y="17.5" width="195" height="90"/>
+                                        <rect key="frame" x="28.5" y="17.5" width="195" height="135"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UK3-cF-86B">
                                                 <rect key="frame" x="0.0" y="0.0" width="195" height="45"/>
@@ -50,6 +50,18 @@
                                                     <action selector="checkListSettingsDeleteButtonPressed:" destination="oBY-4X-gWg" eventType="touchUpInside" id="Z33-hA-EfF"/>
                                                 </connections>
                                             </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GJM-bF-4xh">
+                                                <rect key="frame" x="0.0" y="90" width="195" height="45"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="45" id="6iX-gJ-xoO"/>
+                                                    <constraint firstAttribute="width" constant="195" id="agv-E1-lzd"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="RalewayRoman-Regular" family="Raleway" pointSize="17"/>
+                                                <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="checkListSettingsColorSwitchButtonPressed:" destination="oBY-4X-gWg" eventType="touchUpInside" id="4fM-a7-yDp"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                     </stackView>
                                 </subviews>
@@ -58,7 +70,7 @@
                                     <constraint firstItem="IoU-ea-vhF" firstAttribute="centerX" secondItem="Lfg-8M-0GL" secondAttribute="centerX" id="2Ji-FS-t3H"/>
                                     <constraint firstAttribute="width" constant="252" id="5Ta-gM-OaD"/>
                                     <constraint firstItem="IoU-ea-vhF" firstAttribute="centerY" secondItem="Lfg-8M-0GL" secondAttribute="centerY" id="OGQ-qu-nv5"/>
-                                    <constraint firstAttribute="height" constant="125" id="sSH-vN-cMz"/>
+                                    <constraint firstAttribute="height" constant="170" id="sSH-vN-cMz"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -70,6 +82,7 @@
                     </view>
                     <connections>
                         <outlet property="checkListSettingsButtonStackView" destination="IoU-ea-vhF" id="a9J-l5-XzZ"/>
+                        <outlet property="checkListSettingsColorSwitchButton" destination="GJM-bF-4xh" id="ZZr-PI-x1p"/>
                         <outlet property="checkListSettingsDeleteButton" destination="VwW-9M-QOT" id="9Yk-Kq-aq6"/>
                         <outlet property="checkListSettingsOutsideView" destination="DzR-QS-KZc" id="xdT-5c-44k"/>
                         <outlet property="checkListSettingsRenameButton" destination="UK3-cF-86B" id="oqW-II-yrj"/>

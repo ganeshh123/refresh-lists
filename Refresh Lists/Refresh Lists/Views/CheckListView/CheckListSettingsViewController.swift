@@ -15,6 +15,7 @@ class CheckListSettingsViewController: UIViewController {
     @IBOutlet var checkListSettingsButtonStackView: UIStackView!
     @IBOutlet var checkListSettingsRenameButton: UIButton!
     @IBOutlet var checkListSettingsDeleteButton: UIButton!
+    @IBOutlet var checkListSettingsColorSwitchButton: UIButton!
     
     var currentCheckList: CheckListModel?
 
@@ -32,6 +33,8 @@ class CheckListSettingsViewController: UIViewController {
         checkListSettingsRenameButton.makeSettingsButton(title: "Rename", icon: UIImage(named: "icon_edit")!, color: Theme.current.greenColor)
        
         checkListSettingsDeleteButton.makeSettingsButton(title: "Delete", icon: UIImage(named: "icon_cross")!, color: Theme.current.redColor)
+        
+        checkListSettingsColorSwitchButton.makeSettingsButton(title: "Color", icon: UIImage(named: "icon_color")!, color: Theme.current.appAccentColor)
     }
 
     @objc func outsideViewTouched(sender: UITapGestureRecognizer? = nil) {
@@ -110,5 +113,23 @@ class CheckListSettingsViewController: UIViewController {
         self.present(confirmationView, animated: true, completion: nil)
         
     }
+    
+    @IBAction func checkListSettingsColorSwitchButtonPressed(_ sender: UIButton) {
+        
+        self.currentCheckList!.color = ThemeFunctions.switchListColor(currentColorName: self.currentCheckList!.color)
+        
+        CheckListFunctions.updateCheckListById(checkListId: self.currentCheckList!.id, updatedCheckList: self.currentCheckList!)
+        
+        DispatchQueue.main.async {
+            
+            if let checkListView = self.presentingViewController as? CheckListViewController {
+                checkListView.currentCheckList = Data.checkListModels[checkListView.checkListIndex!]
+                checkListView.viewDidLoad()
+            }
+            
+        }
+        
+    }
+    
     
 }

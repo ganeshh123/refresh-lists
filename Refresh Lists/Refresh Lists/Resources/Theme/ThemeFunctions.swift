@@ -31,24 +31,24 @@ class ThemeFunctions {
         
     }
     
-    static func switchListColor(currentColorName: String) -> UIColor {
+    static func switchListColor(currentColorName: String) -> String {
         
-        var newColor: UIColor?
+        var newColorName: String?
         
         switch currentColorName {
         case "sand":
-            newColor = Theme.current.listBgBlueColor
+            newColorName = "blue"
         case "blue":
-            newColor = Theme.current.listBgGreenColor
+            newColorName = "green"
         case "green":
-            newColor = Theme.current.listBgPinkColor
+            newColorName = "pink"
         case "pink":
-            newColor = Theme.current.listBgSandColor
+            newColorName = "sand"
         default:
-            newColor = Theme.current.listBgSandColor
+            newColorName = "sand"
         }
         
-        return newColor!
+        return newColorName!
         
     }
 }
