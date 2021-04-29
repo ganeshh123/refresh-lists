@@ -28,6 +28,22 @@ class CheckListFunctions {
         }
     }
     
+    static func newCheckList(checkListToAdd: CheckListModel, completion: @escaping (CheckListModel) -> ()){
+        
+        DispatchQueue.global(qos: .userInteractive).async {
+            
+            /* Add to Core Data*/
+            
+            Data.checkListModels.insert(checkListToAdd, at: 0)
+            
+            DispatchQueue.main.async {
+                completion(checkListToAdd)
+            }
+            
+        }
+        
+    }
+    
     
     static func updateCheckListById(checkListId: UUID, updatedCheckList: CheckListModel){
         

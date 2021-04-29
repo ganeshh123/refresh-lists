@@ -69,7 +69,16 @@ class MainViewController: UIViewController {
         
         textEditView.confirmFunction = {inputName in
             
+            let checkListToAdd = CheckListModel(title: inputName, items: [], refresh: nil, reminder: nil)
             
+            CheckListFunctions.newCheckList(checkListToAdd: checkListToAdd) { (createdCheckList: CheckListModel) in
+                
+                CheckListFunctions.readCheckLists { [unowned self] in
+                    self.checkListsTableView.reloadData()
+                }
+                
+                self.tableView(self.checkListsTableView, didSelectRowAt: [0, 0])
+            }
         }
         
         textEditView.cancelFunction = {
