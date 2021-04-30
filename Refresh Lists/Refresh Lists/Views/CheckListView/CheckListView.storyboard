@@ -164,6 +164,20 @@
                                             <action selector="newListItemAddButtonPressed:" destination="ME2-ut-RtU" eventType="touchUpInside" id="lJq-FU-u4V"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bEe-yx-WTJ">
+                                        <rect key="frame" x="157" y="72" width="138" height="17"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="138" id="LSa-Oq-jnp"/>
+                                            <constraint firstAttribute="height" constant="17" id="WZO-Rx-Ml6"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="RalewayRoman-Medium" family="Raleway" pointSize="17"/>
+                                        <state key="normal" title="Refresh">
+                                            <color key="titleColor" name="light_green"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="checkListReminderButtonPressed:" destination="ME2-ut-RtU" eventType="touchUpInside" id="FIp-cT-3OX"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.97254901960784312" green="0.95686274509803926" blue="0.90588235294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" name="light_app_accent"/>
@@ -173,6 +187,8 @@
                                     <constraint firstAttribute="bottom" secondItem="jeI-Xw-pGE" secondAttribute="bottom" constant="10" id="BmE-kO-czz"/>
                                     <constraint firstItem="7am-ym-X42" firstAttribute="top" secondItem="FSA-B9-9Pw" secondAttribute="bottom" constant="55" id="Iz1-8x-5To"/>
                                     <constraint firstItem="NgY-oj-Ps0" firstAttribute="top" secondItem="FSA-B9-9Pw" secondAttribute="bottom" constant="25" id="KBy-Qp-8tp"/>
+                                    <constraint firstItem="bEe-yx-WTJ" firstAttribute="top" secondItem="k3o-an-7v9" secondAttribute="top" constant="72" id="LkM-dT-q9U"/>
+                                    <constraint firstAttribute="trailing" secondItem="bEe-yx-WTJ" secondAttribute="trailing" constant="20" id="Nzb-27-dGZ"/>
                                     <constraint firstItem="7am-ym-X42" firstAttribute="leading" secondItem="k3o-an-7v9" secondAttribute="leading" constant="20" id="Vb8-CX-weq"/>
                                     <constraint firstItem="FSA-B9-9Pw" firstAttribute="top" secondItem="k3o-an-7v9" secondAttribute="top" constant="20" id="WKD-Zr-oe1"/>
                                     <constraint firstItem="guj-RH-cI1" firstAttribute="leading" secondItem="jeI-Xw-pGE" secondAttribute="trailing" constant="15" id="by3-ao-xln"/>
@@ -205,6 +221,7 @@
                         <outlet property="checkListLockButton" destination="xpl-hs-wOG" id="Wio-us-xJC"/>
                         <outlet property="checkListOptionsButton" destination="fCL-MW-qLW" id="Cbx-e9-ZPi"/>
                         <outlet property="checkListRefreshButton" destination="NgY-oj-Ps0" id="xWe-X4-xRO"/>
+                        <outlet property="checkListReminderButton" destination="bEe-yx-WTJ" id="Vhm-av-3Cd"/>
                         <outlet property="checkListTitleLabel" destination="FSA-B9-9Pw" id="zJp-lW-BYn"/>
                         <outlet property="checkListViewModal" destination="k3o-an-7v9" id="Tod-UZ-GcX"/>
                         <outlet property="listItemsTableView" destination="7am-ym-X42" id="meG-Wt-AP6"/>

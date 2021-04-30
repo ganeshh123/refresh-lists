@@ -18,6 +18,7 @@ class CheckListViewController: UIViewController {
     @IBOutlet var checkListLockButton: UIButton!
     @IBOutlet var listItemsTableView: UITableView!
     @IBOutlet var checkListRefreshButton: UIButton!
+    @IBOutlet var checkListReminderButton: UIButton!
     @IBOutlet var newListItemInputBox: UITextField!
     @IBOutlet var newListItemAddButton: UIButton!
     
@@ -51,6 +52,8 @@ class CheckListViewController: UIViewController {
         }
         
         checkListRefreshButton.makeCheckListTimeButton(title: "Refresh", icon: UIImage(named: "icon_refresh")!, color: Theme.current.greenColor)
+        
+        checkListReminderButton.makeCheckListTimeButton(title: "Reminder", icon: UIImage(named: "icon_clock")!, color: Theme.current.redColor)
         
         
         newListItemAddButton.makeCheckListItemButton(icon: UIImage(named: "icon_plus")!, color: Theme.current.greenColor)
@@ -98,6 +101,10 @@ class CheckListViewController: UIViewController {
         listItemsTableView.reloadData()
         
     }
+    
+    @IBAction func checkListReminderButtonPressed(_ sender: UIButton) {
+    }
+    
     
     @IBAction func newListItemAddButtonPressed(_ sender: UIButton) {
         
