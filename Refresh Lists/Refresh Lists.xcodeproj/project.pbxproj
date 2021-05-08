@@ -33,8 +33,6 @@
 		1FBD071D26202D8900E6CC15 /* Refresh_Lists.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1FBD071B26202D8900E6CC15 /* Refresh_Lists.xcdatamodeld */; };
 		1FBD071F26202D8B00E6CC15 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1FBD071E26202D8B00E6CC15 /* Assets.xcassets */; };
 		1FBD072226202D8B00E6CC15 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FBD072026202D8B00E6CC15 /* LaunchScreen.storyboard */; };
-		1FBD072D26202D8B00E6CC15 /* Refresh_ListsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FBD072C26202D8B00E6CC15 /* Refresh_ListsTests.swift */; };
-		1FBD073826202D8B00E6CC15 /* Refresh_ListsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FBD073726202D8B00E6CC15 /* Refresh_ListsUITests.swift */; };
 		1FBD074A262030B300E6CC15 /* ListItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FBD0749262030B300E6CC15 /* ListItemModel.swift */; };
 		1FBD074D2620316900E6CC15 /* DateTimeSelectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FBD074C2620316900E6CC15 /* DateTimeSelectionModel.swift */; };
 		1FBD0750262032FB00E6CC15 /* CheckListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FBD074F262032FB00E6CC15 /* CheckListModel.swift */; };
@@ -105,11 +103,7 @@
 		1FBD072126202D8B00E6CC15 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1FBD072326202D8B00E6CC15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1FBD072826202D8B00E6CC15 /* Refresh ListsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Refresh ListsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		1FBD072C26202D8B00E6CC15 /* Refresh_ListsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Refresh_ListsTests.swift; sourceTree = "<group>"; };
-		1FBD072E26202D8B00E6CC15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1FBD073326202D8B00E6CC15 /* Refresh ListsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Refresh ListsUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		1FBD073726202D8B00E6CC15 /* Refresh_ListsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Refresh_ListsUITests.swift; sourceTree = "<group>"; };
-		1FBD073926202D8B00E6CC15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1FBD0749262030B300E6CC15 /* ListItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItemModel.swift; sourceTree = "<group>"; };
 		1FBD074C2620316900E6CC15 /* DateTimeSelectionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateTimeSelectionModel.swift; sourceTree = "<group>"; };
 		1FBD074F262032FB00E6CC15 /* CheckListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckListModel.swift; sourceTree = "<group>"; };
@@ -234,8 +228,6 @@
 			isa = PBXGroup;
 			children = (
 				1FBD071126202D8900E6CC15 /* Refresh Lists */,
-				1FBD072B26202D8B00E6CC15 /* Refresh ListsTests */,
-				1FBD073626202D8B00E6CC15 /* Refresh ListsUITests */,
 				1FBD071026202D8900E6CC15 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -264,24 +256,6 @@
 				1FBD071B26202D8900E6CC15 /* Refresh_Lists.xcdatamodeld */,
 			);
 			path = "Refresh Lists";
-			sourceTree = "<group>";
-		};
-		1FBD072B26202D8B00E6CC15 /* Refresh ListsTests */ = {
-			isa = PBXGroup;
-			children = (
-				1FBD072C26202D8B00E6CC15 /* Refresh_ListsTests.swift */,
-				1FBD072E26202D8B00E6CC15 /* Info.plist */,
-			);
-			path = "Refresh ListsTests";
-			sourceTree = "<group>";
-		};
-		1FBD073626202D8B00E6CC15 /* Refresh ListsUITests */ = {
-			isa = PBXGroup;
-			children = (
-				1FBD073726202D8B00E6CC15 /* Refresh_ListsUITests.swift */,
-				1FBD073926202D8B00E6CC15 /* Info.plist */,
-			);
-			path = "Refresh ListsUITests";
 			sourceTree = "<group>";
 		};
 		1FBD074526202FD300E6CC15 /* Model */ = {
@@ -565,7 +539,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1FBD072D26202D8B00E6CC15 /* Refresh_ListsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -573,7 +546,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1FBD073826202D8B00E6CC15 /* Refresh_ListsUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
