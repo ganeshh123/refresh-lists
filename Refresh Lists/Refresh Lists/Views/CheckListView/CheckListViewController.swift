@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import EventKit
 class CheckListViewController: UIViewController {
 
     @IBOutlet var outsideView: UIView!
@@ -25,7 +25,6 @@ class CheckListViewController: UIViewController {
     var checkListIndex: Int?
     var currentCheckList: CheckListModel?
     var listEditMode: Bool = false
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -103,6 +102,9 @@ class CheckListViewController: UIViewController {
     }
     
     @IBAction func checkListReminderButtonPressed(_ sender: UIButton) {
+        
+        self.showReminderPicker()
+        
     }
     
     

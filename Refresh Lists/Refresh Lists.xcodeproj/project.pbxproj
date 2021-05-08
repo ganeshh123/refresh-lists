@@ -51,6 +51,9 @@
 		1FE4C9A826262B91003BE873 /* CheckListsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE4C9A726262B91003BE873 /* CheckListsTableViewCell.swift */; };
 		1FE4C9AA26262C0C003BE873 /* CheckListsTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE4C9A926262C0C003BE873 /* CheckListsTableView.swift */; };
 		1FEC06332628B5F90089ED7B /* UITextFieldExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FEC06322628B5F90089ED7B /* UITextFieldExtensions.swift */; };
+		1FEEE71C263C632600365844 /* CheckListReminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FEEE71B263C632600365844 /* CheckListReminder.swift */; };
+		1FEEE71F263C6BD100365844 /* DateTimeSelection.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FEEE71E263C6BD100365844 /* DateTimeSelection.storyboard */; };
+		1FEEE721263C6C4300365844 /* DateTimeSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FEEE720263C6C4300365844 /* DateTimeSelectionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -121,6 +124,9 @@
 		1FE4C9A726262B91003BE873 /* CheckListsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckListsTableViewCell.swift; sourceTree = "<group>"; };
 		1FE4C9A926262C0C003BE873 /* CheckListsTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckListsTableView.swift; sourceTree = "<group>"; };
 		1FEC06322628B5F90089ED7B /* UITextFieldExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextFieldExtensions.swift; sourceTree = "<group>"; };
+		1FEEE71B263C632600365844 /* CheckListReminder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckListReminder.swift; sourceTree = "<group>"; };
+		1FEEE71E263C6BD100365844 /* DateTimeSelection.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DateTimeSelection.storyboard; sourceTree = "<group>"; };
+		1FEEE720263C6C4300365844 /* DateTimeSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateTimeSelectionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -212,13 +218,6 @@
 			path = TextEditView;
 			sourceTree = "<group>";
 		};
-		1FBB8EE42624C29100BFB47E /* Components */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Components;
-			sourceTree = "<group>";
-		};
 		1FBB8EE72624C37500BFB47E /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -254,7 +253,6 @@
 		1FBD071126202D8900E6CC15 /* Refresh Lists */ = {
 			isa = PBXGroup;
 			children = (
-				1FBB8EE42624C29100BFB47E /* Components */,
 				1FBD07472620303200E6CC15 /* Resources */,
 				1FBD074626202FF900E6CC15 /* Views */,
 				1FBD074526202FD300E6CC15 /* Model */,
@@ -301,6 +299,7 @@
 		1FBD074626202FF900E6CC15 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				1FEEE71D263C6B9F00365844 /* DateTimeSelectionView */,
 				1FB62D042637F35F00C9A984 /* TextEditView */,
 				1F63A4A82629F16F000D5A26 /* ConfirmationView */,
 				1FDCE1AE2627AEC700BF3F89 /* ListItemView */,
@@ -359,6 +358,7 @@
 				1F3B4115262CDC0B0039EF03 /* CheckListView.storyboard */,
 				1FCB24D026277F190038ED0B /* CheckListViewController.swift */,
 				1F3B4111262CD5F70039EF03 /* CheckListSettingsViewController.swift */,
+				1FEEE71B263C632600365844 /* CheckListReminder.swift */,
 			);
 			path = CheckListView;
 			sourceTree = "<group>";
@@ -370,6 +370,15 @@
 				1FDCE1B12627B3D500BF3F89 /* ListItemTable.swift */,
 			);
 			path = ListItemView;
+			sourceTree = "<group>";
+		};
+		1FEEE71D263C6B9F00365844 /* DateTimeSelectionView */ = {
+			isa = PBXGroup;
+			children = (
+				1FEEE71E263C6BD100365844 /* DateTimeSelection.storyboard */,
+				1FEEE720263C6C4300365844 /* DateTimeSelectionViewController.swift */,
+			);
+			path = DateTimeSelectionView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -458,6 +467,10 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
+				ja,
+				ko,
+				"zh-Hant",
 			);
 			mainGroup = 1FBD070626202D8900E6CC15;
 			productRefGroup = 1FBD071026202D8900E6CC15 /* Products */;
@@ -485,6 +498,7 @@
 				1FBD071A26202D8900E6CC15 /* Main.storyboard in Resources */,
 				1F0A623A2624ABA0007D2227 /* Icons.xcassets in Resources */,
 				1FB62D062637F38500C9A984 /* TextEditView.storyboard in Resources */,
+				1FEEE71F263C6BD100365844 /* DateTimeSelection.storyboard in Resources */,
 				1FB470672625CA4B00B6A6DA /* AppSettings.storyboard in Resources */,
 				1F63A4AA2629F1D8000D5A26 /* ConfirmationView.storyboard in Resources */,
 				1FCB24CA262718590038ED0B /* font_raleway.ttf in Resources */,
@@ -524,6 +538,7 @@
 				1FE4C9A826262B91003BE873 /* CheckListsTableViewCell.swift in Sources */,
 				1FBD071726202D8900E6CC15 /* ViewController.swift in Sources */,
 				1FB470612625C8CE00B6A6DA /* UIViewExtensions.swift in Sources */,
+				1FEEE71C263C632600365844 /* CheckListReminder.swift in Sources */,
 				1FBD074D2620316900E6CC15 /* DateTimeSelectionModel.swift in Sources */,
 				1FBD0750262032FB00E6CC15 /* CheckListModel.swift in Sources */,
 				1FEC06332628B5F90089ED7B /* UITextFieldExtensions.swift in Sources */,
@@ -537,6 +552,7 @@
 				1FBD07542620368800E6CC15 /* MockData.swift in Sources */,
 				1FBD071326202D8900E6CC15 /* AppDelegate.swift in Sources */,
 				1F0A623E2624BE79007D2227 /* MainViewController.swift in Sources */,
+				1FEEE721263C6C4300365844 /* DateTimeSelectionViewController.swift in Sources */,
 				1FBD071526202D8900E6CC15 /* SceneDelegate.swift in Sources */,
 				1FBD071D26202D8900E6CC15 /* Refresh_Lists.xcdatamodeld in Sources */,
 				1F0A62362624A914007D2227 /* LightTheme.swift in Sources */,
