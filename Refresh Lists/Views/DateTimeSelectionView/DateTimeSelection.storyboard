@@ -48,6 +48,9 @@
                                             <constraint firstAttribute="height" constant="22" id="7GP-qs-SIF"/>
                                             <constraint firstAttribute="width" constant="28" id="YH1-ip-4gl"/>
                                         </constraints>
+                                        <connections>
+                                            <action selector="dateTimeSelectionConfirmButtonPressed:" destination="U06-HH-bS0" eventType="touchUpInside" id="trT-QB-2L6"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Send me an initial reminder on" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ijz-qw-jOP">
                                         <rect key="frame" x="20" y="62.5" width="280" height="39"/>
@@ -76,11 +79,14 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="Q2P-Ey-Qel">
-                                        <rect key="frame" x="20" y="111" width="280" height="100"/>
+                                    <datePicker clipsSubviews="YES" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="Q2P-Ey-Qel">
+                                        <rect key="frame" x="20" y="111.5" width="280" height="100"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="100" id="lH7-Va-xvS"/>
                                         </constraints>
+                                        <date key="minimumDate" timeIntervalSinceReferenceDate="-978267600">
+                                            <!--1970-01-01 11:00:00 +0000-->
+                                        </date>
                                     </datePicker>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MEv-TB-bTq">
                                         <rect key="frame" x="20" y="270.5" width="37" height="34"/>

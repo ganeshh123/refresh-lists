@@ -63,4 +63,16 @@ extension UILabel {
         
     }
     
+    func makeDateTimeSelectionInfoText(text: String){
+        
+        /* Set Colors */
+        self.textColor = Theme.current.appAccentColor
+        
+        /* Set Fonts */
+        self.font = UIFont(name: Theme.current.handwritingFont, size: 14)
+        self.textAlignment = .left
+        
+        
+    }
+    
 }

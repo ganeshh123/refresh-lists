@@ -40,10 +40,28 @@ class DateTimeSelectionViewController: UIViewController {
         self.dateTimeSelectionCancelButton.makeConfirmationButton(icon: UIImage(named: "icon_cross")!, color: Theme.current.redColor)
         self.dateTimeSelectionConfirmButton.makeConfirmationButton(icon: UIImage(named: "icon_tick")!, color: Theme.current.greenColor)
         
+        /* Set Text */
+        dateTimeSelectionInitialReminderLabel.makeDateTimeSelectionInfoText(text: "Send me an initial reminder on")
+        dateTimeContinuedReminderLabel.makeDateTimeSelectionInfoText(text: "Then, continue to remind me every")
+        dateTimeSelectionMonthLabel.makeDateTimeSelectionInfoText(text: "months, and ")
+        dateTimeSelectionDayLabel.makeDateTimeSelectionInfoText(text: "days")
+        dateTimeSelectionForLabel.makeDateTimeSelectionInfoText(text: "for exactly")
+        dateTimeSelectionTimesLabel.makeDateTimeSelectionInfoText(text: "times.")
+        
+        dateTimeSelectionInitialDatePicker.minimumDate = Date()
+        dateTimeSelectionInitialDatePicker.setValue(Theme.current.appAccentColor, forKeyPath: "textColor")
+        dateTimeSelectionInitialDatePicker.setValue(false, forKeyPath: "highlightsToday")
+        
+        
     }
     
-    func setupColors(backgroundColor: UIColor){
-        //self.dateTimeSelectionModalView.backgroundColor = backgroundColor
+    func setupColors(listColor: UIColor){
+        
+        self.dateTimeSelectionMonthTextField.makeDateTimeSelectionTextField(backgroundColor: listColor)
+        self.dateTimeSelectionDayTextField.makeDateTimeSelectionTextField(backgroundColor: listColor)
+        self.dateTimeSelectionRepeatTextField.makeDateTimeSelectionTextField(backgroundColor: listColor)
+        
+        self.dateTimeSelectionInitialDatePicker.backgroundColor = listColor
     }
     
     func setupText(titleText: String){
@@ -57,4 +75,46 @@ class DateTimeSelectionViewController: UIViewController {
         
     }
     
+    func validateInputs() -> Bool{
+        
+        dateTimeSelectionMonthTextField.clearInvalidInput()
+        dateTimeSelectionDayTextField.clearInvalidInput()
+        dateTimeSelectionRepeatTextField.clearInvalidInput()
+        var allInputsValid = true
+        
+        let monthTextFieldValue = dateTimeSelectionMonthTextField.text
+        if(monthTextFieldValue == "" || Int(monthTextFieldValue!) == nil){
+            dateTimeSelectionMonthTextField.invalidInput()
+            allInputsValid = false
+        }
+        
+        let dayTextFieldValue = dateTimeSelectionDayTextField.text
+        if(dayTextFieldValue == "" ||  Int(dayTextFieldValue!) == nil){
+            dateTimeSelectionDayTextField.invalidInput()
+            allInputsValid = false
+        }
+        
+        let repeatTextFieldValue = dateTimeSelectionRepeatTextField.text
+        if(repeatTextFieldValue == "" ||  Int(repeatTextFieldValue!) == nil){
+           dateTimeSelectionRepeatTextField.invalidInput()
+            allInputsValid = false
+        }
+        
+        return allInputsValid
+    }
+    
+    @IBAction func dateTimeSelectionConfirmButtonPressed(_ sender: UIButton) {
+        
+        if(self.validateInputs() == false){
+            return
+        }
+        
+        let initialDate = self.dateTimeSelectionInitialDatePicker.date
+        let repeatMonths = Int(self.dateTimeSelectionMonthTextField.text!)
+        let repeatDays = Int(self.dateTimeSelectionDayTextField.text!)
+        let repeatCount = Int(self.dateTimeSelectionRepeatTextField.text!)
+        
+        self.dismiss(animated: true)
+        addReminderFunc(initialDate, repeatMonths!, repeatDays!, repeatCount!)
+    }
 }

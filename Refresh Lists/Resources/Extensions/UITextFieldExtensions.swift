@@ -57,4 +57,15 @@ extension UITextField {
         /* Set Functions */
     }
     
+    func makeDateTimeSelectionTextField(backgroundColor: UIColor){
+        
+        /* Set Colors */
+        self.backgroundColor = backgroundColor
+        self.textColor = Theme.current.appAccentColor
+        self.tintColor = Theme.current.appAccentColor
+        
+        /* Set Font */
+        self.font = UIFont(name: Theme.current.handwritingFont, size: 17)
+    }
+    
 }
