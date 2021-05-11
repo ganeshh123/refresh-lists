@@ -36,6 +36,10 @@ class MainViewController: UIViewController {
         
         checkListsTableView.dataSource = self
         checkListsTableView.delegate = self
+        
+        checkListsTableView.dragInteractionEnabled = true
+        checkListsTableView.dragDelegate = self
+        
         LocalStorage.readCheckLists { [unowned self] in
             self.checkListsTableView.reloadData()
         }

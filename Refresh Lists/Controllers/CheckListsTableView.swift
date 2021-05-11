@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension MainViewController: UITableViewDataSource, UITableViewDelegate{
+extension MainViewController: UITableViewDataSource, UITableViewDelegate, UITableViewDragDelegate{
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return LocalStorage.checkListModels.count
@@ -38,6 +38,26 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate{
         
         checkListView.checkListIndex = indexPath.row
         self.present(checkListView, animated: true, completion: nil)
+    }
+    
+    func tableView(_ tableView: UITableView, itemsForBeginning session: UIDragSession, at indexPath: IndexPath) -> [UIDragItem] {
+        print("started dragging")
+        let dragItem = UIDragItem(itemProvider: NSItemProvider())
+        dragItem.localObject = LocalStorage.checkListModels[indexPath.row]
+        return [ dragItem ]
+    }
+    
+    func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+        
+        LocalStorage.moveCheckList(sourceIndexPath: sourceIndexPath, destinationIndexPath: destinationIndexPath) {
+            DispatchQueue.main.async {
+                LocalStorage.readCheckLists { [unowned self] in
+                    self.checkListsTableView.reloadData()
+                }
+            }
+        
+        }
+        
     }
     
 }

@@ -180,4 +180,18 @@ class LocalStorage {
         
     }
     
+    static func moveCheckList(sourceIndexPath: IndexPath, destinationIndexPath: IndexPath, completion: @escaping () -> ()){
+        
+        let checkListToMove = LocalStorage.checkListModels.remove(at: sourceIndexPath.row)
+        LocalStorage.checkListModels.insert(checkListToMove, at: destinationIndexPath.row)
+    
+        DispatchQueue.global(qos: .userInteractive).async {
+            LocalStorage.writeCheckListsToStorage()
+
+            completion()
+    
+        }
+            
+    }
+    
 }
