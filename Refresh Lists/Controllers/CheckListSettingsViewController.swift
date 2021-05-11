@@ -86,7 +86,7 @@ class CheckListSettingsViewController: UIViewController {
         
         let checkListIdToDelete = self.currentCheckList!.id
         
-        confirmationView.yesFunction = {
+        confirmationView.confirmFunction = {
             
             LocalStorage.deleteCheckListById(checkListId: checkListIdToDelete) { (deletedCheckListIndex) in
                 
@@ -106,7 +106,7 @@ class CheckListSettingsViewController: UIViewController {
             
         }
         
-        confirmationView.noFunction = {
+        confirmationView.cancelFunction = {
             self.dismiss(animated: true)
         }
         

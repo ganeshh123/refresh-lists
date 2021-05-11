@@ -8,49 +8,55 @@
 
 import UIKit
 
+/// View Controller for the Confirmation View
 class ConfirmationViewController: UIViewController {
-
-    @IBOutlet var confirmationOutsideView: UIView!
-    @IBOutlet var confirmationDialogView: UIView!
-    @IBOutlet var confirmationMessageLabel: UILabel!
-    @IBOutlet var confirmationNoButton: UIButton!
-    @IBOutlet var confirmationYesButton: UIButton!
+    
+    /// View outside the modal
+    @IBOutlet var outsideView: UIView!
+    /// View for the confirmation dialog
+    @IBOutlet var dialogView: UIView!
+    /// Label for Confirmation Message
+    @IBOutlet var messageLabel: UILabel!
+    /// Cancel Button
+    @IBOutlet var cancelButton: UIButton!
+    /// Confirmation Button
+    @IBOutlet var confirmButton: UIButton!
     
     
+    /// Message for Confirmation Dialog
     var message: String = "Are you sure?"
-    var yesFunction: () -> () = {}
-    var noFunction: () -> () = {}
+    /// Function to run if Action Confirmed
+    var confirmFunction: () -> () = {}
+    /// Function to run if Action Canceeled
+    var cancelFunction: () -> () = {}
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
-        confirmationDialogView.makeModalView()
-        confirmationYesButton.makeConfirmationButton(icon: UIImage(named: "icon_tick")!, color: Theme.current.greenColor)
-        confirmationNoButton.makeConfirmationButton(icon: UIImage(named: "icon_cross")!, color: Theme.current.redColor)
-        confirmationMessageLabel.makeConfirmationMessageLabel(text: "Are you sure?", maxLength: 24)
+        /* Style View */
+        dialogView.makeModalView()
+        confirmButton.makeConfirmationButton(icon: UIImage(named: "icon_tick")!, color: Theme.current.greenColor)
+        cancelButton.makeConfirmationButton(icon: UIImage(named: "icon_cross")!, color: Theme.current.redColor)
+        
+        /* Display Confirmation Message in Label */
+        messageLabel.makeConfirmationMessageLabel(text: "Are you sure?", maxLength: 24)
         
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-    
-    @IBAction func noButtonPressed(_ sender: Any) {
-        self.dismiss(animated: true, completion: noFunction)
+    /// Handler for Cancel Button Pressed
+    /// - Parameter sender: Button Pressed
+    @IBAction func cancelButtonPressed(_ sender: Any) {
+        /* Close the confirmation dialog, and run the cancel function*/
+        self.dismiss(animated: true, completion: cancelFunction)
     }
     
     
-    @IBAction func yesButtonPressed(_ sender: Any) {
-        self.dismiss(animated: true, completion: yesFunction)
+    /// Handler for Confirm Button Pressed
+    /// - Parameter sender: Button pressed
+    @IBAction func confirmButtonPressed(_ sender: Any) {
+        /* Close the confirmation dialog and run the confirm function */
+        self.dismiss(animated: true, completion: confirmFunction)
     }
     
 }
