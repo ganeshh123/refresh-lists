@@ -12,8 +12,7 @@ class CheckListsTableViewCell: UITableViewCell {
 
     @IBOutlet var checkListCard: UIView!
     @IBOutlet var checkListCardTitle: UILabel!
-    @IBOutlet var checkListCardOptionsButton: UIButton!
-    @IBOutlet var checkListCardLockButton: UIButton!
+    @IBOutlet var checkListCardItemCountLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -26,11 +25,8 @@ class CheckListsTableViewCell: UITableViewCell {
         checkListCard.makeCheckListCardView(checkList: checkListModel)
         checkListCardTitle.makeCheckListCardTitle(title: checkListModel.title, maxLength: 18)
         
-        checkListCardOptionsButton.makeCheckListCardButton(icon: UIImage(named: "icon_options")!)
-        checkListCardLockButton.makeCheckListCardButton(icon: UIImage(named: "icon_locked")!)
+        checkListCardItemCountLabel.text = String(checkListModel.countUncompleted()) + " items left"
         
-        checkListCardOptionsButton.isHidden = true
-        checkListCardLockButton.isHidden = true
     }
     
     override func layoutSubviews() {

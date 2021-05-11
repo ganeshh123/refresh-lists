@@ -73,7 +73,11 @@ class AppSettingsViewController: UIViewController {
     
     @IBAction func aboutButtonPressed(_ sender: UIButton) {
         
-        LocalStorage.writeCheckListsToStorage()
+        DispatchQueue.main.async {
+            let alert = UIAlertController(title: "About Refresh Lists", message: "Version 1.0.0", preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        }
         
     }
     

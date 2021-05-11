@@ -24,18 +24,9 @@ class MockData {
         
         models.append(
             CheckListModel(
-                title: "Bedtime Pills",
-                items: [],
+                title: "Daily Medication",
+                items: createMockDailyMedicationListItemModelData(),
                 color: "green"
-            )
-            
-        )
-        
-        models.append(
-            CheckListModel(
-                title: "Utility Bills",
-                items: [],
-                color: "blue"
             )
             
         )
@@ -48,11 +39,12 @@ class MockData {
             )
             
         )
-
+        
         models.append(
             CheckListModel(
-                title: "Phone Backup",
-                items: []
+                title: "Monthly Payments",
+                items: createMockMonthlyPaymentsListItemModelData(),
+                color: "blue"
             )
             
         )
@@ -78,6 +70,29 @@ class MockData {
         models.append(ListItemModel(title: "Tomato Soup"))
         models.append(ListItemModel(title: "Potatoes"))
         models.append(ListItemModel(title: "Wheetabix"))
+        
+        return models
+    }
+    
+    static func createMockMonthlyPaymentsListItemModelData() -> [ListItemModel] {
+        
+        var models = [ListItemModel]()
+        
+        models.append(ListItemModel(title: "Phone Contract"))
+        models.append(ListItemModel(title: "Electricity"))
+        models.append(ListItemModel(title: "Health Club Membership"))
+        models.append(ListItemModel(title: "Retirement Fund"))
+        
+        return models
+    }
+    
+    static func createMockDailyMedicationListItemModelData() -> [ListItemModel] {
+        
+        var models = [ListItemModel]()
+        
+        models.append(ListItemModel(title: "Insulin Glulisine"))
+        models.append(ListItemModel(title: "Vitamin D"))
+        models.append(ListItemModel(title: "Hayfever Tablets"))
         
         return models
     }

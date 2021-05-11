@@ -30,4 +30,17 @@ struct CheckListModel: Codable {
         self.color = color!
 
     }
+    
+    func countUncompleted() -> Int{
+        
+        var uncompletedCount = 0
+        
+        items?.forEach({ (listItem) in
+            if(listItem.completed == false){
+                uncompletedCount = uncompletedCount + 1
+            }
+        })
+        
+        return uncompletedCount
+    }
 }
