@@ -36,6 +36,17 @@ extension UILabel {
         
     }
     
+    func makeCheckListCardItemCount(text: String){
+        /* Set Colors */
+        self.textColor = Theme.current.appAccentColor
+        
+        /* Set Fonts */
+        self.font = UIFont(name: Theme.current.sansFont, size: 20)
+        
+        /* Set Values */
+        self.text = text
+    }
+    
     func makeListItemLabel(text: String, maxLength: Int){
         
         /* Set Colors */

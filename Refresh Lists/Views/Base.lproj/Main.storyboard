@@ -77,7 +77,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="de1-Rp-dfT">
-                                                    <rect key="frame" x="25" y="67" width="250" height="25"/>
+                                                    <rect key="frame" x="25" y="62" width="250" height="25"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="25" id="DuL-WZ-5jK"/>
                                                         <constraint firstAttribute="width" constant="250" id="sV6-6D-diY"/>
@@ -91,7 +91,7 @@
                                             <constraints>
                                                 <constraint firstItem="J2S-CY-e1Z" firstAttribute="top" secondItem="iQs-3W-M8X" secondAttribute="topMargin" constant="10" id="2ES-VY-Xa9"/>
                                                 <constraint firstItem="de1-Rp-dfT" firstAttribute="leading" secondItem="iQs-3W-M8X" secondAttribute="leadingMargin" constant="10" id="YZc-eD-CCa"/>
-                                                <constraint firstItem="de1-Rp-dfT" firstAttribute="top" secondItem="J2S-CY-e1Z" secondAttribute="bottom" constant="20" id="eja-2m-42v"/>
+                                                <constraint firstItem="de1-Rp-dfT" firstAttribute="top" secondItem="J2S-CY-e1Z" secondAttribute="bottom" constant="15" id="eja-2m-42v"/>
                                                 <constraint firstItem="J2S-CY-e1Z" firstAttribute="leading" secondItem="iQs-3W-M8X" secondAttribute="leadingMargin" constant="10" id="sAB-lp-SPJ"/>
                                             </constraints>
                                         </tableViewCellContentView>

@@ -35,7 +35,7 @@ class Theme {
                 print("Set Theme to Light")
             }
         }else{
-            UserDefaults.standard.set(true, forKey: "LightTheme")
+            UserDefaults.standard.set(false, forKey: "LightTheme")
             print("Set Theme to Light")
         }
         

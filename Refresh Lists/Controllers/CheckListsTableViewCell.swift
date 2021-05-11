@@ -25,7 +25,7 @@ class CheckListsTableViewCell: UITableViewCell {
         checkListCard.makeCheckListCardView(checkList: checkListModel)
         checkListCardTitle.makeCheckListCardTitle(title: checkListModel.title, maxLength: 18)
         
-        checkListCardItemCountLabel.text = String(checkListModel.countUncompleted()) + " items left"
+        checkListCardItemCountLabel.makeCheckListCardItemCount(text: String(checkListModel.countUncompleted()) + " items left")
         
     }
     

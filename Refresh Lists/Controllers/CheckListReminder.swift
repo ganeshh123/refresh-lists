@@ -80,7 +80,7 @@ extension CheckListViewController{
             
             if(repeatCount > 0){
                 
-                var datesToAdd = repeatCount
+                var datesToAdd = repeatCount + 1
                 var tempDate = initialDate
                 
                 while(datesToAdd > 0){
