@@ -37,7 +37,7 @@
 		1FCB24CA262718590038ED0B /* font_raleway.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1F0A62312624A661007D2227 /* font_raleway.ttf */; };
 		1FCB24D126277F190038ED0B /* CheckListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCB24D026277F190038ED0B /* CheckListViewController.swift */; };
 		1FDCE1AD2627A25100BF3F89 /* StringFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FDCE1AC2627A25100BF3F89 /* StringFunctions.swift */; };
-		1FDCE1B02627AEFB00BF3F89 /* ListItemViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FDCE1AF2627AEFB00BF3F89 /* ListItemViewCell.swift */; };
+		1FDCE1B02627AEFB00BF3F89 /* ListItemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FDCE1AF2627AEFB00BF3F89 /* ListItemController.swift */; };
 		1FDCE1B22627B3D500BF3F89 /* ListItemTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FDCE1B12627B3D500BF3F89 /* ListItemTable.swift */; };
 		1FE4C9A826262B91003BE873 /* CheckListsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE4C9A726262B91003BE873 /* CheckListsTableViewCell.swift */; };
 		1FE4C9AA26262C0C003BE873 /* CheckListsTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE4C9A926262C0C003BE873 /* CheckListsTableView.swift */; };
@@ -80,7 +80,7 @@
 		1FBD075526203DBD00E6CC15 /* LocalStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStorage.swift; sourceTree = "<group>"; };
 		1FCB24D026277F190038ED0B /* CheckListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckListViewController.swift; sourceTree = "<group>"; };
 		1FDCE1AC2627A25100BF3F89 /* StringFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringFunctions.swift; sourceTree = "<group>"; };
-		1FDCE1AF2627AEFB00BF3F89 /* ListItemViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItemViewCell.swift; sourceTree = "<group>"; };
+		1FDCE1AF2627AEFB00BF3F89 /* ListItemController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItemController.swift; sourceTree = "<group>"; };
 		1FDCE1B12627B3D500BF3F89 /* ListItemTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItemTable.swift; sourceTree = "<group>"; };
 		1FE4C9A726262B91003BE873 /* CheckListsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckListsTableViewCell.swift; sourceTree = "<group>"; };
 		1FE4C9A926262C0C003BE873 /* CheckListsTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckListsTableView.swift; sourceTree = "<group>"; };
@@ -132,7 +132,7 @@
 				1FEEE720263C6C4300365844 /* RemindersViewController.swift */,
 				1F7380ED263A1F1200745894 /* TextEditViewController.swift */,
 				1F63A4AB2629F294000D5A26 /* ConfirmationViewController.swift */,
-				1FDCE1AF2627AEFB00BF3F89 /* ListItemViewCell.swift */,
+				1FDCE1AF2627AEFB00BF3F89 /* ListItemController.swift */,
 				1FDCE1B12627B3D500BF3F89 /* ListItemTable.swift */,
 				1FE4C9A926262C0C003BE873 /* CheckListsTableView.swift */,
 				1FE4C9A726262B91003BE873 /* CheckListsTableViewCell.swift */,
@@ -308,7 +308,7 @@
 				1FBB8EE92624C38900BFB47E /* LabelStyles.swift in Sources */,
 				1FB470642625CA0F00B6A6DA /* AppSettingsViewController.swift in Sources */,
 				1F63A4AC2629F294000D5A26 /* ConfirmationViewController.swift in Sources */,
-				1FDCE1B02627AEFB00BF3F89 /* ListItemViewCell.swift in Sources */,
+				1FDCE1B02627AEFB00BF3F89 /* ListItemController.swift in Sources */,
 				1FB470692625D22600B6A6DA /* ButtonStyles.swift in Sources */,
 				1FBD075626203DBD00E6CC15 /* LocalStorage.swift in Sources */,
 				1FE4C9A826262B91003BE873 /* CheckListsTableViewCell.swift in Sources */,

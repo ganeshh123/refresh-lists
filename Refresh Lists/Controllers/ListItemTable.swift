@@ -26,7 +26,7 @@ extension CheckListViewController: UITableViewDataSource, UITableViewDelegate, U
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "listItemCell") as! ListItemViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "listItemCell") as! ListItemController
         
         if let items = currentCheckList?.items {
             cell.setup(inputListItem: items[indexPath.row], checkListId: currentCheckList!.id, editing: self.isEditing, deleteListItemFunc: self.deleteListItem(listItemId:), editListItemFunc: self.showEditListItemName(listItemToEdit:))
