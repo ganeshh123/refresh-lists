@@ -20,6 +20,13 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSRemindersUsageDescription</key>
+	<string>Please allow us to set reminders to review your checklists.</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>font_raleway.tff</string>
+		<string>font_shortstack.tff</string>
+	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
@@ -58,12 +65,5 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-	<key>UIAppFonts</key>
-	<array>
-		<string>font_raleway.tff</string>
-		<string>font_shortstack.tff</string>
-	</array>
-	<key>NSRemindersUsageDescription</key>
-	<string>Please allow us to set reminders to review your checklists.</string>
 </dict>
 </plist>

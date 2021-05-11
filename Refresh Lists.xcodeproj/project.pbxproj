@@ -28,7 +28,6 @@
 		1FBD071326202D8900E6CC15 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FBD071226202D8900E6CC15 /* AppDelegate.swift */; };
 		1FBD071526202D8900E6CC15 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FBD071426202D8900E6CC15 /* SceneDelegate.swift */; };
 		1FBD071A26202D8900E6CC15 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FBD071826202D8900E6CC15 /* Main.storyboard */; };
-		1FBD071F26202D8B00E6CC15 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1FBD071E26202D8B00E6CC15 /* Assets.xcassets */; };
 		1FBD072226202D8B00E6CC15 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FBD072026202D8B00E6CC15 /* LaunchScreen.storyboard */; };
 		1FBD074A262030B300E6CC15 /* ListItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FBD0749262030B300E6CC15 /* ListItemModel.swift */; };
 		1FBD0750262032FB00E6CC15 /* CheckListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FBD074F262032FB00E6CC15 /* CheckListModel.swift */; };
@@ -73,7 +72,6 @@
 		1FBD071226202D8900E6CC15 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1FBD071426202D8900E6CC15 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		1FBD071926202D8900E6CC15 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		1FBD071E26202D8B00E6CC15 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1FBD072126202D8B00E6CC15 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1FBD072326202D8B00E6CC15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1FBD0749262030B300E6CC15 /* ListItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItemModel.swift; sourceTree = "<group>"; };
@@ -185,7 +183,6 @@
 				1FBD07472620303200E6CC15 /* Resources */,
 				1FBD071226202D8900E6CC15 /* AppDelegate.swift */,
 				1FBD071426202D8900E6CC15 /* SceneDelegate.swift */,
-				1FBD071E26202D8B00E6CC15 /* Assets.xcassets */,
 				1FBD072326202D8B00E6CC15 /* Info.plist */,
 			);
 			path = "Refresh Lists";
@@ -287,7 +284,6 @@
 				1F3B4116262CDC0B0039EF03 /* CheckListView.storyboard in Resources */,
 				1FBD072226202D8B00E6CC15 /* LaunchScreen.storyboard in Resources */,
 				1F0A622E2624A127007D2227 /* Colors.xcassets in Resources */,
-				1FBD071F26202D8B00E6CC15 /* Assets.xcassets in Resources */,
 				1FCB24C9262718550038ED0B /* font_shortstack.ttf in Resources */,
 				1F3B4118262CDC360039EF03 /* CheckListSettings.storyboard in Resources */,
 				1FBD071A26202D8900E6CC15 /* Main.storyboard in Resources */,

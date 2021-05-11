@@ -40,7 +40,7 @@ class CheckListViewController: UIViewController {
         
         checkListViewModal.makeCheckListCardView(checkList: currentCheckList!)
         
-        checkListTitleLabel.makeCheckListCardTitle(title: currentCheckList!.title, maxLength: 25)
+        checkListTitleLabel.makeCheckListCardTitle(title: currentCheckList!.title, maxLength: 20)
         checkListCloseButton.makeCheckListCardButton(icon: UIImage(named: "icon_cross")!)
         checkListOptionsButton.makeCheckListCardButton(icon: UIImage(named: "icon_options")!)
         
