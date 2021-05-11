@@ -38,20 +38,8 @@
                                                     <action selector="checkListSettingsRenameButtonPressed:" destination="oBY-4X-gWg" eventType="touchUpInside" id="bc0-5F-MUF"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VwW-9M-QOT">
-                                                <rect key="frame" x="0.0" y="45" width="195" height="45"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="45" id="Mfn-Ba-Nk5"/>
-                                                    <constraint firstAttribute="width" constant="195" id="THJ-ZZ-g9m"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" name="RalewayRoman-Regular" family="Raleway" pointSize="17"/>
-                                                <state key="normal" title="Button"/>
-                                                <connections>
-                                                    <action selector="checkListSettingsDeleteButtonPressed:" destination="oBY-4X-gWg" eventType="touchUpInside" id="Z33-hA-EfF"/>
-                                                </connections>
-                                            </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GJM-bF-4xh">
-                                                <rect key="frame" x="0.0" y="90" width="195" height="45"/>
+                                                <rect key="frame" x="0.0" y="45" width="195" height="45"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="45" id="6iX-gJ-xoO"/>
                                                     <constraint firstAttribute="width" constant="195" id="agv-E1-lzd"/>
@@ -60,6 +48,18 @@
                                                 <state key="normal" title="Button"/>
                                                 <connections>
                                                     <action selector="checkListSettingsColorSwitchButtonPressed:" destination="oBY-4X-gWg" eventType="touchUpInside" id="4fM-a7-yDp"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VwW-9M-QOT">
+                                                <rect key="frame" x="0.0" y="90" width="195" height="45"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="45" id="Mfn-Ba-Nk5"/>
+                                                    <constraint firstAttribute="width" constant="195" id="THJ-ZZ-g9m"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="RalewayRoman-Regular" family="Raleway" pointSize="17"/>
+                                                <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="checkListSettingsDeleteButtonPressed:" destination="oBY-4X-gWg" eventType="touchUpInside" id="Z33-hA-EfF"/>
                                                 </connections>
                                             </button>
                                         </subviews>
