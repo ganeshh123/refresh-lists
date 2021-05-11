@@ -1,5 +1,5 @@
 //
-//  RemindersController.swift
+//  RemindersViewController.swift
 //  Refresh Lists
 //
 //  Created by Ganesh H on 30/04/2021.
@@ -134,16 +134,21 @@ class RemindersViewController: UIViewController {
     /// - Parameter sender: Button that was pressed
     @IBAction func dateTimeSelectionConfirmButtonPressed(_ sender: UIButton) {
         
+        // Don't proceed if some inputs are invalid
         if(self.validateInputs() == false){
             return
         }
         
+        // Get values from date picker and text fields
         let initialDate = self.initialDatePicker.date
         let repeatMonths = Int(self.monthTextField.text!)
         let repeatDays = Int(self.dateTimeSelectionDayTextField.text!)
         let repeatCount = Int(self.dateTimeSelectionRepeatTextField.text!)
         
+        // Dismiss the dialog
         self.dismiss(animated: true)
+        
+        // Call the function to add reminders with the inputs
         addReminderFunc(initialDate, repeatMonths!, repeatDays!, repeatCount!)
     }
 }
