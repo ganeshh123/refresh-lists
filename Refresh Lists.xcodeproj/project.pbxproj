@@ -43,8 +43,8 @@
 		1FE4C9AA26262C0C003BE873 /* CheckListsTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE4C9A926262C0C003BE873 /* CheckListsTableView.swift */; };
 		1FEC06332628B5F90089ED7B /* TextFieldStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FEC06322628B5F90089ED7B /* TextFieldStyles.swift */; };
 		1FEEE71C263C632600365844 /* CheckListReminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FEEE71B263C632600365844 /* CheckListReminder.swift */; };
-		1FEEE71F263C6BD100365844 /* DateTimeSelection.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FEEE71E263C6BD100365844 /* DateTimeSelection.storyboard */; };
-		1FEEE721263C6C4300365844 /* DateTimeSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FEEE720263C6C4300365844 /* DateTimeSelectionViewController.swift */; };
+		1FEEE71F263C6BD100365844 /* RemindersView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FEEE71E263C6BD100365844 /* RemindersView.storyboard */; };
+		1FEEE721263C6C4300365844 /* RemindersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FEEE720263C6C4300365844 /* RemindersViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -86,8 +86,8 @@
 		1FE4C9A926262C0C003BE873 /* CheckListsTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckListsTableView.swift; sourceTree = "<group>"; };
 		1FEC06322628B5F90089ED7B /* TextFieldStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldStyles.swift; sourceTree = "<group>"; };
 		1FEEE71B263C632600365844 /* CheckListReminder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckListReminder.swift; sourceTree = "<group>"; };
-		1FEEE71E263C6BD100365844 /* DateTimeSelection.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DateTimeSelection.storyboard; sourceTree = "<group>"; };
-		1FEEE720263C6C4300365844 /* DateTimeSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateTimeSelectionViewController.swift; sourceTree = "<group>"; };
+		1FEEE71E263C6BD100365844 /* RemindersView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RemindersView.storyboard; sourceTree = "<group>"; };
+		1FEEE720263C6C4300365844 /* RemindersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemindersViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,7 +114,7 @@
 		1F69729E2649DBEB00E7A618 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				1FEEE71E263C6BD100365844 /* DateTimeSelection.storyboard */,
+				1FEEE71E263C6BD100365844 /* RemindersView.storyboard */,
 				1FB62D052637F38500C9A984 /* TextEditView.storyboard */,
 				1F63A4A92629F1D8000D5A26 /* ConfirmationView.storyboard */,
 				1F3B4117262CDC360039EF03 /* CheckListSettings.storyboard */,
@@ -129,7 +129,7 @@
 		1F69729F2649DC9300E7A618 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				1FEEE720263C6C4300365844 /* DateTimeSelectionViewController.swift */,
+				1FEEE720263C6C4300365844 /* RemindersViewController.swift */,
 				1F7380ED263A1F1200745894 /* TextEditViewController.swift */,
 				1F63A4AB2629F294000D5A26 /* ConfirmationViewController.swift */,
 				1FDCE1AF2627AEFB00BF3F89 /* ListItemViewCell.swift */,
@@ -289,7 +289,7 @@
 				1FBD071A26202D8900E6CC15 /* Main.storyboard in Resources */,
 				1F0A623A2624ABA0007D2227 /* Icons.xcassets in Resources */,
 				1FB62D062637F38500C9A984 /* TextEditView.storyboard in Resources */,
-				1FEEE71F263C6BD100365844 /* DateTimeSelection.storyboard in Resources */,
+				1FEEE71F263C6BD100365844 /* RemindersView.storyboard in Resources */,
 				1FB470672625CA4B00B6A6DA /* AppSettings.storyboard in Resources */,
 				1F63A4AA2629F1D8000D5A26 /* ConfirmationView.storyboard in Resources */,
 				1FCB24CA262718590038ED0B /* font_raleway.ttf in Resources */,
@@ -325,7 +325,7 @@
 				1FBD07542620368800E6CC15 /* MockData.swift in Sources */,
 				1FBD071326202D8900E6CC15 /* AppDelegate.swift in Sources */,
 				1F0A623E2624BE79007D2227 /* MainViewController.swift in Sources */,
-				1FEEE721263C6C4300365844 /* DateTimeSelectionViewController.swift in Sources */,
+				1FEEE721263C6C4300365844 /* RemindersViewController.swift in Sources */,
 				1FBD071526202D8900E6CC15 /* SceneDelegate.swift in Sources */,
 				1F0A62362624A914007D2227 /* StaticThemes.swift in Sources */,
 				1F0A623C2624BAE9007D2227 /* Theme.swift in Sources */,

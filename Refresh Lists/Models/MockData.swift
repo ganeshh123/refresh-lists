@@ -8,8 +8,10 @@
 
 import Foundation
 
+/// Class to create mock data for testing
 class MockData {
     
+    /// Creates 4 check listsand stores them into local storage
     static func createMockCheckListModelData() -> [CheckListModel] {
         
         var models = [CheckListModel]()
@@ -53,6 +55,7 @@ class MockData {
         return models
     }
     
+    /// Creates an array of list items for a Shopping List
     static func createMockShoppingListItemModelData() -> [ListItemModel] {
         
         var models = [ListItemModel]()
@@ -74,6 +77,7 @@ class MockData {
         return models
     }
     
+    /// Creates an array of list items for Monthly Payments
     static func createMockMonthlyPaymentsListItemModelData() -> [ListItemModel] {
         
         var models = [ListItemModel]()
@@ -86,6 +90,7 @@ class MockData {
         return models
     }
     
+    /// Creates an array of list items for Daily Medication
     static func createMockDailyMedicationListItemModelData() -> [ListItemModel] {
         
         var models = [ListItemModel]()

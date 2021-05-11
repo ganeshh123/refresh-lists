@@ -14,15 +14,15 @@ extension CheckListViewController{
     
     func showReminderPicker(){
 
-        let storyboard = UIStoryboard(name: "DateTimeSelection", bundle: nil)
+        let storyboard = UIStoryboard(name: "RemindersView", bundle: nil)
         
-        let dateTimeSelectionView = storyboard.instantiateInitialViewController() as! DateTimeSelectionViewController
+        let dateTimeSelectionView = storyboard.instantiateInitialViewController() as! RemindersViewController
         
         dateTimeSelectionView.addReminderFunc = reminderChosen(initialDate:repeatMonths:repeatDays:repeatCount:)
         
         self.present(dateTimeSelectionView, animated: true)
-        dateTimeSelectionView.setupText(titleText: "Add List Reminder")
-        dateTimeSelectionView.setupColors(listColor: Theme.getColorFromName(colorName: self.currentCheckList!.color))
+        dateTimeSelectionView.setTitleText(titleText: "Add List Reminder")
+        dateTimeSelectionView.applyCheckListColor(listColor: Theme.getColorFromName(colorName: self.currentCheckList!.color))
         
     }
     

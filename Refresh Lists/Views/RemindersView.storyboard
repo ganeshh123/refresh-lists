@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="U06-HH-bS0">
-    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,19 +12,19 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Date Time Selection View Controller-->
+        <!--Reminders View Controller-->
         <scene sceneID="rcG-71-mZl">
             <objects>
-                <viewController id="U06-HH-bS0" customClass="DateTimeSelectionViewController" customModule="Refresh_Lists" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="U06-HH-bS0" customClass="RemindersViewController" customModule="Refresh_Lists" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cnx-dG-OMV">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WWA-1B-xcL">
-                                <rect key="frame" x="27.5" y="123.5" width="320" height="420"/>
+                                <rect key="frame" x="140" y="90" width="320" height="420"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add List Reminder" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s2B-FT-9Vk">
-                                        <rect key="frame" x="20" y="20" width="196.5" height="27.5"/>
+                                        <rect key="frame" x="20" y="20" width="191" height="27"/>
                                         <fontDescription key="fontDescription" name="RalewayRoman-Regular" family="Raleway" pointSize="23"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -53,7 +52,7 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Send me an initial reminder on" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ijz-qw-jOP">
-                                        <rect key="frame" x="20" y="62.5" width="280" height="39"/>
+                                        <rect key="frame" x="20" y="62" width="280" height="39"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="39" id="x6Q-w5-qaS"/>
                                         </constraints>
@@ -62,7 +61,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Then, continue to remind me every" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="toh-Aw-3mC">
-                                        <rect key="frame" x="20" y="221.5" width="278" height="39"/>
+                                        <rect key="frame" x="20" y="221" width="264" height="39"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="39" id="VnM-Cj-qX9"/>
                                         </constraints>
@@ -71,7 +70,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="for exactly" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FB6-G8-n0I">
-                                        <rect key="frame" x="20" y="314.5" width="83" height="39"/>
+                                        <rect key="frame" x="20" y="314" width="79" height="39"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="39" id="9dQ-zx-aGi"/>
                                         </constraints>
@@ -80,7 +79,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <datePicker clipsSubviews="YES" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="Q2P-Ey-Qel">
-                                        <rect key="frame" x="2" y="111.5" width="315" height="100"/>
+                                        <rect key="frame" x="2" y="111" width="315" height="100"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="100" id="lH7-Va-xvS"/>
                                         </constraints>
@@ -89,22 +88,22 @@
                                         </date>
                                     </datePicker>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MEv-TB-bTq">
-                                        <rect key="frame" x="20" y="270.5" width="37" height="34"/>
+                                        <rect key="frame" x="20" y="270" width="37" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cKA-QL-hBl">
-                                        <rect key="frame" x="175" y="270.5" width="37" height="34"/>
+                                        <rect key="frame" x="175" y="270" width="37" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ltv-MM-BKa">
-                                        <rect key="frame" x="111" y="314.5" width="37" height="34"/>
+                                        <rect key="frame" x="107" y="314" width="37" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="months, and" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w5z-8x-5g4">
-                                        <rect key="frame" x="65" y="280.5" width="100" height="20"/>
+                                        <rect key="frame" x="65" y="280" width="100" height="20"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="20" id="Vwk-LH-5iq"/>
                                             <constraint firstAttribute="width" constant="100" id="d5w-Vh-w6U"/>
@@ -114,7 +113,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="days" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mLY-6l-6L0">
-                                        <rect key="frame" x="220" y="280.5" width="100" height="20"/>
+                                        <rect key="frame" x="220" y="280" width="100" height="20"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="100" id="PFL-9v-Cm3"/>
                                             <constraint firstAttribute="height" constant="20" id="bbM-09-boc"/>
@@ -124,7 +123,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="times." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a6w-9P-bkT">
-                                        <rect key="frame" x="156" y="324.5" width="100" height="20"/>
+                                        <rect key="frame" x="152" y="324" width="100" height="20"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="20" id="K8T-PE-HcU"/>
                                             <constraint firstAttribute="width" constant="100" id="pTo-Yg-pYd"/>
@@ -178,21 +177,21 @@
                         <viewLayoutGuide key="safeArea" id="4vX-yC-WaY"/>
                     </view>
                     <connections>
-                        <outlet property="dateTimeContinuedReminderLabel" destination="toh-Aw-3mC" id="fcB-m7-mSH"/>
+                        <outlet property="continuedReminderLabel" destination="toh-Aw-3mC" id="fcB-m7-mSH"/>
                         <outlet property="dateTimeSelectionCancelButton" destination="Q7R-c3-ifr" id="h3g-j4-pLL"/>
                         <outlet property="dateTimeSelectionConfirmButton" destination="cQ7-ik-e5X" id="ocA-AX-qsy"/>
                         <outlet property="dateTimeSelectionDayLabel" destination="mLY-6l-6L0" id="Dmt-PO-OGq"/>
                         <outlet property="dateTimeSelectionDayTextField" destination="cKA-QL-hBl" id="TeA-Ey-Ilg"/>
                         <outlet property="dateTimeSelectionForLabel" destination="FB6-G8-n0I" id="mib-br-HfZ"/>
-                        <outlet property="dateTimeSelectionInitialDatePicker" destination="Q2P-Ey-Qel" id="nhc-yE-ryU"/>
-                        <outlet property="dateTimeSelectionInitialReminderLabel" destination="ijz-qw-jOP" id="uga-p8-FUU"/>
-                        <outlet property="dateTimeSelectionModalView" destination="WWA-1B-xcL" id="RHc-7e-SAM"/>
                         <outlet property="dateTimeSelectionMonthLabel" destination="w5z-8x-5g4" id="Gjp-jS-C3N"/>
-                        <outlet property="dateTimeSelectionMonthTextField" destination="MEv-TB-bTq" id="96t-Gf-iXB"/>
                         <outlet property="dateTimeSelectionRepeatTextField" destination="Ltv-MM-BKa" id="Hnk-Er-Ctz"/>
                         <outlet property="dateTimeSelectionTimesLabel" destination="a6w-9P-bkT" id="AWm-M3-pjW"/>
-                        <outlet property="dateTimeSelectionTitleLabel" destination="s2B-FT-9Vk" id="W9E-sN-zLc"/>
+                        <outlet property="initialDatePicker" destination="Q2P-Ey-Qel" id="nhc-yE-ryU"/>
+                        <outlet property="initialReminderLabel" destination="ijz-qw-jOP" id="uga-p8-FUU"/>
+                        <outlet property="modalView" destination="WWA-1B-xcL" id="RHc-7e-SAM"/>
+                        <outlet property="monthTextField" destination="MEv-TB-bTq" id="96t-Gf-iXB"/>
                         <outlet property="outsideView" destination="cnx-dG-OMV" id="hMB-hH-BQE"/>
+                        <outlet property="titleLabel" destination="s2B-FT-9Vk" id="W9E-sN-zLc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Il0-GQ-c3a" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
