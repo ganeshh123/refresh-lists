@@ -33,7 +33,7 @@ class MockData {
         
         models.append(
             CheckListModel(
-                title: "Fishing Supplies",
+                title: "Study Terms",
                 items: [],
                 color: "pink"
             )

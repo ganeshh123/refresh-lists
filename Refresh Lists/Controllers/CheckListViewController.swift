@@ -54,9 +54,6 @@ class CheckListViewController: UIViewController {
         
         checkListReminderButton.makeCheckListTimeButton(title: "Reminder", icon: UIImage(named: "icon_clock")!, color: Theme.current.redColor)
         
-        
-        newListItemAddButton.makeCheckListItemButton(icon: UIImage(named: "icon_plus")!, color: Theme.current.greenColor)
-        
         newListItemInputBox.makeAddListItemTextInput(placeholder: "New Item...")
     }
     
@@ -146,7 +143,41 @@ class CheckListViewController: UIViewController {
     
     
     @IBAction func newListItemInputBoxPressed(_ sender: UITextField) {
-        newListItemInputBox.placeholder = ""
+       
+        let nameEditStoryBoard = UIStoryboard(name: "TextEditView", bundle: nil)
+        let textEditView = nameEditStoryBoard.instantiateInitialViewController() as! TextEditViewController
+
+        textEditView.confirmFunction = {inputName in
+           
+            let newListItem = ListItemModel(title: inputName, completed: false)
+                       
+            /* Add New Item to List */
+            if (self.currentCheckList?.items) != nil{
+                self.currentCheckList?.items!.append(newListItem)
+            }
+
+            /* Save Updated Checklist */
+            LocalStorage.updateCheckListById(checkListId: self.currentCheckList!.id, updatedCheckList: self.currentCheckList!)
+
+            self.newListItemInputBox.text = ""
+
+            /* Refresh List Items */
+            self.listItemsTableView.reloadData()
+
+            /* Scroll List to Bottom so that user can see new item*/
+            DispatchQueue.main.async {
+               let latestIndex = IndexPath(row: (self.currentCheckList?.items?.count)!-1, section: 0)
+               self.listItemsTableView.scrollToRow(at: latestIndex, at: .bottom, animated: true)
+            }
+           
+        }
+
+        textEditView.cancelFunction = {
+           
+        }
+
+        self.present(textEditView, animated: true)
+        textEditView.prepareTextEditInput(color: Theme.getColorFromName(colorName: "sand"), currentName: "", placeholder: "New Item")
     }
     
     
