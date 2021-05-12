@@ -58,7 +58,7 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate, UITabl
         self.newListButton.isHidden = true
         
         /* Set the Check List for the Check List View*/
-        checkListView.checkListIndex = indexPath.row
+        checkListView.currentCheckListIndex = indexPath.row
         
         /* Preset the Check List View */
         self.present(checkListView, animated: true, completion: nil)

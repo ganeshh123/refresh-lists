@@ -8,160 +8,192 @@
 
 import UIKit
 import EventKit
+/// View Controller for Check List View
 class CheckListViewController: UIViewController {
-
-    @IBOutlet var outsideView: UIView!
-    @IBOutlet var checkListViewModal: UIView!
-    @IBOutlet var checkListTitleLabel: UILabel!
-    @IBOutlet var checkListCloseButton: UIButton!
-    @IBOutlet var checkListOptionsButton: UIButton!
-    @IBOutlet var checkListLockButton: UIButton!
-    @IBOutlet var listItemsTableView: UITableView!
-    @IBOutlet var checkListRefreshButton: UIButton!
-    @IBOutlet var checkListReminderButton: UIButton!
-    @IBOutlet var newListItemInputBox: UITextField!
-    @IBOutlet var newListItemAddButton: UIButton!
     
-    var checkListIndex: Int?
+    /// Area outside the Check List View Modal
+    @IBOutlet var outsideView: UIView!
+    /// Modal view showing the Check List
+    @IBOutlet var viewModal: UIView!
+    
+    /// Label showing the name of the check list
+    @IBOutlet var titleLabel: UILabel!
+    /// Button to set all list items as incomplete
+    @IBOutlet var refreshButton: UIButton!
+    /// Button to open the Reminders View to add List Reminders
+    @IBOutlet var reminderButton: UIButton!
+    
+    /// Toolbar button to close the CheckList View
+    @IBOutlet var closeButton: UIButton!
+    /// Toolbar button to open the CheckList Settings Menu
+    @IBOutlet var optionsButton: UIButton!
+    /// Toolbar button to toggle the Check List between Locked and Editing Modes
+    @IBOutlet var lockButton: UIButton!
+    
+    /// Table view showing list items
+    @IBOutlet var listItemsTableView: UITableView!
+    /// Text Field to create a New List Item
+    @IBOutlet var newListItemInput: UITextField!
+    
+    /// Check List Model which the View Represents
     var currentCheckList: CheckListModel?
+    /// Index of the View's checklist in Local Storage
+    var currentCheckListIndex: Int?
+    /// Boolean indicating if the view is in Editing Mode
     var listEditMode: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
         
+        /* Set up the List Items Table View
+            - Set the Source of Data
+            - Enable Drag and Drop Interactions
+            - Style the sepearator between list items
+         */
         listItemsTableView.delegate = self
         listItemsTableView.dataSource = self
         listItemsTableView.dragInteractionEnabled = true
         listItemsTableView.dragDelegate = self
         listItemsTableView.separatorColor = Theme.current.appAccentColor
-        currentCheckList = LocalStorage.checkListModels[checkListIndex!]
         
-        checkListViewModal.makeCheckListCardView(checkList: currentCheckList!)
+        /* Load the Check List Data from the Local Storage */
+        currentCheckList = LocalStorage.checkListModels[currentCheckListIndex!]
         
-        checkListTitleLabel.makeCheckListCardTitle(title: currentCheckList!.title, maxLength: 20)
-        checkListCloseButton.makeCheckListCardButton(icon: UIImage(named: "icon_cross")!)
-        checkListOptionsButton.makeCheckListCardButton(icon: UIImage(named: "icon_options")!)
-        
+        /* Set up the toolbar text and buttons */
+        titleLabel.makeCheckListCardTitle(title: currentCheckList!.title, maxLength: 20)
+        closeButton.makeCheckListCardButton(icon: UIImage(named: "icon_cross")!)
+        optionsButton.makeCheckListCardButton(icon: UIImage(named: "icon_options")!)
+        /* Set the lock button icon based on the list editing mode */
         if(self.isEditing == false){
-            checkListLockButton.makeCheckListCardButton(icon: UIImage(named: "icon_locked")!)
+            lockButton.makeCheckListCardButton(icon: UIImage(named: "icon_locked")!)
         }else{
-             checkListLockButton.makeCheckListCardButton(icon: UIImage(named: "icon_unlocked")!)
+             lockButton.makeCheckListCardButton(icon: UIImage(named: "icon_unlocked")!)
         }
         
-        checkListRefreshButton.makeCheckListTimeButton(title: "Refresh", icon: UIImage(named: "icon_refresh")!, color: Theme.current.greenColor)
+        /* Style the Check List View and its buttons */
+        viewModal.makeCheckListCardView(checkList: currentCheckList!)
+        refreshButton.makeCheckListTimeButton(title: "Refresh", icon: UIImage(named: "icon_refresh")!, color: Theme.current.greenColor)
+        reminderButton.makeCheckListTimeButton(title: "Reminder", icon: UIImage(named: "icon_clock")!, color: Theme.current.redColor)
+        newListItemInput.makeAddListItemTextInput(placeholder: "New Item...")
+    }
+    
+    /// Closes the Check List View and returns to the Main View
+    func closeCheckListView(){
         
-        checkListReminderButton.makeCheckListTimeButton(title: "Reminder", icon: UIImage(named: "icon_clock")!, color: Theme.current.redColor)
+        /* Reload the Main View to show changes made in the Check List View */
+        if let firstVC = self.presentingViewController as? MainViewController {
+           DispatchQueue.main.async {
+               print("Dismissing Checklist View")
+               firstVC.viewDidLoad()
+               firstVC.checkListsTableView.reloadData()
+           }
+        }
         
-        newListItemInputBox.makeAddListItemTextInput(placeholder: "New Item...")
+        /* Close the Check List View */
+        self.dismiss(animated: true, completion: nil)
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-    
-    
-    func refreshCheckListView(){
-        self.listItemsTableView.reloadData()
-    }
-    
-    @IBAction func checkListModalCloseButtonPressed(_ sender: Any) {
+    /// Handler Function for Check List Close Button Pressed
+    /// - Parameter sender: Button Pressed
+    @IBAction func closeButtonPressed(_ sender: Any) {
         
         self.closeCheckListView()
     }
     
-
-    @IBAction func checkListRefreshButtonPressed(_ sender: Any) {
+    /// Handler Function for Check List Lock Button Pressed
+    /// - Parameter sender: Button Pressed
+    @IBAction func lockButtonPressed(_ sender: Any) {
+        
+        /* Switch the Editing Mode Boolean */
+        if(self.isEditing == false){
+            self.isEditing = true
+        }else{
+            self.isEditing = false
+            
+            /* Write changes to local storage when list is locked */
+            LocalStorage.updateCheckListById(checkListId: currentCheckList!.id, updatedCheckList: currentCheckList!)
+        }
+        
+        /* Reload the view to show the edits */
+        self.viewDidLoad()
+        self.listItemsTableView.reloadData()
+    }
+    
+    /// Handler Function for Check List Options Button Pressed
+    /// - Parameter sender: Button Pressed
+    @IBAction func optionsButtonPressed(_ sender: UIButton) {
+        
+        /* Prepare the Check List Settings Menu View */
+        let storyboard = UIStoryboard(name: "CheckListSettings", bundle: nil)
+        let checkListSettingsView = storyboard.instantiateInitialViewController() as! CheckListSettingsViewController
+        
+        /* Assign the current checklist to the settings menu to modify */
+        checkListSettingsView.currentCheckList = self.currentCheckList
+        
+        /* Present the settings menu */
+        self.present(checkListSettingsView, animated: true, completion: nil)
+    }
+    
+    /// Handler function for Check List Refresh Button Pressed
+    /// - Parameter sender: Button Pressed
+    @IBAction func refreshButtonPressed(_ sender: Any) {
         
         if let items = currentCheckList?.items{
             
-            /* Set all list items to not completed */
+            /* Set all list items to incomplete */
             for i in items.indices{
-            currentCheckList!.items![i].completed = false
+                currentCheckList!.items![i].completed = false
             }
-            
         }
         
-        /* Save Updated Checklist */
+        /* Update Check List in Local Storage */
         LocalStorage.updateCheckListById(checkListId: currentCheckList!.id, updatedCheckList: currentCheckList!)
         
-        /* Refresh List Items */
+        /* Reload List Items to show changes */
         listItemsTableView.reloadData()
         
     }
     
-    @IBAction func checkListReminderButtonPressed(_ sender: UIButton) {
+    /// Handler Function for Check List Reminder Button Pressed
+    /// - Parameter sender: Button Pressed
+    @IBAction func reminderButtonPressed(_ sender: UIButton) {
         
+        /* Show the dialog to select reminders to add */
         self.showReminderPicker()
         
     }
     
     
-    @IBAction func newListItemAddButtonPressed(_ sender: UIButton) {
-        
-        if(newListItemInputBox.text == ""){
-            newListItemInputBox.invalidInput()
-        }else{
-            let newListItem = ListItemModel(title: newListItemInputBox.text!, completed: false)
-            
-            /* Add New Item to List */
-            if (currentCheckList?.items) != nil{
-                currentCheckList?.items!.append(newListItem)
-            }
-            
-            /* Save Updated Checklist */
-            LocalStorage.updateCheckListById(checkListId: currentCheckList!.id, updatedCheckList: currentCheckList!)
-            
-            newListItemInputBox.text = ""
-            
-            /* Refresh List Items */
-            listItemsTableView.reloadData()
-            
-            /* Scroll List to Bottom so that user can see new item*/
-            DispatchQueue.main.async {
-                let latestIndex = IndexPath(row: (self.currentCheckList?.items?.count)!-1, section: 0)
-                self.listItemsTableView.scrollToRow(at: latestIndex, at: .bottom, animated: true)
-            }
-                
-        }
-    }
-    
-    @IBAction func newListItemInputBoxTextChanged(_ sender: Any) {
-        
-        if(newListItemInputBox.text != ""){
-            newListItemInputBox.clearInvalidInput()
-        }
-    }
-    
-    
-    @IBAction func newListItemInputBoxPressed(_ sender: UITextField) {
+    /// Handler function for New List Item Input Pressed
+    /// - Parameter sender: Element Pressed
+    @IBAction func newListItemInputPressed(_ sender: UITextField) {
        
+        /* Prepare the Text Edit View */
         let nameEditStoryBoard = UIStoryboard(name: "TextEditView", bundle: nil)
         let textEditView = nameEditStoryBoard.instantiateInitialViewController() as! TextEditViewController
 
+        /* Set function to use new input upon confirmation */
         textEditView.confirmFunction = {inputName in
            
+            /* Create a new incomplete list item instance from the name provided */
             let newListItem = ListItemModel(title: inputName, completed: false)
                        
-            /* Add New Item to List */
+            /* Add New Item to Items list */
             if (self.currentCheckList?.items) != nil{
+                self.currentCheckList?.items!.append(newListItem)
+            }else{
+                /* If items list doesn't exist, then create it first */
+                self.currentCheckList?.items = [ListItemModel]()
                 self.currentCheckList?.items!.append(newListItem)
             }
 
-            /* Save Updated Checklist */
+            /* Update the Check List in Local Storage */
             LocalStorage.updateCheckListById(checkListId: self.currentCheckList!.id, updatedCheckList: self.currentCheckList!)
 
-            self.newListItemInputBox.text = ""
+            /* Set text field value to empty */
+            self.newListItemInput.text = ""
 
-            /* Refresh List Items */
+            /* Refresh List Items to show new item */
             self.listItemsTableView.reloadData()
 
             /* Scroll List to Bottom so that user can see new item*/
@@ -172,49 +204,10 @@ class CheckListViewController: UIViewController {
            
         }
 
-        textEditView.cancelFunction = {
-           
-        }
-
+        /* Present the Text Input view */
         self.present(textEditView, animated: true)
-        textEditView.prepareTextEditInput(color: Theme.getColorFromName(colorName: "sand"), currentName: "", placeholder: "New Item")
-    }
-    
-    
-    @IBAction func checkListLockButtonPressed(_ sender: Any) {
-        
-        if(self.isEditing == false){
-            self.isEditing = true
-        }else{
-            self.isEditing = false
-            /* Save Updated Checklist */
-           LocalStorage.updateCheckListById(checkListId: currentCheckList!.id, updatedCheckList: currentCheckList!)
-        }
-        self.viewDidLoad()
-        self.listItemsTableView.reloadData()
-    }
-    
-    @IBAction func checkListOptionsButtonPressed(_ sender: UIButton) {
-        
-        let storyboard = UIStoryboard(name: "CheckListSettings", bundle: nil)
-        
-        let checkListSettingsView = storyboard.instantiateInitialViewController() as! CheckListSettingsViewController
-        
-        checkListSettingsView.currentCheckList = self.currentCheckList
-        
-        self.present(checkListSettingsView, animated: true, completion: nil)
-        
-    }
-    
-    func closeCheckListView(){
-        if let firstVC = self.presentingViewController as? MainViewController {
-           DispatchQueue.main.async {
-               print("Dismissing Checklist View")
-               firstVC.viewDidLoad()
-               firstVC.checkListsTableView.reloadData()
-           }
-       }
-       self.dismiss(animated: true, completion: nil)
+        /* Style the text field with color and placeholder */
+        textEditView.prepareTextEditInput(color: Theme.getColorFromName(colorName: self.currentCheckList!.color), currentName: "", placeholder: "New Item")
     }
     
     

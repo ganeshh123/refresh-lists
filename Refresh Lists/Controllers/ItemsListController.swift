@@ -84,7 +84,7 @@ extension CheckListViewController: UITableViewDataSource, UITableViewDelegate, U
         DispatchQueue.main.async {
             
             /* Reload the list to show new order */
-            self.currentCheckList = LocalStorage.checkListModels[self.checkListIndex!]
+            self.currentCheckList = LocalStorage.checkListModels[self.currentCheckListIndex!]
             self.listItemsTableView.reloadData()
         }
         
@@ -105,7 +105,7 @@ extension CheckListViewController: UITableViewDataSource, UITableViewDelegate, U
                 /* If item deleted, then update the list view to show this change*/
                 
                 DispatchQueue.main.async {
-                    self.currentCheckList = LocalStorage.checkListModels[self.checkListIndex!]
+                    self.currentCheckList = LocalStorage.checkListModels[self.currentCheckListIndex!]
                     self.listItemsTableView.deleteRows(at: [IndexPath(row: deletedItemIndex, section: 0)], with: .fade)
                 }
                 
@@ -135,7 +135,7 @@ extension CheckListViewController: UITableViewDataSource, UITableViewDelegate, U
             DispatchQueue.main.async {
                 
                 /* Update the list to show the new name */
-                self.currentCheckList = LocalStorage.checkListModels[self.checkListIndex!]
+                self.currentCheckList = LocalStorage.checkListModels[self.currentCheckListIndex!]
                 self.listItemsTableView.reloadData()
             }
         }

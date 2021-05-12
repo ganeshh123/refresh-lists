@@ -31,7 +31,7 @@
                                     <constraint firstAttribute="width" constant="34" id="sqm-l8-KHY"/>
                                 </constraints>
                                 <connections>
-                                    <action selector="checkListModalCloseButtonPressed:" destination="ME2-ut-RtU" eventType="touchUpInside" id="7wO-a6-ZXH"/>
+                                    <action selector="closeButtonPressed:" destination="ME2-ut-RtU" eventType="touchUpInside" id="7wO-a6-ZXH"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fCL-MW-qLW">
@@ -42,7 +42,7 @@
                                     <constraint firstAttribute="width" constant="34" id="wIL-Da-bPK"/>
                                 </constraints>
                                 <connections>
-                                    <action selector="checkListOptionsButtonPressed:" destination="ME2-ut-RtU" eventType="touchUpInside" id="Ewg-d3-ieD"/>
+                                    <action selector="optionsButtonPressed:" destination="ME2-ut-RtU" eventType="touchUpInside" id="Ewg-d3-ieD"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xpl-hs-wOG">
@@ -53,7 +53,7 @@
                                     <constraint firstAttribute="height" constant="34" id="z02-6g-Phh"/>
                                 </constraints>
                                 <connections>
-                                    <action selector="checkListLockButtonPressed:" destination="ME2-ut-RtU" eventType="touchUpInside" id="EHm-yT-0X6"/>
+                                    <action selector="lockButtonPressed:" destination="ME2-ut-RtU" eventType="touchUpInside" id="EHm-yT-0X6"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k3o-an-7v9">
@@ -136,7 +136,7 @@
                                             <color key="titleColor" name="light_green"/>
                                         </state>
                                         <connections>
-                                            <action selector="checkListRefreshButtonPressed:" destination="ME2-ut-RtU" eventType="touchUpInside" id="5Ah-Ng-cxt"/>
+                                            <action selector="refreshButtonPressed:" destination="ME2-ut-RtU" eventType="touchUpInside" id="5Ah-Ng-cxt"/>
                                         </connections>
                                     </button>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="New Item..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jeI-Xw-pGE">
@@ -148,8 +148,8 @@
                                         <fontDescription key="fontDescription" name="ShortStack" family="Short Stack" pointSize="22"/>
                                         <textInputTraits key="textInputTraits"/>
                                         <connections>
-                                            <action selector="newListItemInputBoxPressed:" destination="ME2-ut-RtU" eventType="editingDidBegin" id="kGs-fO-bx4"/>
                                             <action selector="newListItemInputBoxTextChanged:" destination="ME2-ut-RtU" eventType="editingChanged" id="edJ-fY-edx"/>
+                                            <action selector="newListItemInputPressed:" destination="ME2-ut-RtU" eventType="editingDidBegin" id="kGs-fO-bx4"/>
                                         </connections>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bEe-yx-WTJ">
@@ -163,7 +163,7 @@
                                             <color key="titleColor" name="light_green"/>
                                         </state>
                                         <connections>
-                                            <action selector="checkListReminderButtonPressed:" destination="ME2-ut-RtU" eventType="touchUpInside" id="FIp-cT-3OX"/>
+                                            <action selector="reminderButtonPressed:" destination="ME2-ut-RtU" eventType="touchUpInside" id="FIp-cT-3OX"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -203,16 +203,16 @@
                         <viewLayoutGuide key="safeArea" id="AcA-k2-AQa"/>
                     </view>
                     <connections>
-                        <outlet property="checkListCloseButton" destination="rfP-Is-c0y" id="7DY-Sa-8eW"/>
-                        <outlet property="checkListLockButton" destination="xpl-hs-wOG" id="Wio-us-xJC"/>
-                        <outlet property="checkListOptionsButton" destination="fCL-MW-qLW" id="Cbx-e9-ZPi"/>
-                        <outlet property="checkListRefreshButton" destination="NgY-oj-Ps0" id="xWe-X4-xRO"/>
-                        <outlet property="checkListReminderButton" destination="bEe-yx-WTJ" id="Vhm-av-3Cd"/>
-                        <outlet property="checkListTitleLabel" destination="FSA-B9-9Pw" id="zJp-lW-BYn"/>
-                        <outlet property="checkListViewModal" destination="k3o-an-7v9" id="Tod-UZ-GcX"/>
+                        <outlet property="closeButton" destination="rfP-Is-c0y" id="7DY-Sa-8eW"/>
                         <outlet property="listItemsTableView" destination="7am-ym-X42" id="meG-Wt-AP6"/>
-                        <outlet property="newListItemInputBox" destination="jeI-Xw-pGE" id="WB5-Rd-oM8"/>
+                        <outlet property="lockButton" destination="xpl-hs-wOG" id="Wio-us-xJC"/>
+                        <outlet property="newListItemInput" destination="jeI-Xw-pGE" id="WB5-Rd-oM8"/>
+                        <outlet property="optionsButton" destination="fCL-MW-qLW" id="Cbx-e9-ZPi"/>
                         <outlet property="outsideView" destination="Z8Q-k3-VlJ" id="qW4-to-gfu"/>
+                        <outlet property="refreshButton" destination="NgY-oj-Ps0" id="xWe-X4-xRO"/>
+                        <outlet property="reminderButton" destination="bEe-yx-WTJ" id="Vhm-av-3Cd"/>
+                        <outlet property="titleLabel" destination="FSA-B9-9Pw" id="zJp-lW-BYn"/>
+                        <outlet property="viewModal" destination="k3o-an-7v9" id="Tod-UZ-GcX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Yr-Rg-lbD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

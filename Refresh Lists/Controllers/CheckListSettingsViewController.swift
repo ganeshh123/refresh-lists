@@ -73,7 +73,7 @@ class CheckListSettingsViewController: UIViewController {
                 
                 /* Reload the Check List View to show the new name */
                 if let checkListView = self.presentingViewController as? CheckListViewController {
-                    checkListView.currentCheckList = LocalStorage.checkListModels[checkListView.checkListIndex!]
+                    checkListView.currentCheckList = LocalStorage.checkListModels[checkListView.currentCheckListIndex!]
                     checkListView.viewDidLoad()
                 }
                 
@@ -152,7 +152,7 @@ class CheckListSettingsViewController: UIViewController {
             
             /* Reload Checklist View to show the new color */
             if let checkListView = self.presentingViewController as? CheckListViewController {
-                checkListView.currentCheckList = LocalStorage.checkListModels[checkListView.checkListIndex!]
+                checkListView.currentCheckList = LocalStorage.checkListModels[checkListView.currentCheckListIndex!]
                 checkListView.viewDidLoad()
             }
             
