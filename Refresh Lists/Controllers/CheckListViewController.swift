@@ -158,8 +158,18 @@ class CheckListViewController: UIViewController {
     /// - Parameter sender: Button Pressed
     @IBAction func reminderButtonPressed(_ sender: UIButton) {
         
-        /* Show the dialog to select reminders to add */
-        self.showReminderPicker()
+        /* Prepare the Reminder Selection View */
+        let storyboard = UIStoryboard(name: "RemindersView", bundle: nil)
+        let reminderSelectionView = storyboard.instantiateInitialViewController() as! RemindersViewController
+        
+        /* Assign the function add reminders using User Selection */
+        reminderSelectionView.addReminderFunc = addReminders(initialDate:repeatMonths:repeatDays:repeatCount:)
+        
+        /* Present the Reminder View */
+        self.present(reminderSelectionView, animated: true)
+        
+        /* Provide the Check List's color to style the Reminder View */
+        reminderSelectionView.applyCheckListColor(listColor: Theme.getColorFromName(colorName: self.currentCheckList!.color))
         
     }
     

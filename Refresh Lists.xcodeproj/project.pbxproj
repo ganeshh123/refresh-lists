@@ -42,7 +42,7 @@
 		1FE4C9A826262B91003BE873 /* CheckListCardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE4C9A726262B91003BE873 /* CheckListCardController.swift */; };
 		1FE4C9AA26262C0C003BE873 /* CheckListCardsListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE4C9A926262C0C003BE873 /* CheckListCardsListController.swift */; };
 		1FEC06332628B5F90089ED7B /* TextFieldStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FEC06322628B5F90089ED7B /* TextFieldStyles.swift */; };
-		1FEEE71C263C632600365844 /* CheckListReminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FEEE71B263C632600365844 /* CheckListReminder.swift */; };
+		1FEEE71C263C632600365844 /* RemindersController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FEEE71B263C632600365844 /* RemindersController.swift */; };
 		1FEEE71F263C6BD100365844 /* RemindersView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FEEE71E263C6BD100365844 /* RemindersView.storyboard */; };
 		1FEEE721263C6C4300365844 /* RemindersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FEEE720263C6C4300365844 /* RemindersViewController.swift */; };
 /* End PBXBuildFile section */
@@ -85,7 +85,7 @@
 		1FE4C9A726262B91003BE873 /* CheckListCardController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckListCardController.swift; sourceTree = "<group>"; };
 		1FE4C9A926262C0C003BE873 /* CheckListCardsListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckListCardsListController.swift; sourceTree = "<group>"; };
 		1FEC06322628B5F90089ED7B /* TextFieldStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldStyles.swift; sourceTree = "<group>"; };
-		1FEEE71B263C632600365844 /* CheckListReminder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckListReminder.swift; sourceTree = "<group>"; };
+		1FEEE71B263C632600365844 /* RemindersController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemindersController.swift; sourceTree = "<group>"; };
 		1FEEE71E263C6BD100365844 /* RemindersView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RemindersView.storyboard; sourceTree = "<group>"; };
 		1FEEE720263C6C4300365844 /* RemindersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemindersViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -140,7 +140,7 @@
 				1F0A623D2624BE79007D2227 /* MainViewController.swift */,
 				1FCB24D026277F190038ED0B /* CheckListViewController.swift */,
 				1F3B4111262CD5F70039EF03 /* CheckListSettingsViewController.swift */,
-				1FEEE71B263C632600365844 /* CheckListReminder.swift */,
+				1FEEE71B263C632600365844 /* RemindersController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -313,7 +313,7 @@
 				1FBD075626203DBD00E6CC15 /* LocalStorage.swift in Sources */,
 				1FE4C9A826262B91003BE873 /* CheckListCardController.swift in Sources */,
 				1FB470612625C8CE00B6A6DA /* ViewStyles.swift in Sources */,
-				1FEEE71C263C632600365844 /* CheckListReminder.swift in Sources */,
+				1FEEE71C263C632600365844 /* RemindersController.swift in Sources */,
 				1FBD0750262032FB00E6CC15 /* CheckListModel.swift in Sources */,
 				1FEC06332628B5F90089ED7B /* TextFieldStyles.swift in Sources */,
 				1F0A62342624A746007D2227 /* ThemeProtocol.swift in Sources */,

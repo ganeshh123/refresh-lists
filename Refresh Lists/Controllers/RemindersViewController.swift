@@ -55,6 +55,7 @@ class RemindersViewController: UIViewController {
         self.dateTimeSelectionConfirmButton.makeConfirmationButton(icon: UIImage(named: "icon_tick")!, color: Theme.current.greenColor)
         
         // Set Text
+        self.titleLabel.makeCheckListCardTitle(title: "Add List Reminder", maxLength: 50)
         initialReminderLabel.makeDateTimeSelectionInfoText(text: "Send me an initial reminder on")
         continuedReminderLabel.makeDateTimeSelectionInfoText(text: "Then, continue to remind me every")
         dateTimeSelectionMonthLabel.makeDateTimeSelectionInfoText(text: "months, and ")
@@ -80,13 +81,6 @@ class RemindersViewController: UIViewController {
         self.dateTimeSelectionRepeatTextField.makeDateTimeSelectionTextField(backgroundColor: listColor)
         self.initialDatePicker.backgroundColor = listColor
     }
-    
-    /// Sets the text for the add reminder modal title
-    /// - Parameter titleText: Title text for the add reminder modal title
-    func setTitleText(titleText: String){
-        self.titleLabel.makeCheckListCardTitle(title: titleText, maxLength: 50)
-    }
-    
     
     /// Handler function for the cancel button pressed
     /// - Parameter sender: Button that was pressed
