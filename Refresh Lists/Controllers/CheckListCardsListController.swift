@@ -1,5 +1,5 @@
 //
-//  CheckListsTableView.swift
+//  CheckListCardsList.swift
 //  Refresh Lists
 //
 //  Created by Ganesh H on 13/04/2021.
@@ -24,7 +24,7 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate, UITabl
     ///   - tableView: Table View
     ///   - indexPath: Index of Row
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "checkListCell") as! CheckListsTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "checkListCell") as! CheckListCardController
         
         /* Set View to a card representing checklist
             from same index in local storage
