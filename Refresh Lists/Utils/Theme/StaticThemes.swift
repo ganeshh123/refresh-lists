@@ -1,5 +1,5 @@
 //
-//  LightTheme.swift
+//  StaticThemes.swift
 //  Refresh Lists
 //
 //  Created by Ganesh H on 12/04/2021.
@@ -8,6 +8,7 @@
 
 import UIKit
 
+/// App Theme for Light Mode
 struct LightTheme: ThemeProtocol{
     var sansFont: String = "RalewayRoman-Regular"
     var handwritingFont: String = "ShortStack"
@@ -23,6 +24,7 @@ struct LightTheme: ThemeProtocol{
     var listHeaderColor: UIColor = UIColor(named: "light_list_header")!
 }
 
+/// App Theme for Dark Mode
 struct DarkTheme: ThemeProtocol{
     var sansFont: String = "RalewayRoman-Regular"
     var handwritingFont: String = "ShortStack"
