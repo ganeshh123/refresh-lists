@@ -36,11 +36,11 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Yj-sD-uV3">
-                                        <rect key="frame" x="165" y="73" width="28" height="22"/>
+                                        <rect key="frame" x="168" y="73" width="22" height="22"/>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="22" id="QJO-nX-gKR"/>
-                                            <constraint firstAttribute="width" constant="28" id="n0j-vX-VZB"/>
+                                            <constraint firstAttribute="width" constant="22" id="n0j-vX-VZB"/>
                                         </constraints>
                                         <connections>
                                             <action selector="confirmButtonPressed:" destination="uAg-j3-y1c" eventType="touchUpInside" id="qz6-ET-laT"/>
