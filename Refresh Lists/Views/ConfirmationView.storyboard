@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uAg-j3-y1c">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -11,11 +12,11 @@
             <objects>
                 <viewController id="uAg-j3-y1c" customClass="ConfirmationViewController" customModule="Refresh_Lists" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wWq-Mv-PXy">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="97k-Qw-zXj">
-                                <rect key="frame" x="165" y="242.5" width="270" height="115"/>
+                                <rect key="frame" x="72" y="390.5" width="270" height="115"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tdf-XH-ula">
                                         <rect key="frame" x="10" y="20" width="240" height="21"/>
@@ -68,7 +69,8 @@
                         <viewLayoutGuide key="safeArea" id="EwD-vc-IjS"/>
                     </view>
                     <connections>
-                        <outlet property="cancelButton" destination="4Yj-sD-uV3" id="CPr-It-cdR"/>
+                        <outlet property="cancelButton" destination="S5O-b7-ANE" id="i39-Hc-aNP"/>
+                        <outlet property="confirmButton" destination="4Yj-sD-uV3" id="Qr3-EA-Ema"/>
                         <outlet property="dialogView" destination="97k-Qw-zXj" id="med-e7-8aF"/>
                         <outlet property="messageLabel" destination="tdf-XH-ula" id="ng0-fd-wwS"/>
                         <outlet property="outsideView" destination="wWq-Mv-PXy" id="ceI-3S-89E"/>

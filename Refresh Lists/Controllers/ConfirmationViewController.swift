@@ -27,7 +27,7 @@ class ConfirmationViewController: UIViewController {
     var message: String = "Are you sure?"
     /// Function to run if Action Confirmed
     var confirmFunction: () -> () = {}
-    /// Function to run if Action Canceeled
+    /// Function to run if Action Cancelled
     var cancelFunction: () -> () = {}
     
     
