@@ -81,7 +81,7 @@ class AppSettingsViewController: UIViewController {
         DispatchQueue.main.async {
             
             /* Prepare an alert with the version number */
-            let alert = UIAlertController(title: "About Refresh Lists", message: "Version 1.0.0", preferredStyle: UIAlertController.Style.alert)
+            let alert = UIAlertController(title: "About Refresh Lists", message: "Version 1.0.0. Made by Ganesh H", preferredStyle: UIAlertController.Style.alert)
             alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
             
             /* Present the Alert*/
