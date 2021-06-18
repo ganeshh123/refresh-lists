@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="https://ganeshh123.github.io/assets/icon_trans.jpg" />
+    <title>Refresh Lists - Convert Notion pages to PDFs</title>
+    <meta name="description" content="Batch Convert Notion pages to PDF documents, for free Notion Users." />
+    <style>
+        @font-face {
+            font-family: "iA Writer Quattro S";
+            src: url("https://cors.bridged.cc/https://ganeshh123.github.io/assets/iAWriterQuattroS-Regular.woff") format("woff")
+        }
+
+        * :not(code) {
+            font-family: 'iA Writer Quattro S', sans-serif;
+            color: rgba(255, 255, 255, 0.9);
+            box-sizing: border-box;
+        }
+
+        html {
+            max-height: 100vh;
+            max-width: 100vw;
+        }
+
+        body {
+            background-color: rgb(47, 52, 55);
+            max-width: 100vw;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            padding-left: 10px;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p,
+        caption,
+        ul,
+        figure {
+            max-width: 100%;
+        }
+
+        img {
+            max-width: 600px;
+            height: auto;
+        }
+
+        p {
+            margin-left: 10px;
+        }
+
+        pre,
+        code {
+            margin-left: 10px;
+            background-color: #3f4447;
+        }
+
+        #contents {
+            list-style-type: none;
+        }
+
+        iframe {
+            width: 640px;
+            height: 360px;
+        }
+
+        #footer {
+            margin-top: 15px;
+            text-align: center;
+            width: 100vw;
+            margin-bottom: 10px;
+            text-decoration: none;
+        }
+
+        @media only screen and (max-width: 425px) {
+            iframe {
+                width: 384px;
+                height: 216px;
+            }
+
+            img {
+                max-width: 300px;
+                height: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="refresh-lists">Refresh Lists</h1>
+    <p>iOS App to create and review re-usable checklists with reminders.</p>
+    <ul id="contents">
+        <li><a href="#usage">Usage</a></li>
+        <li><a href="#requirements">Requirements</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#building">Building</a></li>
+    </ul>
+    <h2 id="usage">Usage</h2>
+    <iframe src="https://www.youtube-nocookie.com/embed/x8XtxqdA8oc" title="Refresh Lists Video Demo" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+    <br />
+    <caption>Video Guide</caption>
+    <h2 id="requirements">Requirements</h2>
+    <ul>
+        <li>iOS 13.2 Device or Emulator</li>
+        <li>Permission to access to iOS Reminders</li>
+    </ul>
+    <h2 id="features">Features</h2>
+    <ul>
+        <li>Create, Rename, &amp; Delete Multiple Checklists</li>
+        <li>Mark Items as Completed/Uncompleted</li>
+        <li>Add, Edit, Remove and Re-order List Items</li>
+        <li>Reset the state of the list with the &ldquo;Refresh&rdquo; button</li>
+        <li>Create Multiple Recurring reminders to review list in iOS Reminders App that sync through iCloud</li>
+        <li>All Data Stored Locally - Works Offline</li>
+        <li>Customize Checklists with Colors</li>
+        <li>Light &amp; Dark Theme Available</li>
+    </ul>
+    <h2 id="building">Building</h2>
+    <ol>
+        <li>Clone/Download the <a href="https://github.com/ganeshh123/refresh-lists">Source Code</a></li>
+        <li>Open <code>Refresh Lists.xcodeproj</code> in <a href="https://xcodereleases.com/">Xcode 11</a> or higher
+        </li>
+        <li>Build/Run in iOS 13.2 or higher device or emulator</li>
+    </ol>
+
+    <a id='footer' href='https://nesh.gq/'>Ganesh H</a>
+</body>
+
+
+</html>
